@@ -1,0 +1,3811 @@
+<!DOCTYPE html>
+<html lang="en" onload="updateData()">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <meta name="description" content="Covid India Live is a website that uses API to show current status of Coronavirus around the globe & specifically for India">
+        <meta name="author" content="Shubh Khanna">
+        <meta name="keywords" content="Coronavirus, tracker, corona, COVID-19, COVID, COVID-19 India, COVID-19 India Live, covid-19 india live, covid-19 india live update, global cases, Coronavirus india cases">
+        <link rel="canonical" href="https://covidindialive.netlify.app/index.html" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+
+        
+        <title>COVID-19 District Zones</title>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165420192-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-165420192-1');
+        </script>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav id="sidebar" class="px-3 pt-5 pb-5" id="main-nav">
+                <ul class="nav flex-column">
+                  <li class="nav-item mt-5">
+                      <a class="nav-link text-white" href="index.html">
+                        <i class="fas fa-home"></i> Home</a>
+                  </li>  
+                  <li class="nav-item mt-2">
+                      <a class="nav-link text-white" href="state.html">
+                        <i class="far fa-compass"></i> State Wise Cases</a>
+                    </li>
+                  <li class="nav-item my-2">
+                      <a class="nav-link text-white" href="center.html">
+                          <i class="fas fa-flask"></i> Test Centers</a>
+                  </li>
+                  <li class="nav-item my-2">
+                      <a class="nav-link text-white" href="zones.html">
+                          <i class="fas fa-skull"></i> District Zones</a>                    
+                  </li>
+                  <li class="nav-item my-2">
+                      <a class="nav-link text-white" href="world.html">
+                          <i class="fas fa-flag"></i> Country Wise Cases</a>                   
+                  </li>
+                  <li class="nav-item my-2">
+                    <a class="nav-link text-white" href="precaution.html">
+                      <i class="fas fa-notes-medical"></i> Precautions</a>
+                  </li>
+                   <li class="nav-item my-2">
+                    <a class="nav-link text-white" href="health.html">
+                      <i class="fas fa-heartbeat"></i> Health Tips</a>
+                  </li>
+                  <li class="nav-item my-2">
+                      <a class="nav-link text-white" href="about.html">
+                          <i class="fas fa-question"></i> About</a>                    
+                  </li>
+               </ul>                      
+            </nav>
+            <div class="main-content" id="main-content">
+              <nav class="navbar fixed-top py-2" style="background-color: #0097dc;">                 
+                <button type="button" id="sidebarCollapse" class="btn" style="background-color: #0097dc;">
+                  <i class="fas fa-align-left icon-toggle fa-lg"></i>
+                </button>
+                <div class="navbar-brand mx-auto" style="font-size: 25px;letter-spacing: 2px;"><a href="index.html" class="text-white nav-link">COVID India Live</a></div>
+              </nav>
+              <div class="container">
+                <h2 class="text-center text-dark mt-5 pt-5 mx-auto" style="font-size: 50px;">District Wise Zone( Red, Orange, Green)</h2>
+                <div class="text-center">
+                    <input id="myZone" type="text" placeholder="  Search Your State or District  " class=" text-dark p-2 mt-4" style="box-shadow: 0px 2px 5px grey;border: 1px solid black;border-radius: 20px;">
+                </div>
+                <div class="table-responsive-sm mx-auto mt-4 border-dark" style="align-items: center; max-width: 50rem;">
+                    <table class="table table-bordered table-hover text-center">
+                        <thead class="thead-dark" style="font-size: 20px;">
+                            <tr>
+                                <th title="Field #1">State</th>
+                                <th title="Field #2">District</th>
+                                <th title="Field #3">Zone</th>
+                            </tr>
+                        </thead>
+                        <tbody id="zoneTab" style="letter-spacing: 1px;">                                                                            
+                                <tr>
+                                <td>Andaman and Nicobar Islands</td>
+                                <td>Nicobars</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Andaman and Nicobar Islands</td>
+                                <td>North and Middle Andaman</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Andaman and Nicobar Islands</td>
+                                <td>South Andaman</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>Anantapur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>Chittoor</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>East Godavari</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>Guntur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>Krishna</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>Kurnool</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>Prakasam</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>S.P.S. Nellore</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>Srikakulam</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>Visakhapatnam</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>Vizianagaram</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>West Godavari</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Andhra Pradesh</td>
+                                <td>Y.S.R. Kadapa</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Anjaw</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Changlang</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>East Kameng</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>East Siang</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Kamle</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Kra Daadi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Kurung Kumey</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Lepa Rada</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Lohit</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Longding</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Lower Dibang Valley</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Lower Siang</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Lower Subansiri</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Namsai</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Pakke Kessang</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Papum Pare</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Shi Yomi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Siang</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Tawang</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Tirap</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Upper Dibang Valley</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Upper Siang</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>Upper Subansiri</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>West Kameng</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Arunachal Pradesh</td>
+                                <td>West Siang</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Baksa</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Barpeta</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Biswanath</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Bongaigaon</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Cachar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Charaideo</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Chirang</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Darrang</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Dhemaji</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Dhubri</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Dibrugarh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Dima Hasao</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Goalpara</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Golaghat</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Hailakandi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Hojai</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Jorhat</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Kamrup</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Kamrup Metropolitan</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Karbi Anglong</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Karimganj</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Kokrajhar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Lakhimpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Majuli</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Morigaon</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Nagaon</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Nalbari</td>
+                                <td>Green</td>
+                                </tr>                                
+                                <tr>
+                                <td>Assam</td>
+                                <td>Sivasagar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Sonitpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>South Salmara Mankachar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Tinsukia</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>Udalguri</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Assam</td>
+                                <td>West Karbi Anglong</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Araria</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Arwal</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Aurangabad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Banka</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Begusarai</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Bhagalpur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Bhojpur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Buxar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Darbhanga</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>East Champaran</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Gaya</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Gopalganj</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Jamui</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Jehanabad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Kaimur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Katihar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Khagaria</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Kishanganj</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Lakhisarai</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Madhepura</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Madhubani</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Munger</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Muzaffarpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Nalanda</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Nawada</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Patna</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Purnia</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Rohtas</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Saharsa</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Samastipur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Saran</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Sheikhpura</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Sheohar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Sitamarhi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Siwan</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Supaul</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>Vaishali</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Bihar</td>
+                                <td>West Champaran</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chandigarh</td>
+                                <td>Chandigarh</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Balod</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Baloda Bazar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Balrampur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Bametara</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Bastar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Bijapur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Bilaspur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Dakshin Bastar Dantewada</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Dhamtari</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Durg</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Gariaband</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Janjgir Champa</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Jashpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Kabeerdham</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Kondagaon</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Korba</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Koriya</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Mahasamund</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Mungeli</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Narayanpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Raigarh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Raipur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Rajnandgaon</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Sukma</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Surajpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Surguja</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Chhattisgarh</td>
+                                <td>Uttar Bastar Kanker</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Dadra and Nagar Haveli</td>
+                                <td>Dadra and Nagar Haveli</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Daman And Diu</td>
+                                <td>Daman</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Daman And Diu</td>
+                                <td>Diu</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Delhi</td>
+                                <td>Central Delhi</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Delhi</td>
+                                <td>East Delhi</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Delhi</td>
+                                <td>New Delhi</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Delhi</td>
+                                <td>North Delhi</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Delhi</td>
+                                <td>North East Delhi</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Delhi</td>
+                                <td>North West Delhi</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Delhi</td>
+                                <td>Shahdara</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Delhi</td>
+                                <td>South Delhi</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Delhi</td>
+                                <td>South East Delhi</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Delhi</td>
+                                <td>South West Delhi</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Delhi</td>
+                                <td>West Delhi</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Goa</td>
+                                <td>North Goa</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Goa</td>
+                                <td>South Goa</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Ahmedabad</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Amreli</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Anand</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Aravalli</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Banaskantha</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Bharuch</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Bhavnagar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Botad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Chhota Udaipur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Dahod</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Dang</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Devbhumi Dwarka</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Gandhinagar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Gir Somnath</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Jamnagar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Junagadh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Kutch</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Kheda</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Mehsana</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Mahisagar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Morbi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Narmada</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Navsari</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Panchmahal</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Patan</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Porbandar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Rajkot</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Sabarkantha</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Surat</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Surendranagar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Tapi</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Vadodara</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Gujarat</td>
+                                <td>Valsad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Ambala</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Bhiwani</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Charkhi Dadri</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Faridabad</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Fatehabad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Gurugram</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Hisar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Italians</td>
+                                <td> </td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Jhajjar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Jind</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Kaithal</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Karnal</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Kurukshetra</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Mahendragarh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Nuh</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Palwal</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Panchkula</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Panipat</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Rewari</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Rohtak</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Sirsa</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Sonipat</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Haryana</td>
+                                <td>Yamunanagar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Himachal Pradesh</td>
+                                <td>Bilaspur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Himachal Pradesh</td>
+                                <td>Chamba</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Himachal Pradesh</td>
+                                <td>Hamirpur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Himachal Pradesh</td>
+                                <td>Kangra</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Himachal Pradesh</td>
+                                <td>Kinnaur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Himachal Pradesh</td>
+                                <td>Kullu</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Himachal Pradesh</td>
+                                <td>Lahaul and Spiti</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Himachal Pradesh</td>
+                                <td>Mandi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Himachal Pradesh</td>
+                                <td>Shimla</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Himachal Pradesh</td>
+                                <td>Sirmaur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Himachal Pradesh</td>
+                                <td>Solan</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Himachal Pradesh</td>
+                                <td>Una</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Anantnag</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Budgam</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Bandipora</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Baramulla</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Doda</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Ganderbal</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Jammu</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Kathua</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Kishtwar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Kulgam</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Kupwara</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Mirpur</td>
+                                <td> </td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Muzaffarabad</td>
+                                <td> </td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Pulwama</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Punch</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Rajouri</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Ramban</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Reasi</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Samba</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Shopiyan</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Srinagar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Jammu and Kashmir</td>
+                                <td>Udhampur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Bokaro</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Chatra</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Deoghar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Dhanbad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Dumka</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Garhwa</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Giridih</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Godda</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Gumla</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Hazaribagh</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Jamtara</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Khunti</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Koderma</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Latehar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Lohardaga</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Pakur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Palamu</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>West Singhbhum</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>East Singhbhum</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Ramgarh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Ranchi</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Sahibganj</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Saraikela-Kharsawan</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Jharkhand</td>
+                                <td>Simdega</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Bagalkote</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Ballari</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Belagavi</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Bengaluru Urban</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Bengaluru Rural</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Bidar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Chamarajanagara</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Chikkaballapura</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Chikkamagaluru</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Chitradurga</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Dakshina Kannada</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Davanagere</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Dharwad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Gadag</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Hassan</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Haveri</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Kalaburagi</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Kodagu</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Kolar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Koppal</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Mandya</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Mysuru</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Raichur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Ramanagara</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Shivamogga</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Tumakuru</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Udupi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Uttara Kannada</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Vijayapura</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Karnataka</td>
+                                <td>Yadgir</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Alappuzha</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Ernakulam</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Idukki</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Kannur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Kasaragod</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Kollam</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Kottayam</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Kozhikode</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Malappuram</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Palakkad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Pathanamthitta</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Thiruvananthapuram</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Thrissur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Kerala</td>
+                                <td>Wayanad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Ladakh</td>
+                                <td>Kargil</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Ladakh</td>
+                                <td>Leh</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Lakshadweep</td>
+                                <td>Lakshadweep</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Agar Malwa</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Alirajpur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Anuppur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Ashoknagar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Balaghat</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Barwani</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Betul</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Bhind</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Bhopal</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Burhanpur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Chhatarpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Chhindwara</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Damoh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Datia</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Dewas</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Dhar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Dindori</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Guna</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Gwalior</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Harda</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Hoshangabad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Indore</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Jabalpur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Jhabua</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Katni</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Khandwa</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Khargone</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Mandla</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Mandsaur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Morena</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Narsinghpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Neemuch</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Niwari</td>
+                                <td>Green</td>
+                                </tr>                            
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Panna</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Raisen</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Rajgarh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Ratlam</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Rewa</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Sagar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Satna</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Sehore</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Seoni</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Shahdol</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Shajapur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Sheopur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Shivpuri</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Sidhi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Singrauli</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Tikamgarh</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Ujjain</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Umaria</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Madhya Pradesh</td>
+                                <td>Vidisha</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Ahmednagar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Akola</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Amravati</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Aurangabad</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Bhandara</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Beed</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Buldhana</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Chandrapur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Dhule</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Gadchiroli</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Gondia</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Hingoli</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Jalgaon</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Jalna</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Kolhapur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Latur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Mumbai</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Mumbai Suburban</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Nagpur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Nanded</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Nandurbar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Nashik</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Osmanabad</td>
+                                <td>Green</td>
+                                </tr>                           
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Palghar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Parbhani</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Pune</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Raigad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Ratnagiri</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Sangli</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Satara</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Sindhudurg</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Solapur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Thane</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Wardha</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Washim</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Maharashtra</td>
+                                <td>Yavatmal</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Bishnupur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Chandel</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Churachandpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Imphal East</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Imphal West</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Jiribam</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Kakching</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Kamjong</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Kangpokpi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Noney</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Pherzawl</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Senapati</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Tamenglong</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Tengnoupal</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Thoubal</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Manipur</td>
+                                <td>Ukhrul</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Meghalaya</td>
+                                <td>East Garo Hills</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Meghalaya</td>
+                                <td>East Jaintia Hills</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Meghalaya</td>
+                                <td>East Khasi Hills</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Meghalaya</td>
+                                <td>North Garo Hills</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Meghalaya</td>
+                                <td>Ribhoi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Meghalaya</td>
+                                <td>South Garo Hills</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Meghalaya</td>
+                                <td>South West Garo Hills</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Meghalaya</td>
+                                <td>South West Khasi Hills</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Meghalaya</td>
+                                <td>West Garo Hills</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Meghalaya</td>
+                                <td>West Jaintia Hills</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Meghalaya</td>
+                                <td>West Khasi Hills</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Mizoram</td>
+                                <td>Saitual</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Mizoram</td>
+                                <td>Hnahthial</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Mizoram</td>
+                                <td>Khawzawl</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Mizoram</td>
+                                <td>Aizawl</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Mizoram</td>
+                                <td>Champhai</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Mizoram</td>
+                                <td>Kolasib</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Mizoram</td>
+                                <td>Lawngtlai</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Mizoram</td>
+                                <td>Lunglei</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Mizoram</td>
+                                <td>Mamit</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Mizoram</td>
+                                <td>Saiha</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Mizoram</td>
+                                <td>Serchhip</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Nagaland</td>
+                                <td>Dimapur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Nagaland</td>
+                                <td>Kiphire</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Nagaland</td>
+                                <td>Kohima</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Nagaland</td>
+                                <td>Longleng</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Nagaland</td>
+                                <td>Mokokchung</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Nagaland</td>
+                                <td>Mon</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Nagaland</td>
+                                <td>Peren</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Nagaland</td>
+                                <td>Phek</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Nagaland</td>
+                                <td>Tuensang</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Nagaland</td>
+                                <td>Wokha</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Nagaland</td>
+                                <td>Zunheboto</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Angul</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Balangir</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Balasore</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Bargarh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Boudh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Bhadrak</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Cuttack</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Deogarh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Dhenkanal</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Gajapati</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Ganjam</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Jagatsinghpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Jajpur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Jharsuguda</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Kalahandi</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Kandhamal</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Kendrapara</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Kendujhar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Khordha</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Koraput</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Malkangiri</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Mayurbhanj</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Nabarangapur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Nayagarh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Nuapada</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Puri</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Rayagada</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Sambalpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Subarnapur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Odisha</td>
+                                <td>Sundargarh</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Puducherry</td>
+                                <td>Karaikal</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Puducherry</td>
+                                <td>Mahe</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Puducherry</td>
+                                <td>Puducherry</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Puducherry</td>
+                                <td>Yanam</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Amritsar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Barnala</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Bathinda</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Faridkot</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Fatehgarh Sahib</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Fazilka</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Ferozepur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Gurdaspur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Hoshiarpur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Jalandhar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Kapurthala</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Ludhiana</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Mansa</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Moga</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Pathankot</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Patiala</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Rupnagar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>S.A.S. Nagar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Sangrur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Shahid Bhagat Singh Nagar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Sri Muktsar Sahib</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Punjab</td>
+                                <td>Tarn Taran</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Ajmer</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Alwar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Banswara</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Baran</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Barmer</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Bharatpur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Bhilwara</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Bikaner</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Bundi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Chittorgarh</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Churu</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Dausa</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Dholpur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Dungarpur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Evacuees</td>
+                                <td> </td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Ganganagar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Hanumangarh</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Italians</td>
+                                <td> </td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Jaipur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Jaisalmer</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Jalore</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Jhalawar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Jhunjhunu</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Jodhpur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Karauli</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Kota</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Nagaur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>                            
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Pali</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Pratapgarh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Rajsamand</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Sawai Madhopur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Sikar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Sirohi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Tonk</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Rajasthan</td>
+                                <td>Udaipur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Sikkim</td>
+                                <td>East District</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Sikkim</td>
+                                <td>North District</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Sikkim</td>
+                                <td>South District</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Sikkim</td>
+                                <td>West District</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Ariyalur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Chengalpattu</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Chennai</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Coimbatore</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Cuddalore</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Dharmapuri</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Dindigul</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Erode</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Kallakurichi</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Kancheepuram</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Kanyakumari</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Karur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Krishnagiri</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Madurai</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Nagapattinam</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Namakkal</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Perambalur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Pudukkottai</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Ramanathapuram</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Ranipet</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Salem</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Sivaganga</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Tenkasi</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Thanjavur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Nilgiris</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Theni</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Thiruvallur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Thiruvarur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Thoothukkudi</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Tiruchirappalli</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Tirunelveli</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Tirupathur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Tiruppur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Tiruvannamalai</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Vellore</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Viluppuram</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tamil Nadu</td>
+                                <td>Virudhunagar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Adilabad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Bhadradri Kothagudem</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Hyderabad</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Jagtial</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Jangaon</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Jayashankar Bhupalapally</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Jogulamba Gadwal</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Kamareddy</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Karimnagar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Khammam</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Komaram Bheem</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Mahabubabad</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Mahabubnagar</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Mancherial</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Medak</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Medchal Malkajgiri</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Mulugu</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Nagarkurnool</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Nalgonda</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Narayanpet</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Nirmal</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Nizamabad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Peddapalli</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Rajanna Sircilla</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Ranga Reddy</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Sangareddy</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Siddipet</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Suryapet</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Vikarabad</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Wanaparthy</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Warangal Rural</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Warangal Urban</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Telangana</td>
+                                <td>Yadadri Bhuvanagiri</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Tripura</td>
+                                <td>Dhalai</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Tripura</td>
+                                <td>Gomati</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tripura</td>
+                                <td>Khowai</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Tripura</td>
+                                <td>North Tripura</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Tripura</td>
+                                <td>Sipahijala</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Tripura</td>
+                                <td>South Tripura</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Tripura</td>
+                                <td>Unokoti</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Tripura</td>
+                                <td>West Tripura</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Agra</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Aligarh</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Ambedkar Nagar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Amethi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Amroha</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Auraiya</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Ayodhya</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Azamgarh</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Baghpat</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Bahraich</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Ballia</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Balrampur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Banda</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Barabanki</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Bareilly</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Basti</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Bhadohi</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Bijnor</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Budaun</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Bulandshahr</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Chandauli</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Chitrakoot</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Deoria</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Etah</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Etawah</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Ayodhya</td>
+                                <td> </td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Farrukhabad</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Fatehpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Firozabad</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Gautam Buddha Nagar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Ghaziabad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Ghazipur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Gonda</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Gorakhpur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Hamirpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Hapur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Hardoi</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Hathras</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Jalaun</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Jaunpur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Jhansi</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Kannauj</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Kanpur Dehat</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Kanpur Nagar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Kasganj</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Kaushambi</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Lakhimpur Kheri</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Kushinagar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Lalitpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Lucknow</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Mahoba</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Maharajganj</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Mainpuri</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Mathura</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Mau</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Meerut</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Mirzapur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Moradabad</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Muzaffarnagar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Pilibhit</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Pratapgarh</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Prayagraj</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Rae Bareli</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Rampur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Saharanpur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Sambhal</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Sant Kabir Nagar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Shahjahanpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Shamli</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Shrawasti</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Siddharthnagar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Sitapur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Sonbhadra</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Sultanpur</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Unnao</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttar Pradesh</td>
+                                <td>Varanasi</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Almora</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Bageshwar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Chamoli</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Champawat</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Dehradun</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Haridwar</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Nainital</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Pauri Garhwal</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Pithoragarh</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Rudraprayag</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Tehri Garhwal</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Udham Singh Nagar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>Uttarakhand</td>
+                                <td>Uttarkashi</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Alipurduar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Bankura</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Birbhum</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Cooch Behar</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Dakshin Dinajpur</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Darjeeling</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Hooghly</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Howrah</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Jalpaiguri</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Jhargram</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Kalimpong</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Kolkata</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Malda</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Purba Medinipur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Paschim Medinipur</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Murshidabad</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Nadia</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>North 24 Parganas</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Paschim Bardhaman</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Purba Bardhaman</td>
+                                <td>Orange</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Purulia</td>
+                                <td>Green</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>South 24 Parganas</td>
+                                <td>Red</td>
+                                </tr>
+                                <tr>
+                                <td>West Bengal</td>
+                                <td>Uttar Dinajpur</td>
+                                <td>Green</td>
+                                </tr>                                
+                        </tbody>
+                    </table>
+              </div>
+                <footer>
+                    <hr style="width: 80%; border: 1px dashed red">
+                    <div class="footer-content text-center text-dark pb-3" style="min-height: 40px; font-weight: bold;">
+                        Designed & Developed by <a href="https://www.linkedin.com/in/shubh-khanna-2b6986191/" class="text-dark">Shubh Khanna.</a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="/main.js"></script>
+    </body>
+</html>   
+

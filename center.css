@@ -1,0 +1,79 @@
+html, body {
+    font-family: "Poppins" !important;
+    background-color: #fff;
+  }
+  
+  
+  /*For Sidebar*/
+  .wrapper {
+    width: 100%;
+    display: flex;
+  }
+  .main-content {
+    width: 100%;
+    margin-left: 0px;
+  }
+  #sidebar {
+    width: 200px;
+    position: fixed;
+    top: 0px;
+    background: #0097dc;
+    z-index: 10;
+    height: 100vh;
+    margin-left: -200px;
+  }
+  
+  .main-content,
+  #sidebar {
+    transition: 0.5s ease;
+  }   
+  
+  .icon-toggle {
+    color: #292b2c;
+    font-size: 20px;
+  }
+  
+  #sidebar.active {
+    margin-left: 0px;
+  }
+  #sidebar.active ~ .main-content {
+    margin-left: 200px;
+  }
+  
+  @media (min-width: 576px) {
+    #sidebar {
+      margin-left: -250px;
+    }
+    #sidebar.active {
+      width: 250px;
+      margin-left: 0px;
+    }
+    .main-content {
+      margin-left: 0;
+    }
+  
+    #sidebar.active ~ .main-content {
+      margin-left: 250px;
+    }
+  }
+  
+  i {
+      text-transform: uppercase;
+      margin-right: 2px;
+  }
+
+  .equal .card, .equal .counter-box {
+    height: 100%;
+}
+.equal {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+  border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 1px 2px;
+}
+.badge {
+    border-radius: 15px;
+}
