@@ -44,17 +44,6 @@ function updateData() {
         .catch(err => {
          console.error("Error fetching data from API.\n", err);
     });
-   /* fetch("https://coronavirus-19-api.herokuapp.com/countries/india")
-        .then(inn => {
-            return inn.json();
-        })
-        .then(data => {
-            document.getElementById("dailyCases").innerHTML = data.todayCases;
-            document.getElementById("dailyDeaths").innerHTML = data.todayDeaths;
-        })
-        .catch(err => {
-            console.error("Error fetching data from API.\n", err);
-       });*/
     // fetch india data
     /*fetch("https://covid19.mathdro.id/api/countries/India")
         .then(india => {
