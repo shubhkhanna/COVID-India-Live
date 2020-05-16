@@ -530,11 +530,11 @@ function drawRedChart(processedData, ctxID) {
               data: processedData,
               fill: true,
               backgroundColor: gradientFill,
-              borderColor: "#ff0000",
-              pointBorderColor: "#ff0000",
-              pointBackgroundColor: "#ff0000",
-              pointHoverBackgroundColor: "#ff0000",
-              pointHoverBorderColor: "#ff0000",
+              borderColor: "blue",
+              pointBorderColor: "blue",
+              pointBackgroundColor: "lightblue",
+              pointHoverBackgroundColor: "lightblue",
+              pointHoverBorderColor: "royalblue",
               pointHoverRadius: 5,
               pointHoverBorderWidth: 3
           }]
@@ -598,11 +598,11 @@ function drawGreenChart(processedData, ctxID) {
               data: processedData,
               fill: true,
               backgroundColor: gradientFill,
-              borderColor: "#00ff00",
-              pointBorderColor: "#00ff00",
-              pointBackgroundColor: "#00ff00",
-              pointHoverBackgroundColor: "#00ff00",
-              pointHoverBorderColor: "#00ff00",
+              borderColor: "green",
+              pointBorderColor: "green",
+              pointBackgroundColor: "greenyellow",
+              pointHoverBackgroundColor: "greenyellow",
+              pointHoverBorderColor: "green",
               pointHoverRadius: 5,
               pointHoverBorderWidth: 3
           }]
@@ -658,7 +658,7 @@ function drawBlueChart(processedData) {
       datasets: [{
           label: 'Daily New Cases',
           data: processedData["y"],
-          backgroundColor: "#fff",  
+          backgroundColor: 'red',  
           borderWidth: 2,
           
       }]
