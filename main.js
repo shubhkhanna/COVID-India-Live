@@ -504,7 +504,7 @@ function updateData() {
 
 updateData();
 
-function drawRedChart(processedData, ctxID) {
+function drawBlueChart(processedData, ctxID) {
   var timeFormat = "YYYY-MM-DD";
   //canvas
   var ctx = document.getElementById(ctxID).getContext("2d");
@@ -637,65 +637,77 @@ function drawGreenChart(processedData, ctxID) {
   window.myLine = new Chart(ctx, config);
 } //end function
 
-function drawBlueChart(processedData) {
-  var ctx = document.getElementById("new-cases-chart").getContext("2d");
-  var myBarChart = new Chart(ctx, {
-      
-  type: 'bar',
-  data: {
-      labels: processedData["x"],
-      datasets: [{
-          label: 'Daily New Cases',
-          data: processedData["y"],
-          backgroundColor: 'red',  
-          borderWidth: 2,
-          
-      }]
-  },
-  options: {
-      legend: {
-          display: true
-       },
-      maintainAspectRatio: true,
-      tooltips: {
-          enabled: true
-     },
-      responsive: true,
-      scales: {
-      xAxes: [{
-        scaleLabel: {
-            display: true,
-            labelString: "Date"
+
+function drawRedChart(processedData, ctxID) {
+    var timeFormat = "YYYY-MM-DD";
+    //canvas
+    var ctx = document.getElementById(ctxID).getContext("2d");
+    //gradient
+    var gradientFill = ctx.createLinearGradient(0, 0, 0, 350);
+  
+    var config = {
+        type: "line",
+        data: {
+            datasets: [{
+                label: "Daily Cases",
+                data: processedData,
+                fill: true,
+                backgroundColor: gradientFill,
+                borderColor: "red",
+                pointBorderColor: "darkred",
+                pointBackgroundColor: "lightpink",
+                pointHoverBackgroundColor: "lightpink",
+                pointHoverBorderColor: "darkred",               
+                pointHoverRadius: 7,
+                pointHoverBorderWidth: 3
+            }]
         },
-          barThickness: 1,
-          maxBarThickness: 1,
-          barPercentage:0.8,
-          type: 'time',
-          time: {
-              format: "YYYY-MM-DD",
-              tooltipFormat: "ll"
-          }
-      }],
-      yAxes: [{
-        scaleLabel: {
-            display: true,
-            labelString: "Cases"
-        },
-          ticks: {
-          beginAtZero: true
-          }
-      }]
-      }
-  }
-     
-  });
-}
+        options: {
+            legend: {
+                display: true
+            },
+            elements: {
+                line: {
+                    tension: 0
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: true,
+            title: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                    type: "time",
+                    time: {
+                        displayFormats: {
+                            day: 'MMM D'
+                        },
+                        tooltipFormat: 'll'
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: "Date"
+                    }
+                }],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: "Cases"
+                    }
+                }]
+            }
+        }
+    };
+  
+    window.myLine = new Chart(ctx, config);
+  } //end funcntion
 
 window.onload = function() {
   var proCasesData = [];
   var proRecoveredData = [];
   var previousDay = {};
-  var newcases = {x:[], y:[]}
+  var newcases = []
   fetch("https://pomber.github.io/covid19/timeseries.json")
       .then(response => response.json())
       .then(data => {
@@ -719,10 +731,10 @@ window.onload = function() {
                           y: recovered,
                       });
                       //new cases
-                      if(day["confirmed"] - previousDay["confirmed"] >= 0){  
-                        newcases["x"].push(moment(day["date"], 'YYYY-MM-DD'));
-                        newcases["y"].push(day["confirmed"] - previousDay["confirmed"] )
-                      }
+                      newcases.push({
+                          x: moment(day["date"], 'YYYY-MM-DD'),
+                          y: day["confirmed"] - previousDay["confirmed"],                        
+                      });                      
                   }
                   previousDay = day;
               }
@@ -730,9 +742,9 @@ window.onload = function() {
           ); //end foreach
          
 
-          drawRedChart(proCasesData, "total-cases-graph");
+          drawBlueChart(proCasesData, "total-cases-graph");
           drawGreenChart(proRecoveredData, "recovered-graph");
-          drawBlueChart(newcases);
+          drawRedChart(newcases, "new-cases-chart");
         
       }).catch(e => {
           console.log(e)
