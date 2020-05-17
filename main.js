@@ -657,7 +657,8 @@ function drawRedChart(processedData, ctxID) {
                 pointBorderColor: "darkred",
                 pointBackgroundColor: "lightpink",
                 pointHoverBackgroundColor: "lightpink",
-                pointHoverBorderColor: "darkred",               
+                pointHoverBorderColor: "darkred",
+                pointRadius: 4,               
                 pointHoverRadius: 7,
                 pointHoverBorderWidth: 3
             }]
