@@ -524,7 +524,8 @@ function drawBlueChart(processedData, ctxID) {
               pointBackgroundColor: "lightblue",
               pointHoverBackgroundColor: "lightblue",
               pointHoverBorderColor: "royalblue",
-              pointHoverRadius: 5,
+              pointRadius: 4,
+              pointHoverRadius: 7,
               pointHoverBorderWidth: 3
           }]
       },
@@ -592,7 +593,8 @@ function drawGreenChart(processedData, ctxID) {
               pointBackgroundColor: "greenyellow",
               pointHoverBackgroundColor: "greenyellow",
               pointHoverBorderColor: "green",
-              pointHoverRadius: 5,
+              pointRadius: 4,
+              pointHoverRadius: 7,
               pointHoverBorderWidth: 3
           }]
       },
