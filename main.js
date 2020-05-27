@@ -44,33 +44,18 @@ function updateData() {
         .catch(err => {
          console.error("Error fetching data from API.\n", err);
     });
-    // fetch india data
-    /*fetch("https://covid19.mathdro.id/api/countries/India")
-        .then(india => {
-            return india.json();
-        })
-        .then(data => {
-            document.getElementById("confirmedCases").innerHTML = data.confirmed.value;
-            document.getElementById("recoveredCases").innerHTML = data.recovered.value;
-            document.getElementById("deathCases").innerHTML = data.deaths.value;
-        })
-        .catch(err => {
-            console.error("Error fetching india data from API.\n", err);
-        });*/
-
+    // fetch india data    
         fetch("https://api.covid19india.org/data.json")
         .then(first => {
             return first.json();
         })
         .then(data => {
-            document.getElementById("conf1").innerHTML = data.statewise[0].deltaconfirmed;
-            document.getElementById("conf2").innerHTML = data.statewise[0].deltarecovered;
-            document.getElementById("conf3").innerHTML = data.statewise[0].deltadeaths;
             document.getElementById("confirmedCases").innerHTML = data.statewise[0].confirmed;
             document.getElementById("activeCases").innerHTML = data.statewise[0].active;
             document.getElementById("recoveredCases").innerHTML = data.statewise[0].recovered;
             document.getElementById("deathCases").innerHTML = data.statewise[0].deaths;
             document.getElementById("dailyCases").innerHTML = data.statewise[0].deltaconfirmed;
+            document.getElementById("dailyRecovered").innerHTML = data.statewise[0].deltarecovered;
             document.getElementById("dailyDeaths").innerHTML = data.statewise[0].deltadeaths;                       
         });
 

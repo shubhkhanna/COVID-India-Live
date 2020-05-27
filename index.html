@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
+        
 
         
         <title>COVID-19 Live</title>
@@ -81,74 +82,40 @@
                     Deaths: <span id="globalDeaths" class="pt-5 text-danger pr-2" style="font-weight: bold;"></span><br>
                 </p>
               </div>                            
-                <h2 class="text-center text-dark mt-2 pt-2 display-3">India </h2>
+                <br>
                 <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-sm mx-2 my-2">
-                            <div class="card text-center" style="color: #000; background-color: white;box-shadow: 0px 1px 2px ;border-radius: 10px;">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 my-1">
+                            <div class="card c1 bg-dark" style="min-height: 18em;border-radius: 10px;">
                                 <div class="card-body">
-                                    <div class="card-title" style="font-size: 1.5em; font-weight: bold;">Confirmed<i class="fas fa-arrow-up fa-xs text-danger px-1"></i><span id="conf1" class="text-light badge badge-success" style="font-size: 0.5em;"></span></div>
-                                    <p class="card-text"><span id="confirmedCases" class="pt-5 text-primary" style="font-size: 1.3em; font-weight: bold;letter-spacing: 0.5px;"></span></p>                                
+                                    <h2 class="text-center text-white" style="font-size: 2.5em;">India Cases </h2>
+                                    <p class="mx-4 text-primary" style="font-size: 1.3em;letter-spacing: 0.5px;">Confirmed: <span id="confirmedCases" class="float-right" style="font-size: 1.2em; letter-spacing: 0.5px;"></span></p>
+                                    <p class="mx-4 text-warning" style="font-size: 1.3em;letter-spacing: 0.5px;">Active: <span id="activeCases" class="float-right" style="font-size: 1.2em;letter-spacing: 0.5px;"></span></p>
+                                    <p class="mx-4 text-success" style="font-size: 1.3em;letter-spacing: 0.5px;">Recovered: <span id="recoveredCases" class="float-right" style="font-size: 1.2em;letter-spacing: 0.5px;"></span></p>
+                                    <p class="mx-4 text-danger" style="font-size: 1.3em;letter-spacing: 0.5px;">Deaths: <span id="deathCases" class="float-right" style="font-size: 1.2em; ;letter-spacing: 0.5px;"></span></p>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="col-sm mx-2 my-2">
-                            <div class="card text-center" style="color: #000; background-color: white;box-shadow: 0px 1px 2px ;border-radius: 10px;">
+                        <div class="col-lg-6 col-md-6 my-1">
+                            <div class="card c1 bg-dark" style="min-height: 18em;border-radius: 10px;">
                                 <div class="card-body">
-                                    <div class="card-title" style="font-size: 1.5em; font-weight: bold;">Recovered<i class="fas fa-arrow-up fa-xs text-danger px-1"></i><span id="conf2" class="text-light badge badge-primary" style="font-size: 0.5em;"></span></div>
-                                    <p class="card-text"><span id="recoveredCases" class="pt-5 text-success" style="font-size: 1.3em; font-weight: bold;letter-spacing: 0.5px;"></span></p>                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm mx-2 my-2">
-                            <div class="card text-center" style="color: #000; background-color: white;box-shadow: 0px 1px 2px ;border-radius: 10px;">
-                                <div class="card-body">                                    
-                                    <div class="card-title" style="font-size: 1.5em; font-weight: bold;">Deaths<i class="fas fa-arrow-up fa-xs text-danger px-1"></i><span id="conf3" class="text-light badge badge-danger" style="font-size: 0.5em;"></span></div>
-                                    <p class="card-text"><span id="deathCases" class="pt-5 text-danger" style="font-size: 1.3em; font-weight: bold;letter-spacing: 0.5px;"></span></p>                                    
+                                    <h2 class="text-center text-white" style="font-size: 2.5em;">India New Cases</h2>
+                                    <p class="mx-4 text-primary" style="font-size: 1.3em;letter-spacing: 0.5px;">New Confirmed: <span id="dailyCases" class="float-right" style="font-size: 1.2em; letter-spacing: 0.5px;"></span></p>
+                                    <p class="mx-4 text-success" style="font-size: 1.3em;letter-spacing: 0.5px;">New Recovered: <span id="dailyRecovered" class="float-right" style="font-size: 1.2em; letter-spacing: 0.5px;"></span></p>
+                                    <p class="mx-4 text-danger" style="font-size: 1.3em;letter-spacing: 0.5px;">New Deaths: <span id="dailyDeaths" class="float-right" style="font-size: 1.2em; letter-spacing: 0.5px;"></span></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                        <div class="container">
-                            <div class="row align-items-center">
-                                <div class="col-sm mx-2 my-2">
-                                    <div class="card text-center" style="color: #000; background-color: white;box-shadow: 0px 1px 2px ;border-radius: 10px;">
-                                        <div class="card-body">
-                                            <div class="card-title" style="font-size: 1.5em; font-weight: bold;">Active Cases<i class="fas fa-arrow-up fa-xs text-danger px-1"></i></div>
-                                            <p class="card-text"><span id="activeCases" class="pt-5 text-warning" style="font-size: 1.3em; font-weight: bold;letter-spacing: 0.5px;"></span></p>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm mx-2 my-2">
-                                    <div class="card  text-center" style="color: #000; background-color: white;box-shadow: 0px 1px 2px ;border-radius: 10px;">
-                                        <div class="card-body">
-                                            <div class="card-title" style="font-size: 1.5em; font-weight: bold;">Daily Cases<i class="fas fa-arrow-up fa-xs text-danger px-1"></i></div>
-                                            <p class="card-text"><span id="dailyCases" class="pt-5 text-info" style="font-size: 1.3em; font-weight: bold;letter-spacing: 0.5px;"></span></p>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm mx-2 my-2">
-                                    <div class="card text-center" style="color: #000; background-color: white;box-shadow: 0px 1px 2px ;border-radius: 10px;">
-                                        <div class="card-body">
-                                            <div class="card-title" style="font-size: 1.5em; font-weight: bold;">Daily Deaths<i class="fas fa-arrow-up fa-xs text-danger px-1"></i></div>
-                                            <p class="card-text"><span id="dailyDeaths" class="pt-5" style="font-size: 1.3em; font-weight: bold;letter-spacing: 0.5px; color: #f37735;"></span></p>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   
-                    <br>
+                    <p></p>
                     <div class="container-fluid">
                         <marquee behavior="scroll" direction="left" scrollamount="5" style="color: black;font-weight: bold; font-size: 20px;" onmouseover="javascript:stop()" onmouseout="javascript:start()">
                         <p style="text-align: justify;">Contact Details For INDIA : Helpline Number : +91-11-23978046 / Toll Free : 1075  ||  Helpline Email ID : ncov2019@gov.in </p>
                         </marquee>
                     </div>                    
-                    <h2 class="text-center mt-2 pt-1 display-3 text-dark">India Visuals</h2>
-                    <div class="text-center text-warning px-3" style="font-size: 1.3em;font-weight: bold;">Please hover on the points on the graph to see the values.</div>
+                    <h2 class="text-center mt-1 display-3 text-dark">India Visuals</h2>
+                    <div class="text-center text-danger px-3" style="font-size: 1.3em;font-weight: bold;">Please hover on the points on the graph to see the values.</div>
 
                     <br><br>
 

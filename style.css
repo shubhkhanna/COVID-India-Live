@@ -1,7 +1,7 @@
   
 html, body {
   font-family: "Poppins" !important;
-  background-color: #fff;
+  background-color: whitesmoke;
 }
 
 
@@ -72,4 +72,6 @@ canvas {
   padding: auto ;
 }
 
-
+.c1 {
+  border: 2px solid black;
+}
