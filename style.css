@@ -73,5 +73,5 @@ canvas {
 }
 
 .c1 {
-  border: 2px solid black;
+  box-shadow: 1px 1px 10px grey;
 }
