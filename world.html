@@ -15,13 +15,13 @@
         <link rel="stylesheet" href="style.css">
 
         <!-- Chrome, Firefox OS and Opera -->
-        <meta name="theme-color" content="#0097dc">
+        <meta name="theme-color" content="#292b2c">
         <!-- Windows Phone -->
-        <meta name="msapplication-navbutton-color" content="#0097dc">
+        <meta name="msapplication-navbutton-color" content="#292b2c">
         <!-- iOS Safari -->
-        <meta name="apple-mobile-web-app-status-bar-style" content="#0097dc">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#292b2c">
         
-        <title>COVID Country Wise Cases</title>
+        <title>COVID India Live-Countries Cases</title>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165420192-1"></script>
@@ -33,51 +33,43 @@
         </script>
 
     </head>
-    <body>
-        <div class="wrapper">
-          <nav id="sidebar" class="px-3 pt-5 pb-5" id="main-nav">
-            <ul class="nav flex-column">
-              <li class="nav-item mt-5">
-                  <a class="nav-link text-white" href="index.html">
-                    <i class="fas fa-home"></i> Home</a>
-              </li>  
-              <li class="nav-item mt-2">
-                  <a class="nav-link text-white" href="state.html">
-                    <i class="far fa-compass"></i> State Wise Cases</a>
-                </li>
-              <li class="nav-item my-2">
-                  <a class="nav-link text-white" href="center.html">
-                      <i class="fas fa-flask"></i> Test Centers</a>
+    <body data-spy="scroll" data-target="#main-nav" id="home">
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top" id="main-nav">
+        <div class="container">
+          <a href="index.html" class="navbar-brand ml-2"><span style="font-weight: lighter;color: red;">COVID</span> India Live</a>
+          <button class="navbar-toggler border-dark" data-toggle="collapse" data-target="#navbarCollapse" >
+            <span class="text-warning">Menu</span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
               </li>
-              <li class="nav-item my-2">
-                  <a class="nav-link text-white" href="zones.html">
-                      <i class="fas fa-skull"></i> District Zones</a>                    
+              <li class="nav-item">
+                <a href="state.html" class="nav-link">State Cases</a>
               </li>
-              <li class="nav-item my-2">
-                  <a class="nav-link text-white" href="world.html">
-                      <i class="fas fa-flag"></i> Country Wise Cases</a>                   
+              <li class="nav-item active">
+                <a href="world.html" class="nav-link">Countries Cases</a>
               </li>
-              <li class="nav-item my-2">
-                <a class="nav-link text-white" href="precaution.html">
-                  <i class="fas fa-notes-medical"></i> Precautions</a>
+              <li class="nav-item">
+                <a href="zones.html" class="nav-link">Zones</a>
               </li>
-               <li class="nav-item my-2">
-                <a class="nav-link text-white" href="health.html">
-                  <i class="fas fa-heartbeat"></i> Health Tips</a>
+              <li class="nav-item">
+                  <a href="center.html" class="nav-link">Test Centers</a>
               </li>
-              <li class="nav-item my-2">
-                  <a class="nav-link text-white" href="about.html">
-                      <i class="fas fa-question"></i> About</a>                    
+              <li class="nav-item">
+                  <a href="precaution.html" class="nav-link">Precautions</a>
               </li>
-           </ul>                      
-          </nav>
-            <div class="main-content" id="main-content">
-              <nav class="navbar fixed-top py-2" style="background-color: #0097dc;">                 
-                <button type="button" id="sidebarCollapse" class="btn" style="background-color: #0097dc;">
-                  <i class="fas fa-align-left icon-toggle fa-lg"></i>
-                </button>
-                <div class="navbar-brand mx-auto" style="font-size: 25px;letter-spacing: 2px;"><a href="index.html" class="text-white nav-link">COVID India Live</a></div>
-              </nav>
+              <li class="nav-item">
+                  <a href="health.html" class="nav-link">Health Tips</a>
+              </li>
+              <li class="nav-item">
+                  <a href="about.html" class="nav-link">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
               <h2 class="text-center text-dark mt-5 pt-5 mx-auto" style="font-size: 60px;">Country Wise Cases</h2>
               <div class="text-center">
                 <input id="myCountry" type="text" placeholder="   Search Your Country " class=" text-dark p-2 mt-4" style="box-shadow: 0px 2px 5px grey;border: 1px solid black;border-radius: 20px;">
@@ -100,8 +92,10 @@
                   </table>
                 </div>
               </div>
-            </div>
-        </div>
+              <footer class="bg-dark py-2">
+                <div class="footer-content text-center text-white">Designed & Developed by <a href="https://www.linkedin.com/in/shubhkhanna/" class="text-primary">Shubh Khanna</a></div>
+                <div class="footer-content text-center text-white ">Made For <span class="text-warning">India</div>
+            </footer>
         <script
         src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="

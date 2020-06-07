@@ -1,33 +1,18 @@
-function handleSidebarActiveClass() {
-    $("#sidebar").removeClass("active");
-  }
-  handleSidebarActiveClass();
-  // resize eventlistener
-  $(window).resize(() => {
-    handleSidebarActiveClass();
-  });
-  $(document).ready(function () {
-    $("#sidebarCollapse").on("click", function () {
-      $("#sidebar").toggleClass("active");
-    });
-  });
-
-
-//Smooth scrolling
-$("#main-content a").on('click', function (event) {
+// Smooth Scrolling
+$("#main-nav a").on('click', function (event) {
     if (this.hash !== "") {
-        event.preventDefault();
+      event.preventDefault();
 
-        const hash = this.hash;
+      const hash = this.hash;
 
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function () {
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
 
-          window.location.hash = hash;
-        });
+        window.location.hash = hash;
+      });
     }
-});
+  });
 
 
 function updateData() {
@@ -46,8 +31,8 @@ function updateData() {
     });
     // fetch india data    
         fetch("https://api.covid19india.org/data.json")
-        .then(first => {
-            return first.json();
+        .then(res => {
+            return res.json();
         })
         .then(data => {
             document.getElementById("confirmedCases").innerHTML = data.statewise[0].confirmed;

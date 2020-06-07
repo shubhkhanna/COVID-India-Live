@@ -1,77 +1,26 @@
-  
 html, body {
-  font-family: "Poppins" !important;
+  font-family: "Roboto" !important;
   background-color: whitesmoke;
 }
-
-
-/*For Sidebar*/
-.wrapper {
-  width: 100%;
-  display: flex;
+.navbar .nav-link {
+  font-size: 1.1em;
+  padding-left: 0.5rem !important;
+  padding-right: 10px !important;
 }
-.main-content {
-  width: 100%;
-  margin-left: 0px;
+.navbar .nav-item.active {
+  border-left: red 3px solid;
 }
-#sidebar {
-  width: 200px;
-  position: fixed;
-  top: 0px;
-  background: #0097dc;
-  z-index: 10;
-  height: 100vh;
-  margin-left: -200px;
-}
-
-.main-content,
-#sidebar {
-  transition:  0.2s ease-in;
-}   
-
-.icon-toggle {
-  color: #292b2c;
-  font-size: 20px;
-}
-
-#sidebar.active {
-  margin-left: 0px;
-}
-#sidebar.active ~ .main-content {
-  margin-left: 200px;
-}
-
-@media (min-width: 576px) {
-  #sidebar {
-    margin-left: -250px;
-  }
-  #sidebar.active {
-    width: 250px;
-    margin-left: 0px;
-  }
-  .main-content {
-    margin-left: 0;
-  }
-
-  #sidebar.active ~ .main-content {
-    margin-left: 250px;
-  }
-}
-
 i {
-    text-transform: uppercase;
-    margin-right: 2px;
+  text-transform: uppercase;
+  margin-right: 2px;
 }
-
 .badge {
-    font-size: medium;
+  font-size: medium;
 }
-
 canvas { 
   width: auto;
   padding: auto ;
 }
-
 .c1 {
   box-shadow: 1px 1px 10px grey;
 }

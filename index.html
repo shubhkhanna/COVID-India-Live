@@ -13,12 +13,12 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
         <!-- Chrome, Firefox OS and Opera -->
-        <meta name="theme-color" content="#0097dc">
+        <meta name="theme-color" content="#292b2c">
         <!-- Windows Phone -->
-        <meta name="msapplication-navbutton-color" content="#0097dc">
+        <meta name="msapplication-navbutton-color" content="#292b2c">
         <!-- iOS Safari -->
-        <meta name="apple-mobile-web-app-status-bar-style" content="#0097dc">        
-        <title>COVID India Live</title>
+        <meta name="apple-mobile-web-app-status-bar-style" content="#292b2c">        
+        <title>COVID India Live-Home</title>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165420192-1"></script>
         <script>
@@ -28,135 +28,121 @@
             gtag('config', 'UA-165420192-1');
         </script>
     </head>
-    <body>
-        <div class="wrapper">
-            <nav id="sidebar" class="px-3 pt-5 pb-5" id="main-nav">
-              <ul class="nav flex-column">
-                <li class="nav-item mt-5">
-                    <a class="nav-link text-white" href="index.html">
-                      <i class="fas fa-home"></i> Home</a>
-                </li>  
-                <li class="nav-item mt-2">
-                    <a class="nav-link text-white" href="state.html">
-                      <i class="far fa-compass"></i> State Wise Cases</a>
-                  </li>
-                <li class="nav-item my-2">
-                    <a class="nav-link text-white" href="center.html">
-                        <i class="fas fa-flask"></i> Test Centers</a>
+    <body data-spy="scroll" data-target="#main-nav" id="home">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top" id="main-nav">
+          <div class="container">
+            <a href="index.html" class="navbar-brand ml-2"><span style="font-weight: lighter;color: red;">COVID</span> India Live</a>
+            <button class="navbar-toggler border-dark" data-toggle="collapse" data-target="#navbarCollapse" >
+              <span class="text-warning">Menu</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a href="index.html" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item my-2">
-                    <a class="nav-link text-white" href="zones.html">
-                        <i class="fas fa-skull"></i> District Zones</a>                    
+                <li class="nav-item">
+                  <a href="state.html" class="nav-link">State Cases</a>
                 </li>
-                <li class="nav-item my-2">
-                    <a class="nav-link text-white" href="world.html">
-                        <i class="fas fa-flag"></i> Country Wise Cases</a>                   
+                <li class="nav-item">
+                  <a href="world.html" class="nav-link">Countries Cases</a>
                 </li>
-                <li class="nav-item my-2">
-                  <a class="nav-link text-white" href="precaution.html">
-                    <i class="fas fa-notes-medical"></i> Precautions</a>
+                <li class="nav-item">
+                  <a href="zones.html" class="nav-link">Zones</a>
                 </li>
-                 <li class="nav-item my-2">
-                  <a class="nav-link text-white" href="health.html">
-                    <i class="fas fa-heartbeat"></i> Health Tips</a>
+                <li class="nav-item">
+                    <a href="center.html" class="nav-link">Test Centers</a>
                 </li>
-                <li class="nav-item my-2">
-                    <a class="nav-link text-white" href="about.html">
-                        <i class="fas fa-question"></i> About</a>                    
+                <li class="nav-item">
+                    <a href="precaution.html" class="nav-link">Precautions</a>
                 </li>
-             </ul>                      
-            </nav>
-            <div class="main-content" id="main-content">
-              <nav class="navbar fixed-top py-2" style="background-color: #0097dc;">                 
-                <button type="button" id="sidebarCollapse" class="btn" style="background-color:#0097dc;">
-                  <i class="fas fa-align-left icon-toggle fa-lg"></i>
-                </button>
-                <div class="navbar-brand mx-auto" style="font-size: 25px;letter-spacing: 2px;"><a href="index.html" class="text-white nav-link">COVID India Live</a></div>
-              </nav>
-              <div class="container-fluid bg-dark mt-5 pt-5 pb-2 px-2 h-auto" >
-                <p class="text-white text-center " style="font-size: 1.0em;letter-spacing: 1px;">
-                    <span class="pr-2">Worldwide : </span>    
-                    Confirmed: <span id="globalCases" class="pt-5 text-primary pr-2" style="font-weight: bold;">...</span><br>                    
-                    Recovered: <span id="globalRecovered" class="pt-5 text-success pr-2" style="font-weight: bold;">...</span>
-                    Deaths: <span id="globalDeaths" class="pt-5 text-danger pr-2" style="font-weight: bold;">...</span><br>
-                </p>
-              </div>                            
-                <br>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 my-1">
-                            <div class="card c1 bg-dark" style="min-height: 18em;border-radius: 15px;">
-                                <div class="card-body">
-                                    <h2 class="text-center text-white" style="font-size: 2.0em;font-weight: lighter;">India Cases </h2>
-                                    <p class="mx-4 text-primary" style="font-size: 1.3em;">Confirmed: <span id="confirmedCases" class="float-right" style="font-weight: bold;">...</span></p>
-                                    <p class="mx-4 text-warning" style="font-size: 1.3em;">Active: <span id="activeCases" class="float-right" style="font-weight: bold;">...</span></p>
-                                    <p class="mx-4 text-success" style="font-size: 1.3em;">Recovered: <span id="recoveredCases" class="float-right" style="font-weight: bold;">...</span></p>
-                                    <p class="mx-4 text-danger" style="font-size: 1.3em;">Deaths: <span id="deathCases" class="float-right" style="font-weight: bold;">...</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 my-1">
-                            <div class="card c1 bg-dark" style="min-height: 18em;border-radius: 15px;">
-                                <div class="card-body">
-                                    <h2 class="text-center text-white" style="font-size: 2.0em; font-weight: lighter;">India New Cases</h2>
-                                    <p class="mx-4 text-primary" style="font-size: 1.3em;">New Confirmed: <span id="dailyCases" class="float-right" style="font-weight: bold;">...</span></p>
-                                    <p class="mx-4 text-success" style="font-size: 1.3em;">New Recovered: <span id="dailyRecovered" class="float-right" style="font-weight: bold;">...</span></p>
-                                    <p class="mx-4 text-danger" style="font-size: 1.3em;">New Deaths: <span id="dailyDeaths" class="float-right" style="font-weight: bold;">...</span></p>
-                                </div>
-                            </div>
+                <li class="nav-item">
+                    <a href="health.html" class="nav-link">Health Tips</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="container-fluid bg-dark mt-5 pt-5 pb-2 px-2 h-auto" >
+        <p class="text-white text-center " style="font-size: 1.0em;letter-spacing: 1px;">
+            <span class="pr-2">Worldwide : </span>    
+            Confirmed: <span id="globalCases" class="pt-5 text-primary pr-2" style="font-weight: bold;">...</span><br>                    
+            Recovered: <span id="globalRecovered" class="pt-5 text-success pr-2" style="font-weight: bold;">...</span>
+            Deaths: <span id="globalDeaths" class="pt-5 text-danger pr-2" style="font-weight: bold;">...</span><br>
+        </p>
+        </div>                            
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 my-1">
+                    <div class="card c1 bg-dark" style="min-height: 18em;border-radius: 15px;">
+                        <div class="card-body">
+                            <h2 class="text-center text-white" style="font-size: 2.0em;font-weight: lighter;">India Cases </h2>
+                            <p class="mx-4 text-primary" style="font-size: 1.3em;">Confirmed: <span id="confirmedCases" class="float-right" style="font-weight: bold;">...</span></p>
+                            <p class="mx-4 text-warning" style="font-size: 1.3em;">Active: <span id="activeCases" class="float-right" style="font-weight: bold;">...</span></p>
+                            <p class="mx-4 text-success" style="font-size: 1.3em;">Recovered: <span id="recoveredCases" class="float-right" style="font-weight: bold;">...</span></p>
+                            <p class="mx-4 text-danger" style="font-size: 1.3em;">Deaths: <span id="deathCases" class="float-right" style="font-weight: bold;">...</span></p>
                         </div>
                     </div>
                 </div>
-                    <p></p>
-                    <div class="container-fluid">
-                        <marquee behavior="scroll" direction="left" scrollamount="5" style="color: black;font-weight: bold; font-size: 20px;" onmouseover="javascript:stop()" onmouseout="javascript:start()">
-                        <p style="text-align: justify;">Contact Details For INDIA : Helpline Number : +91-11-23978046 / Toll Free : 1075  ||  Helpline Email ID : ncov2019@gov.in </p>
-                        </marquee>
-                    </div>                    
-                    <h2 class="text-center mt-1 display-3 text-dark">India Visuals</h2>
-                    <div class="text-center text-danger px-3" style="font-size: 1.3em;font-weight: bold;">Please hover on the points on the graph to see the values.</div>
-
-                    <br><br>
-
-                    <!--graph-->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card bg-dark mb-2" style="box-shadow: 0px 1px 2px;">
-                                    <div class="card-body">
-                                        <p class="card-text text-white text-center">TOTAL CASES<i class="fas fa-arrow-up fa-xs text-danger px-2"></i></p>
-                                        <canvas id="total-cases-graph" width="200" height="200" style=" padding: 0px 0px 0.5px 0px;"></canvas>
-                                    </div>
-                                </div>                    
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card bg-dark mb-2" style="box-shadow: 0px 1px 2px;">
-                                    <div class="card-body">
-                                        <p class="card-text text-white text-center">RECOVERED<i class="fas fa-arrow-up fa-xs text-danger px-2"></i></p>
-                                        <canvas id="recovered-graph" width="200" height="200" style="padding: 0px 0px 0.5px 0px;"></canvas>
-                                    </div>
-                                </div>                    
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card bg-dark" style="box-shadow: 0px 1px 2px;">
-                                    <div class="card-body">
-                                        <p class="card-text text-white text-center">DAILY NEW CASES<i class="fas fa-arrow-up fa-xs text-danger px-2"></i></p>
-                                        <canvas id="new-cases-chart" width="200" height="200" style="padding: 0px 0px 0.5px 0px;"></canvas>
-                                    </div>
-                                </div>                    
-                            </div>
+                <div class="col-lg-6 col-md-6 my-1">
+                    <div class="card c1 bg-dark" style="min-height: 18em;border-radius: 15px;">
+                        <div class="card-body">
+                            <h2 class="text-center text-white" style="font-size: 2.0em; font-weight: lighter;">India New Cases</h2>
+                            <p class="mx-4 text-primary" style="font-size: 1.3em;">New Confirmed: <span id="dailyCases" class="float-right" style="font-weight: bold;">...</span></p>
+                            <p class="mx-4 text-success" style="font-size: 1.3em;">New Recovered: <span id="dailyRecovered" class="float-right" style="font-weight: bold;">...</span></p>
+                            <p class="mx-4 text-danger" style="font-size: 1.3em;">New Deaths: <span id="dailyDeaths" class="float-right" style="font-weight: bold;">...</span></p>
                         </div>
                     </div>
-                    <br>                                                                                           
-                    <footer>
-                        <hr style="width: 80%; border: 1px dashed red">
-                        <div class="footer-content text-center text-dark pb-3" style="min-height: 40px; font-weight: bold;">
-                            Designed & Developed by <a href="https://www.linkedin.com/in/shubh-khanna-2b6986191/" class="text-dark">Shubh Khanna.</a>
-                        </div>
-                    </footer>
+                </div>
             </div>
         </div>
-        
+        <p></p>
+        <div class="container-fluid">
+            <marquee behavior="scroll" direction="left" scrollamount="5" style="color: black;font-size: 1.5em;" onmouseover="javascript:stop()" onmouseout="javascript:start()">
+                <p class="pt-2" style="font-weight:bold;"><span class="text-danger">Contact Details For INDIA :</span> Helpline Number : +91-11-23978046 / Toll Free : 1075  ||  Helpline Email ID : ncov2019@gov.in </p>
+            </marquee>
+        </div>
+        <section>                    
+            <h2 class="text-center pt-4 display-3 text-dark">India Visuals</h2>
+            <div class="text-center text-danger px-3" style="font-size: 1.3em;font-weight: bold;">Please hover on the points on the graph to see the values.</div>
+            <br>
+            <!--graph-->
+            <div class="container pb-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card bg-dark mb-2" style="box-shadow: 0px 1px 2px;">
+                            <div class="card-body">
+                                <p class="card-text text-white text-center">TOTAL CASES<i class="fas fa-arrow-up fa-xs text-danger px-2"></i></p>
+                                <canvas id="total-cases-graph" width="200" height="200" style=" padding: 0px 0px 0.5px 0px;"></canvas>
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card bg-dark mb-2" style="box-shadow: 0px 1px 2px;">
+                            <div class="card-body">
+                                <p class="card-text text-white text-center">RECOVERED<i class="fas fa-arrow-up fa-xs text-danger px-2"></i></p>
+                                <canvas id="recovered-graph" width="200" height="200" style="padding: 0px 0px 0.5px 0px;"></canvas>
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card bg-dark" style="box-shadow: 0px 1px 2px;">
+                            <div class="card-body">
+                                <p class="card-text text-white text-center">DAILY NEW CASES<i class="fas fa-arrow-up fa-xs text-danger px-2"></i></p>
+                                <canvas id="new-cases-chart" width="200" height="200" style="padding: 0px 0px 0.5px 0px;"></canvas>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </section>                                                                                           
+        <footer class="bg-dark py-2">
+            <div class="footer-content text-center text-white">Designed & Developed by <a href="https://www.linkedin.com/in/shubhkhanna/" class="text-primary">Shubh Khanna</a></div>
+            <div class="footer-content text-center text-white ">Made For <span class="text-warning">India</div>
+        </footer>        
         <script
         src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
