@@ -2,6 +2,9 @@ html, body {
   font-family: "Roboto" !important;
   background-color: whitesmoke;
 }
+.navbar {
+  box-shadow: 0px 1px 2px #292b2c;
+}
 .navbar .nav-link {
   font-size: 1.1em;
   padding-left: 0.5rem !important;
