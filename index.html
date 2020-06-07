@@ -19,6 +19,7 @@
         <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#292b2c">        
         <title>COVID India Live-Home</title>
+        
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165420192-1"></script>
         <script>
@@ -27,6 +28,35 @@
             gtag('js', new Date());
             gtag('config', 'UA-165420192-1');
         </script>
+        <script>
+            //some default pre init
+            var PB = PB || {};PB.q = PB.q || [];PB.events = PB.events || [];
+            
+            //PushBots ApplicationId (required)
+            PB.app_id = "5edd493c81db327bc621a7a5";
+            //Your domain name, must be HTTPS or localhost  (required)
+            PB.domain = "https://covidindialive.netlify.app";
+            //Update and uncomment it if you are using custom safari certificate for your app
+            PB.safari_push_id = "web.com.pushbots.safaripush";
+            //****************************************
+            
+            PB.logging_enabled = true;
+            PB.auto_subscribe = true;
+            
+            //Custom worker and manifest URL
+            //PB.worker_url = PB.domain + "/pushbots-worker.js";
+            
+            //Welcome notification message
+            PB.welcome = {title:"Welcome ",message:"Thanks for subscribing!", url :PB.domain};
+            
+            function sendNotification(){
+                  PB.register();
+                  PB.q.push(["sendNotification", {title:"Hey ",message:"Why not?", url :"https://covidindialive.netlify.app"}]);
+            }
+            
+            </script>
+            
+            <script src="//cdn.pushbots.com/js/sdk.min.js" type="text/javascript" onload="PB.init()" async></script>
     </head>
     <body data-spy="scroll" data-target="#main-nav" id="home">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top" id="main-nav">
@@ -155,6 +185,7 @@
         crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-        <script src="/main.js"></script> 
+        <script src="/main.js"></script>
+         
     </body>
 </html>
