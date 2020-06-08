@@ -1,4 +1,4 @@
-# COVID-19 India Live
+# COVID India Live
 
 **Website Live since 03 May, 2020**
 
