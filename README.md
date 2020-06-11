@@ -3,4 +3,6 @@
 
 **Website Live since 04 May, 2020**
 
-![COVID India Live](https://github.com/shubhkhanna/COVID-19-India-Live/blob/master/logo.png)
+* Tracking COVID-19 cases across the globe.
+
+![COVID India Live](https://github.com/shubhkhanna/COVID-19-India-Live/blob/master/images/favicon.ico)
