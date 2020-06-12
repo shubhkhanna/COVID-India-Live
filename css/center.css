@@ -1,35 +1,37 @@
-html, body {
-    font-family: "Roboto" !important;
-    background-color: whitesmoke;
-  }
-  .navbar {
-    box-shadow: 0px 1px 2px #292b2c;
-  }
-  .navbar .nav-link {
-    font-size: 1.1em;
-    padding-left: 0.5rem !important;
-    padding-right: 10px !important;
-  }
-  .navbar .nav-item.active {
-    border-left: red 3px solid;
-  }      
-  i {
-      text-transform: uppercase;
-      margin-right: 2px;
-  }
+html,
+body {
+  font-family: "Roboto" !important;
+  background-color: whitesmoke;
+}
+.navbar {
+  box-shadow: 0px 1px 2px #292b2c;
+}
+.navbar .nav-link {
+  font-size: 1.1em;
+  padding-left: 0.5rem !important;
+  padding-right: 10px !important;
+}
+.navbar .nav-item.active {
+  border-left: red 3px solid;
+}
+i {
+  text-transform: uppercase;
+  margin-right: 2px;
+}
 
-  .equal .card, .equal .counter-box {
-    height: 100%;
+.equal .card,
+.equal .counter-box {
+  height: 100%;
 }
 .equal {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .card {
   border-radius: 10px;
-    border: 1px solid black;
-    box-shadow: 0 1px 2px;
+  border: 1px solid black;
+  box-shadow: 0 1px 2px;
 }
 .badge {
-    border-radius: 15px;
+  border-radius: 15px;
 }

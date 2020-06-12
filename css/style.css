@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   font-family: "Roboto" !important;
   background-color: whitesmoke;
 }
@@ -20,9 +21,9 @@ i {
 .badge {
   font-size: medium;
 }
-canvas { 
+canvas {
   width: auto;
-  padding: auto ;
+  padding: auto;
 }
 .c1 {
   box-shadow: 1px 1px 8px lightgrey;
