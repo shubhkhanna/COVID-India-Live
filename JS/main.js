@@ -596,7 +596,7 @@ function drawBlueChart(processedData, ctxID) {
       type: "line",
       data: {
           datasets: [{
-              label: "Total Cases",
+              label: "Confirmed Cases",
               data: processedData,
               fill: true,
               backgroundColor: gradientFill,
@@ -720,88 +720,13 @@ function drawGreenChart(processedData, ctxID) {
   window.myLine = new Chart(ctx, config);
 } //end function
 
-
-function drawRedChart(processedData, ctxID) {
-    var timeFormat = "YYYY-MM-DD";
-    //canvas
-    var ctx = document.getElementById(ctxID).getContext("2d");
-    //gradient
-    var gradientFill = ctx.createLinearGradient(0, 0, 0, 350);
-  
-    var config = {
-        type: "line",
-        data: {
-            datasets: [{
-                label: "Daily Cases",
-                data: processedData,
-                fill: true,
-                backgroundColor: gradientFill,
-                borderColor: "darkred",
-                pointBorderColor: "red",
-                pointBackgroundColor: "lightpink",
-                pointHoverBackgroundColor: "lightpink",
-                pointHoverBorderColor: "red",
-                pointRadius: 4,               
-                pointHoverRadius: 7,
-                pointHoverBorderWidth: 3
-            }]
-        },
-        options: {
-            legend: {
-                display: true
-            },
-            elements: {
-                line: {
-                    tension: 0
-                }
-            },
-            responsive: true,
-            maintainAspectRatio: true,
-            title: {
-                display: false
-            },
-            scales: {
-                xAxes: [{
-                    type: "time",
-                    time: {
-                        displayFormats: {
-                            day: 'MMM D'
-                        },
-                        tooltipFormat: 'll'
-                    },
-                    scaleLabel: {
-                        display: true,
-                        labelString: "Date"
-                    }
-                }],
-                yAxes: [{
-                    scaleLabel: {
-                        display: true,
-                        labelString: "Cases"
-                    }
-                }]
-            }
-        }
-    };
-  
-    window.myLine = new Chart(ctx, config);
-  } //end funcntion
-
 window.onload = function() {
   var proCasesData = [];
   var proRecoveredData = [];
-  var previousDay = {};
-  var newcases = []
   fetch("https://pomber.github.io/covid19/timeseries.json")
       .then(response => response.json())
       .then(data => {
           data["India"].forEach(day => {
-                  if (previousDay["recovered"] >= day["recovered"]) {
-                      recovered = previousDay["recovered"];
-                  } else {
-                      recovered = day["recovered"];
-                  }
-                  //temporary variable
                   d2 = moment(day["date"], 'YYYY-MM-DD');
                   if (d2.isAfter("2020-1-29")) {
                       //total cases
@@ -813,23 +738,13 @@ window.onload = function() {
                       proRecoveredData.push({
                           x: moment(day["date"], 'YYYY-MM-DD'),
                           y: recovered,
-                      });
-                      //new cases
-                      newcases.push({
-                          x: moment(day["date"], 'YYYY-MM-DD'),
-                          y: day["confirmed"] - previousDay["confirmed"],                        
                       });                      
                   }
-                  previousDay = day;
               }
 
-          ); //end foreach
-         
-
+          ); //end foreach         
           drawBlueChart(proCasesData, "total-cases-graph");
           drawGreenChart(proRecoveredData, "recovered-graph");
-          drawRedChart(newcases, "new-cases-chart");
-        
       }).catch(e => {
           console.log(e)
       });
