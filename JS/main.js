@@ -719,7 +719,74 @@ function drawGreenChart(processedData, ctxID) {
 
   window.myLine = new Chart(ctx, config);
 } //end function
-
+///////
+function drawRedChart(processedData, ctxID) {
+    var timeFormat = "YYYY-MM-DD";
+    //canvas
+    var ctx = document.getElementById(ctxID).getContext("2d");
+  
+    //gradient
+    var gradientFill = ctx.createLinearGradient(0, 0, 220, 0);
+    
+  
+    var config = {
+        type: "line",
+        data: {
+            datasets: [{
+                label: "Death Cases",
+                data: processedData,
+                fill: true,
+                backgroundColor: gradientFill,
+                borderColor: "green",
+                pointBorderColor: "green",
+                pointBackgroundColor: "greenyellow",
+                pointHoverBackgroundColor: "greenyellow",
+                pointHoverBorderColor: "green",
+                pointRadius: 4,
+                pointHoverRadius: 7,
+                pointHoverBorderWidth: 3
+            }]
+        },
+        options: {
+            legend: {
+                display: true
+            },
+            elements: {
+                line: {
+                    tension: 0
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: true,
+            title: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                    type: "time",
+                    time: {
+                        displayFormats: {
+                            day: 'MMM D'
+                        },                        
+                        tooltipFormat: "ll"
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: "Date"
+                    }
+                }],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: "Cases"
+                    }
+                }]
+            }
+        }
+    };
+  
+    window.myLine = new Chart(ctx, config);
+}
 
 window.onload = function() {
   var proCasesData = [];
@@ -748,7 +815,10 @@ window.onload = function() {
                           x: moment(day["date"], 'YYYY-MM-DD'),
                           y: recovered,
                       });
-                                           
+                      newcases.push({
+                        x: moment(day["date"], 'YYYY-MM-DD'),
+                        y: deaths,
+                    });                  
                   }
                   previousDay = day;
               }
@@ -758,7 +828,7 @@ window.onload = function() {
 
           drawBlueChart(proCasesData, "total-cases-graph");
           drawGreenChart(proRecoveredData, "recovered-graph");
-          
+          drawRedChart(newcases, "deaths-graph");
         
       }).catch(e => {
           console.log(e)
