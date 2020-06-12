@@ -719,7 +719,7 @@ function drawGreenChart(processedData, ctxID) {
 
   window.myLine = new Chart(ctx, config);
 } //end function
-///////
+//death graph
 function drawRedChart(processedData, ctxID) {
     var timeFormat = "YYYY-MM-DD";
     //canvas
@@ -737,11 +737,11 @@ function drawRedChart(processedData, ctxID) {
                 data: processedData,
                 fill: true,
                 backgroundColor: gradientFill,
-                borderColor: "green",
-                pointBorderColor: "green",
-                pointBackgroundColor: "greenyellow",
-                pointHoverBackgroundColor: "greenyellow",
-                pointHoverBorderColor: "green",
+                borderColor: "darkred",
+                pointBorderColor: "red",
+                pointBackgroundColor: "lightpink",
+                pointHoverBackgroundColor: "lightpink",
+                pointHoverBorderColor: "red",
                 pointRadius: 4,
                 pointHoverRadius: 7,
                 pointHoverBorderWidth: 3
@@ -822,18 +822,13 @@ window.onload = function() {
                   }
                   previousDay = day;
               }
-
-          ); //end foreach
-         
-
-          drawBlueChart(proCasesData, "total-cases-graph");
+          ); //end foreach         
+          drawBlueChart(proCasesData, "confirm-graph");
           drawGreenChart(proRecoveredData, "recovered-graph");
-          drawRedChart(newcases, "death-graph");
-        
+          drawRedChart(newcases, "death-graph");        
       }).catch(e => {
           console.log(e)
       });
-
 };
 
 //For Zone Table Search
