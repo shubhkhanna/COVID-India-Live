@@ -817,7 +817,7 @@ window.onload = function() {
                       });
                       newcases.push({
                         x: moment(day["date"], 'YYYY-MM-DD'),
-                        y: deaths,
+                        y: day["deaths"],
                     });                  
                   }
                   previousDay = day;
@@ -828,7 +828,7 @@ window.onload = function() {
 
           drawBlueChart(proCasesData, "total-cases-graph");
           drawGreenChart(proRecoveredData, "recovered-graph");
-          drawRedChart(newcases, "deaths-graph");
+          drawRedChart(newcases, "death-graph");
         
       }).catch(e => {
           console.log(e)
