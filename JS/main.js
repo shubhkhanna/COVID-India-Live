@@ -720,13 +720,22 @@ function drawGreenChart(processedData, ctxID) {
   window.myLine = new Chart(ctx, config);
 } //end function
 
+
 window.onload = function() {
   var proCasesData = [];
   var proRecoveredData = [];
+  var previousDay = {};
+  var newcases = [];
   fetch("https://pomber.github.io/covid19/timeseries.json")
       .then(response => response.json())
       .then(data => {
           data["India"].forEach(day => {
+                  if (previousDay["recovered"] >= day["recovered"]) {
+                     recovered = previousDay["recovered"];
+                  } else {
+                      recovered = day["recovered"];
+                  }
+                  //temporary variable
                   d2 = moment(day["date"], 'YYYY-MM-DD');
                   if (d2.isAfter("2020-1-29")) {
                       //total cases
@@ -738,13 +747,19 @@ window.onload = function() {
                       proRecoveredData.push({
                           x: moment(day["date"], 'YYYY-MM-DD'),
                           y: recovered,
-                      });                      
+                      });
+                                           
                   }
+                  previousDay = day;
               }
 
-          ); //end foreach         
+          ); //end foreach
+         
+
           drawBlueChart(proCasesData, "total-cases-graph");
           drawGreenChart(proRecoveredData, "recovered-graph");
+          
+        
       }).catch(e => {
           console.log(e)
       });
