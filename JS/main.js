@@ -792,7 +792,6 @@ function drawBlueChart(processedData, ctxID) {
         display: true,
         labels: {
           fontColor: "lightblue",
-          fontSize: 15,
         },
       },
       elements: {
@@ -870,7 +869,7 @@ function drawGreenChart(processedData, ctxID) {
         display: true,
         labels: {
           fontColor: "greenyellow",
-          fontSize: 15,
+          fontSize: 16,
         },
       },
       elements: {
@@ -947,7 +946,7 @@ function drawRedChart(processedData, ctxID) {
         display: true,
         labels: {
           fontColor: "red",
-          fontSize: 15,
+        },
       },
       elements: {
         line: {
