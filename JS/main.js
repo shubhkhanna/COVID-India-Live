@@ -825,6 +825,9 @@ function drawBlueChart(processedData, ctxID) {
               fontColor: "#fff",
               fontSize: 10,
             },
+            gridLines: {
+              color: "rgba(173,216,230 ,1 )",
+            },
           },
         ],
         yAxes: [
@@ -838,6 +841,9 @@ function drawBlueChart(processedData, ctxID) {
             ticks: {
               fontColor: "#fff",
               fontSize: 14,
+            },
+            gridLines: {
+              color: "rgba(173,216,230 ,1 )",
             },
           },
         ],
@@ -915,6 +921,9 @@ function drawGreenChart(processedData, ctxID) {
               fontColor: "#fff",
               fontSize: 10,
             },
+            gridLines: {
+              color: "rgba(173,216,230 ,1 )",
+            },
           },
         ],
         yAxes: [
@@ -928,6 +937,9 @@ function drawGreenChart(processedData, ctxID) {
             ticks: {
               fontColor: "#fff",
               fontSize: 14,
+            },
+            gridLines: {
+              color: "rgba(173,216,230 ,1 )",
             },
           },
         ],
@@ -1004,6 +1016,9 @@ function drawRedChart(processedData, ctxID) {
               fontColor: "#fff",
               fontSize: 10,
             },
+            gridLines: {
+              color: "rgba(173,216,230 ,1 )",
+            },
           },
         ],
         yAxes: [
@@ -1017,6 +1032,9 @@ function drawRedChart(processedData, ctxID) {
             ticks: {
               fontColor: "#fff",
               fontSize: 14,
+            },
+            gridLines: {
+              color: "rgba(173,216,230 ,1 )",
             },
           },
         ],
