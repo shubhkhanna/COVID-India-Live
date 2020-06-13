@@ -818,6 +818,12 @@ function drawBlueChart(processedData, ctxID) {
             scaleLabel: {
               display: true,
               labelString: "Date",
+              fontColor: "#ADDFFF",
+              fontSize: 12,
+            },
+            ticks: {
+              fontColor: "#fff",
+              fontSize: 14,
             },
           },
         ],
@@ -826,6 +832,8 @@ function drawBlueChart(processedData, ctxID) {
             scaleLabel: {
               display: true,
               labelString: "Cases",
+              fontColor: "#ADDFFF",
+              fontSize: 12,
             },
             ticks: {
               fontColor: "#fff",
@@ -900,6 +908,12 @@ function drawGreenChart(processedData, ctxID) {
             scaleLabel: {
               display: true,
               labelString: "Date",
+              fontColor: "#52D017",
+              fontSize: 12,
+            },
+            ticks: {
+              fontColor: "#fff",
+              fontSize: 14,
             },
           },
         ],
@@ -908,6 +922,12 @@ function drawGreenChart(processedData, ctxID) {
             scaleLabel: {
               display: true,
               labelString: "Cases",
+              fontColor: "#52D017",
+              fontSize: 12,
+            },
+            ticks: {
+              fontColor: "#fff",
+              fontSize: 14,
             },
           },
         ],
@@ -977,6 +997,12 @@ function drawRedChart(processedData, ctxID) {
             scaleLabel: {
               display: true,
               labelString: "Date",
+              fontColor: "#FF0000",
+              fontSize: 12,
+            },
+            ticks: {
+              fontColor: "#fff",
+              fontSize: 14,
             },
           },
         ],
@@ -985,6 +1011,12 @@ function drawRedChart(processedData, ctxID) {
             scaleLabel: {
               display: true,
               labelString: "Cases",
+              fontColor: "#FF0000",
+              fontSize: 12,
+            },
+            ticks: {
+              fontColor: "#fff",
+              fontSize: 14,
             },
           },
         ],
