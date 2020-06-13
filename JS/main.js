@@ -790,6 +790,9 @@ function drawBlueChart(processedData, ctxID) {
     options: {
       legend: {
         display: true,
+        labels: {
+          fontColor: "#f00",
+        },
       },
       elements: {
         line: {
