@@ -946,6 +946,7 @@ function drawRedChart(processedData, ctxID) {
         display: true,
         labels: {
           fontColor: "red",
+          fontSize: 15,
         },
       },
       elements: {
