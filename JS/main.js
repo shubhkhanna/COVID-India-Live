@@ -791,7 +791,7 @@ function drawBlueChart(processedData, ctxID) {
       legend: {
         display: true,
         labels: {
-          fontColor: "blue",
+          fontColor: "lightblue",
         },
       },
       elements: {
