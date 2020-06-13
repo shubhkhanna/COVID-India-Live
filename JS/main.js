@@ -869,6 +869,7 @@ function drawGreenChart(processedData, ctxID) {
         display: true,
         labels: {
           fontColor: "greenyellow",
+          fontSize: 16,
         },
       },
       elements: {
