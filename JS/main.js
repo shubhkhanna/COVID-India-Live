@@ -827,6 +827,10 @@ function drawBlueChart(processedData, ctxID) {
               display: true,
               labelString: "Cases",
             },
+            ticks: {
+              fontColor: "#fff",
+              fontSize: 14,
+            },
           },
         ],
       },
