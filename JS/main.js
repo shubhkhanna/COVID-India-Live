@@ -868,7 +868,7 @@ function drawGreenChart(processedData, ctxID) {
       legend: {
         display: true,
         labels: {
-          fontColor: "green",
+          fontColor: "greenyellow",
         },
       },
       elements: {
