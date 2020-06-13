@@ -823,7 +823,7 @@ function drawBlueChart(processedData, ctxID) {
             },
             ticks: {
               fontColor: "#fff",
-              fontSize: 12,
+              fontSize: 10,
             },
           },
         ],
@@ -913,7 +913,7 @@ function drawGreenChart(processedData, ctxID) {
             },
             ticks: {
               fontColor: "#fff",
-              fontSize: 12,
+              fontSize: 10,
             },
           },
         ],
@@ -1002,7 +1002,7 @@ function drawRedChart(processedData, ctxID) {
             },
             ticks: {
               fontColor: "#fff",
-              fontSize: 12,
+              fontSize: 10,
             },
           },
         ],
