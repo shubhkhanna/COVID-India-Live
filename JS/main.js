@@ -1,3 +1,5 @@
+console.log(window.matchMedia("(prefers-color-scheme: dark)").matches)
+
 // Smooth Scrolling
 $("#main-nav a").on("click", function (event) {
   if (this.hash !== "") {

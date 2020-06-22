@@ -18,7 +18,9 @@ i {
   text-transform: uppercase;
   margin-right: 2px;
 }
-
+.scheme {
+  color: #292b2c;
+}
 .equal .card,
 .equal .counter-box {
   height: 100%;
@@ -28,10 +30,26 @@ i {
   flex-wrap: wrap;
 }
 .card {
+  background-color: white;
+  border-color: #292b2c;
   border-radius: 10px;
-  border: 1px solid black;
-  box-shadow: 0 1px 2px;
+  box-shadow: 0px 0px 3px #292b2c;
 }
 .badge {
   border-radius: 15px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #292b2c;
+  }
+  .scheme {
+    color: white;
+  }
+  .card {
+    background-color: #292b2c;
+    border-color: white;
+    box-shadow: 0px 0px 3px whitesmoke;
+    border-radius: 10px;
+  }
 }

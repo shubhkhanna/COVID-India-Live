@@ -4,7 +4,7 @@ body {
   background-color: whitesmoke;
 }
 .navbar {
-  box-shadow: 0px 1px 2px #292b2c;
+  box-shadow: 0px 2px 5px #292b2c;
 }
 .navbar .nav-link {
   font-size: 1.1em;
@@ -25,6 +25,45 @@ canvas {
   width: auto;
   padding: auto;
 }
+.scheme {
+  color: #292b2c;
+}
+.abt {
+  background-color: white;
+  border-color: #292b2c;
+  box-shadow: 0px 0px 5px #292b2c;
+  border-radius: 10px;
+}
+.pre {
+  background-color: white;
+  border-color: #292b2c;
+  box-shadow: 0px 0px 10px #292b2c;
+  border-radius: 10px;
+}
 .c1 {
   box-shadow: 1px 1px 8px lightgrey;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #292b2c;
+  }
+  .c1 {
+    box-shadow: 0px 0px 6px whitesmoke;
+  }
+  .scheme {
+    color: white;
+  }
+  .abt {
+    background-color: #292b2c;
+    border-color: white;
+    box-shadow: 0px 0px 5px whitesmoke;
+    border-radius: 10px;
+  }
+  .pre {
+    background-color:#292b2c;
+    border-color: white;
+    box-shadow: 0px 0px 5px whitesmoke;
+    border-radius: 10px;
+  }
 }

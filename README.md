@@ -5,5 +5,6 @@
 **Website Live since 04 May, 2020**
 
 - Tracking COVID-19 cases across the globe.
+- Implemented Dark Mode which changes according to your device color scheme.
 
 ![GitHub followers](https://img.shields.io/github/followers/shubhkhanna?label=Follow&style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/khannashubh04?style=social)
