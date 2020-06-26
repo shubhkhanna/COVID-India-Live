@@ -1144,3 +1144,19 @@ function drawRow(rowData) {
   row.append($("<td>" + rowData.recovered + "</td>"));
   row.append($("<td>" + rowData.deaths + "</td>"));
 }
+
+
+$(function() {
+  $("#zoneTab td ").each(function() {
+    if ($(this).text() == 'Red') {
+      $(this).css('background-color', 'red');
+    }
+    if ($(this).text() == 'Orange') {
+      $(this).css('background-color', 'orange');
+    }
+    if ($(this).text() == 'Green') {
+     $(this).css('background-color', 'green');
+    }
+  });
+});
+
