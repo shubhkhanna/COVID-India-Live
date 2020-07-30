@@ -1,600 +1,618 @@
 <!DOCTYPE html>
 <html lang="en" onload="updateData()">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="32x32">
-        <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="16x16">
-        <meta name="author" content="Shubh Khanna">
-        <meta name="description" content="Tracking COVID-19 cases across the Globe"> 
-        <meta name="keywords" content="coronavirus, coronavirus tracker, corona, COVID-19, Covid-19 India, Covid India Live, covid india live, covid india live update, global cases, coronavirus india cases">
-        
-        <meta property="og:site_name" content="COVID India Live">
-        <meta property="og:title" content="COVID India Live">
-        <meta property="og:description" content="Tracking COVID-19 cases across the Globe">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://covidindialive.netlify.com/">
-        <meta property="og:image" content="https://covidindialive.netlify.com/images/favicon.ico">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="https://covidindialive.netlify.com/">
-        <meta name="twitter:image" content="https://covidindialive.netlify.com/images/favicon.ico">
-        <base href="https://covidindialive.netlify.com/">
-        <link rel="canonical" href="https://covidindialive.netlify.com/">
-        
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/center.css">
 
-        <!-- Chrome, Firefox OS and Opera -->
-        <meta name="theme-color" content="#292b2c">
-        <!-- Windows Phone -->
-        <meta name="msapplication-navbutton-color" content="#292b2c">
-        <!-- iOS Safari -->
-        <meta name="apple-mobile-web-app-status-bar-style" content="#292b2c">
-        
-        <title>COVID India Live | Test Centers</title>
+<head>
+  <title>COVID India Live | Test Centers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google-site-verification" content="QpGLgEQeUnwpcmpy6CVlQwdEOOHCAnaDrzsLE03HE60" />
+  <meta name="robots" content="index,follow" />
+  <meta name="Googlebot" content="index,follow" />
+  <meta name="AdsBot-Google" content="index,follow" />
+  <meta name="author" content="Shubh Khanna">
+  <meta name="description" content="Tracking COVID-19 cases across the Globe">
+  <meta name="keywords" content="covid india live,covid19,coronavirus,covid">
+  <meta property="og:site_name" content="COVID India Live">
+  <meta property="og:title" content="COVID India Live">
+  <meta property="og:description" content="Tracking COVID-19 cases across the Globe">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://covidindialive.netlify.app/">
+  <meta property="og:image" content="https://covidindialive.netlify.app/images/favicon.ico">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="https://covidindialive.netlify.app/">
+  <meta name="twitter:image" content="https://covidindialive.netlify.app/images/favicon.ico">
+  <base href="https://covidindialive.netlify.app/">
+  <link rel="canonical" href="https://covidindialive.netlify.app/">
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165420192-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-165420192-1');
-        </script>
+  <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="16x16">
 
-    </head>
-    <body data-spy="scroll" data-target="#main-nav" id="home">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
-        <div class="container">
-          <a href="index.html" class="navbar-brand ml-2"><span style="font-weight: bold;color: red;">COVID</span> India Live</a>
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" >
-            <span class="text-warning">Menu</span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a href="index.html" class="nav-link">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="state.html" class="nav-link">State Cases</a>
-              </li>
-              <li class="nav-item">
-                <a href="world.html" class="nav-link">Countries Cases</a>
-              </li>
-              <li class="nav-item">
-                <a href="zones.html" class="nav-link">Zones</a>
-              </li>
-              <li class="nav-item active">
-                  <a href="center.html" class="nav-link">Test Centers</a>
-              </li>
-              <li class="nav-item">
-                  <a href="precaution.html" class="nav-link">Precautions</a>
-              </li>
-              <li class="nav-item">
-                  <a href="health.html" class="nav-link">Health Tips</a>
-              </li>
-              <li class="nav-item">
-                  <a href="about.html" class="nav-link">About</a>
-              </li>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/center.css">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#292b2c">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#292b2c">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#292b2c">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165420192-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-165420192-1');
+  </script>
+
+</head>
+
+<body data-spy="scroll" data-target="#main-nav" id="home">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
+    <div class="container">
+      <a href="index.html" class="navbar-brand ml-2"><span style="font-weight: bold;color: red;">COVID</span> India
+        Live</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="text-warning">Menu</span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="state.html" class="nav-link">State Cases</a>
+          </li>
+          <li class="nav-item">
+            <a href="world.html" class="nav-link">Countries Cases</a>
+          </li>
+          <li class="nav-item">
+            <a href="zones.html" class="nav-link">Zones</a>
+          </li>
+          <li class="nav-item active">
+            <a href="center.html" class="nav-link">Test Centers</a>
+          </li>
+          <li class="nav-item">
+            <a href="precaution.html" class="nav-link">Precautions</a>
+          </li>
+          <li class="nav-item">
+            <a href="health.html" class="nav-link">Health Tips</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Test Centers-->
+  <h2 class="text-center scheme mt-5 pt-5 mx-2" style="font-size: 60px;">Test Centers Across India</h2>
+  <section class="py-2">
+    <div class="container">
+      <div class="row equal">
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Andaman & Nicobar Islands</h3>
+            <h4>Helpline Number :<a href="tel:03192-232102 " target="_blank ">03192-232102</a></h4>
+            <h5>Test Centers <span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Regional Medical Research Centre, Port Blair, Andaman and Nicobar</li>
             </ul>
           </div>
         </div>
-      </nav>
-              <!--Test Centers-->
-              <h2 class="text-center scheme mt-5 pt-5 mx-2" style="font-size: 60px;">Test Centers Across India</h2>
-                <section class="py-2">
-                    <div class="container">                   
-                        <div class="row equal">
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                                <h3 class="card-title ">Andaman & Nicobar Islands</h3>
-                                <h4>Helpline Number :<a href="tel:03192-232102 " target="_blank ">03192-232102</a></h4>
-                                <h5>Test Centers <span class="badge badge-danger ml-2">Government</span></h5>
-                                <ul class="pl-3 ">
-                                <li>Regional Medical Research Centre, Port Blair, Andaman and Nicobar</li>
-                                </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Andhra Pradesh </h3>
-                            <h4>Helpline Number :<a href="tel:0866-2410978 " target="_blank ">0866-2410978</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Sidhartha Medical College, Vijaywada</li>
-                            <li>Govt. Medical College, Ananthpur</li>
-                            <li>Rangaraya Medical College, Kakinada</li>
-                            <li>Sri Venkateswara Institute of Medical Sciences, Tirupati </li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                              <div class="card card-body scheme">
-                              <h3 class="card-title ">Arunachal Pradesh</h3>
-                              <h4>Helpline Number : <a href="tel:9436055743" target="_blank ">9436055743</a></h4>
-                              <h5>Test Centers <span class="badge badge-warning ml-2">Collection sites only</span></h5>
-                              <ul class="pl-3 ">
-                              <li>Tomo Riba Institute of Health & Medical Sciences (TRIHMS), Naharlagun</li>
-                              </ul>
-                              </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Assam</h3>
-                            <h4>Helpline Number : <a href="tel:6913347770 " target="_blank ">6913347770</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Gauhati Medical College, Guwahati</li>
-                            <li>Jorhat Medical College, Jorhat</li>
-                            <li>Regional Medical Research Center, Dibrugarh</li>
-                            <li>Silchar Medical College, Silchar</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Bihar</h3>
-                            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Indira Gandhi Institute Medical Sciences, Patna</li>
-                            <li>Patna Medical College, Patna</li>
-                            <li>Darbhanga Medical College, Darbhanga</li>
-                            <li>Rajendra Memorial Research Institute of Medical Sciences, Patna</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Chandigarh</h3>
-                            <h4>Helpline Number : <a href="tel:9779558282 " target="_blank ">9779558282</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Post Graduate Institute of Medical Education & Research, Chandigarh</li>
-                            <li>Govt Medical College, Chandigarh</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Chhattisgarh </h3>
-                            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>All India Institute of Medical Sciences, Raipur</li>
-                            <li>Late Baliram Kashyap M Govt Medical College, Jagdalpur</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Delhi</h3>
-                            <h4>Helpline Number : <a href="tel:011-22307145 " target="_blank ">011-22307145</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>All India Institute Medical Sciences</li>
-                            <li>Lady Hardinge Medical College</li>
-                            <li>National Centre for Disease Control</li>
-                            <li>Ram Manohar Lohia Hospital</li>
-                            <li>Institute of Liver & Biliary Sciences</li>
-                            <li>Army Hospital Research & Referral</li>
-                            </ul>
-                            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Lal Path Labs, Block -E, Sector 18, Rohini, Delhi</li>
-                            <li>Dr Dangs Lab, C-2/1, Safadarjung Development Area, New-Delhi</li>
-                            <li>Laboratory Services, Indraprastha Apollo Hospitals, Sarita, Vihar, New Delhi</li>
-                            <li>Max Lab, Max Super Spciality Hospital, Saket, New-Delhi</li>
-                            <li>Sir Ganga Ram Hospital Clinical Lab Services, Sir Ganga, Ram Hospital, Delhi</li>
-                            <li>Oncquest Labs Ltd, 3-Factory Road, New-Delhi</li>
-                            <li>Prognosis Laboratories, 515-16, Sector 19, Dwarka</li>
-                            <li>City X-Ray & Scan Clinic Pvt Ltd, 4B/18, Tilak Nagar, New Delhi</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Goa</h3>
-                            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Goa Medical College, Goa</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Gujarat</h3>
-                            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>BJ Medical College, Ahmedabad</li>
-                            <li>MP Shah Govt Medical College, Jamnagar</li>
-                            <li>Govt Medical College, Surat</li>
-                            <li>Govt Medical College, Bhavnagar</li>
-                            <li>Govt Medical College, Vadodara</li>
-                            <li>GMC, Rajkot, Gujarat</li>
-                            </ul>
-                            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Unipath Specialty laboratory limited, Ahmedabad</li>
-                            <li>Supratech Micropath Laboratory & Research Institute Pvt Ltd, Kedar, Ahmedabad</li>
-                            <li>SN GeneLab Pvt Ltd, President Plaza –A, Near Mahavir Hospital, Nanpura, Surat</li>
-                            <li>Pangenomics International Pvt Ltd, Ellis Bridge, Ahmedabad</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Haryana</h3>
-                            <h4>Helpline Number : <a href="tel:8558893911 " target="_blank ">8558893911</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Pt B D Sharma Post Graduate Inst of Med Sciences, Rohtak, Haryana</li>
-                            <li>BPS Govt Medical College, Sonipat</li>
-                            </ul>
-                            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Strand Life Sciences, A-17, Sector 34, Gurugram</li>
-                            <li>SRL Limited, GP26, Sector 18, Gurugram</li>
-                            <li>Modern Diagnostic & Research Centre-Lab, 363-364/4, JAwahar Nagar. Gurgaon</li>
-                            <li>MolQ Laboratory, Plot 28,29; Sector 18(P), Electronic city, Udyog Vihar, Phase IV, Gurgaon</li>
-                            <li>Core Diagnostics Pvt Ltd, Udyog Vihar Phase-3, Gurgaon</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Himachal pradesh</h3>
-                            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Indira Gandhi Medical College, Shimla</li>
-                            <li>Dr Rajendra Prasad Govt Medical College, Tanda</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Jammu and Kashmir</h3>
-                            <h4>Helpline Number : <a href="tel:01912520982 " target="_blank ">01912520982</a>, <a href="tel:0194-2440283 " target="_blank ">0194-2440283</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Govt Medical College, Jammu</li>
-                            <li>Command Hospital (NC) Udhampur</li>
-                            <li>Sher-i-Kashmir Institute of Medical Sciences, Srinagar</li>
-                            <li>Govt Medical College, Srinagar</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Jharkhand</h3>
-                            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>MGM Medical College & Hospital, Jamshedpur</li>
-                            <li>Rajendra Institute of Medical Sciences, Ranchi</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Karnataka</h3>
-                            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Hassan Inst of Med Sciences, Hassan</li>
-                            <li>Mysore Medical College & Research Institute, Mysore</li>
-                            <li>Shimoga Instt of Medical Sciences, Shivamoga Inst of Med Sciences, Shivamogga</li>
-                            <li>Command Hospital (Air Force) Bengaluru</li>
-                            <li>Bangalore Medical College & Research Institute, Bengaluru</li>
-                            <li>National Institute of Virology, Bangalore Field Unit, Bengaluru</li>
-                            <li>Gulbarga Institute of Medical Sciences, Gulbarga</li>
-                            </ul>
-                            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Neuberg Anand Reference Laboratory, Bengaluru</li>
-                            <li>Cancyte Technologies Pvt Ltd, Sri Shankara Research Centre, Bengaluru</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Kerala</h3>
-                            <h4>Helpline Number : <a href="tel:0471-2552056 " target="_blank ">0471-2552056</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>National Institute of Virology Field Unit, Allapuzzha</li>
-                            <li>Govt Medical College, Thiruvanathapuram</li>
-                            <li>Govt Medical College, Kozhikode</li>
-                            <li>Govt Medical College, Thrissur</li>
-                            <li>Rajiv Gandhi Center for Biotechnology, Thiruvanathapuram</li>
-                            <li>Sree Chitra Tirunal Institute of Medical Sciences, Thiruvanathapuram</li>
-                            <li>State Public Health Laboratory, Trivandrum</li>
-                            <li>Interuniversity, Kottayam</li>
-                            <li>Malabar Cancer Center, Thalassery</li>
-                            <li>Government Medical College Hospital, Kasaragod</li>
-                            </ul>
-                            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
-                            <ul class="pl-3 ">
-                            <li>DDRC SRL Diagnostics Pvt Ltd, Panampilly Nagar, Ernakulam</li>
-                            <li>MIMS Lab Services, Govindapuram, Kozhikode</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                              <div class="card card-body scheme">
-                              <h3 class="card-title ">Ladakh</h3>
-                              <h4>Helpline Number : <a href="tel:1800313444222 " target="_blank ">1800313444222</a></h4>
-                              <h5>Test Centers <span class="badge badge-warning ml-2">Collection sites only</span></h5>
-                              <ul class="pl-3 ">
-                              <li>Sonam Norboo Memorial Hospital (SNMH), Leh</li>
-                              </ul>
-                              </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Madhya Pradesh</h3>
-                            <h4>Helpline Number : <a href="tel:0755-2527177 " target="_blank ">0755-2527177</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>All India Institute of Medical Sciences, Bhopal</li>
-                            <li>National Institute for Research on Tribal Health, Jabalpur</li>
-                            <li>Mahatma Gandhi Memorial Medical College, Indore</li>
-                            <li>Gandhi Medical College, Bhopal</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Maharashtra</h3>
-                            <h4>Helpline Number : <a href="tel:020-26127394 " target="_blank ">020-26127394</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>National Institute of Virology, Pune</li>
-                            <li>Seth GS Medical College & KEM Hospital, Mumbai</li>
-                            <li>Kasturba Hospital for Infectious Diseases, Mumbai</li>
-                            <li>National Institute of Virology Field Unit, Mumbai</li>
-                            <li>Armed Forces Medical College, Pune</li>
-                            <li>BJ Medical College, Pune</li>
-                            <li>Indira Gandhi Govt Medical College, Nagpur</li>
-                            <li>Grant Medical College & Sir JJ Hospital, Mumbai</li>
-                            <li>Govt Medical College, Aurangabad</li>
-                            <li>V M Government Medical College, Solapur</li>
-                            <li>Haffkine Institute, Mumbai</li>
-                            <li>Shree Bhausaheb Hire Govt Medical College, Dhule</li>
-                            <li>Government Medical College, Miraj</li>
-                            </ul>
-                            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Sir H.N. Reliance Foundation Hospital and Research Centre, Mumbai</li>
-                            <li>Thyrocare Technologies Limited, D37/1, TTC MIDC, Turbhe, Navi Mumbai</li>
-                            <li>SRL Limited, Prime Square Building, Plot No 1, Gaiwadi Industrial Estate, SV Road, Goregaon, Mumbai</li>
-                            <li>Suburban Diagnostics (India) Pvt. Ltd., 306, 307/T, 3rd Floor, Sunshine Bld., Andheri (W), Mumbai</li>
-                            <li>Metropolis Healthcare Ltd, Unit No. 409-416, 4th Floor, Commercial Building-1, Kohinoor Mall, Mumbai</li>
-                            <li>A.G. Diagnostics Pvt Ltd, Nayantara Building, Pune</li>
-                            <li>Kokilaben Dhirubhai Ambani Hospital Laboratory, Four Bungalows, Mumbai</li>
-                            <li>InfeXn Laboratories Private Limited, A/131, Therelek Compound, Road No 23, Wagle Industrial Estate, Thane (W)</li>
-                            <li>iGenetic Diagnostics Pvt Ltd, Krislon House, Andheri East, Mumbai</li>
-                            <li>Tata Memorial Centre Diagnostic Services-Tata Memorial Hospital, Parel, Mumbai</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Manipur</h3>
-                            <h4>Helpline Number : <a href="tel:3852411668 " target="_blank ">3852411668</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Jawaharlal Nehru Institute of Med Sciences, Imphal-East, Manipur</li>
-                            <li>Regional Institute of Medical Sciences, Imphal</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Meghalaya</h3>
-                            <h4>Helpline Number : <a href="tel:108 " target="_blank ">108</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>North Eastern Indira Gandhi Regional Institute of Health & Medical Sciences, Shillong, Meghalaya</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Odisha</h3>
-                            <h4>Helpline Number : <a href="tel:9439994859 " target="_blank ">9439994859</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Regional Medical Research Centre, Bhubaneshwar</li>
-                            <li>All India Institute of Medical Sciences, Bhubaneshwar</li>
-                            </ul>
-                            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Dept of Lab Services, Apollo Hospitals, Bhubaneswar</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Puducherry</h3>
-                            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Jawaharlal Institute of Postgraduate Medical Education & Research, Puducherry</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Punjab</h3>
-                            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Govt Medical College, Amritsar</li>
-                            <li>Govt Medical College, Patiala</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Rajasthan</h3>
-                            <h4>Helpline Number : <a href="tel:0141-2225624 " target="_blank ">0141-2225624</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Sawai Man Singh Medical College, Jaipur</li>
-                            <li>Dr Sampurnan and Medical College, Jodhpur</li>
-                            <li>Jhalawar Medical College, Jhalawar</li>
-                            <li>RNT Medical College, Udaipur</li>
-                            <li>SP Medical College, Bikaner</li>
-                            <li>All India Institute of Medical Sciences, Jodhpur</li>
-                            <li>JLN Medical College, Ajmer</li>
-                            <li>Govt Medical College, Kota</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                              <div class="card card-body scheme">
-                              <h3 class="card-title ">Sikkim</h3>
-                              <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
-                              <h5>Test Centers <span class="badge badge-warning ml-2">Collection sites only</span></h5>
-                              <ul class="pl-3 ">
-                              <li>Sir Thutob Namgyal Memorial (STNM), Gangtok</li>
-                              </ul>
-                              </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Tamil Nadu</h3>
-                            <h4>Helpline Number : <a href="tel:044-29510500 " target="_blank ">044-29510500</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>King Institute of Preventive Medicine & Research, Chennai</li>
-                            <li>Madras Medical College, Chennai</li>
-                            <li>Govt Theni Medical College, Theni</li>
-                            <li>Tirunelveli Medical College, Tirunelveli</li>
-                            <li>Govt Medical College, Thiruvarur</li>
-                            <li>Kumar Mangalam Govt Medical College, Salem 96 Coimbatore Medical College, Coimbatore</li>
-                            <li>Govt Medical College, Villupuram</li>
-                            <li>Madurai Medical College, Madurai</li>
-                            <li>Govt Medical College, Trichy</li>
-                            </ul>
-                            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Dept of Lab Services, Apollo Hospitals, Bhubaneswar</li>
-                            <li>Dept. of Clinical Virology, CMC, Vellore</li>
-                            <li>Department of Laboratory Services, Apollo Hospitals Enterprise Ltd, Chennai</li>
-                            <li>Sri Ramachandra Medical College & Research Institute, Porur, Chennai</li>
-                            <li>Neuberg Ehrlich Lab Pvt Ltd, 46-48 Masilamani Road, Balaji Nagar, Chennai</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Telangana</h3>
-                            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Gandhi Medical College, Secunderabad</li>
-                            <li>Osmania Medical College, Hyderabad</li>
-                            <li>Sir Ronald Ross of Tropical & Communicable Diseases, Hyderabad</li>
-                            <li>Nizam’s Institute of Medical Sciences, Hyderabad</li>
-                            <li>Institute of Preventive Medicine, Hyderabad</li>
-                            </ul>
-                            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Laboratory Services, Apollo Hospitals, 6th Floor, Health Street Building, Jubilee Hills, Hyderabad</li>
-                            <li>Vijaya Diagnostic Centre Pvt Ltd, Street No 19, Himayath Nagar, Hyderabad</li>
-                            <li>Vimta Labs Ltd, Plot No 142, Phase 2, IDA Cherlapally, Hyderabad</li>
-                            <li>Apollo Health and Lifestyle Limited, Diagnostic Labortory, Bowenpally, Secunderabad</li>
-                            <li>Dr. Remedies Labs Private Ltd, A3, Titus Plaza, Sharma Commercial Complex, Punjagutta, Hyderabad</li>
-                            <li>American Institute of Pathology And Lab Sciences Pvt Ltd, Citizens Hospital, Serilingampally, Hyderabad</li>
-                            <li>Pathcare Labs Pvt Ltd, Medchal, Hyderabad</li>
-                            <li>Medcis Pathlabs India Pvt Ltd, Plot No 16 & 17, Swathi Plaza, Anand Nagar, New Bowenpally, Secunderabad</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Tripura</h3>
-                            <h4>Helpline Number : <a href="tel:0381-2315879 " target="_blank ">0381-2315879</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Government Medical College, Agartala</li>
-                            </ul>
-                            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
-                            <ul class="pl-3 ">
-                            <li>RML Mehrotra Pathology Pvt Ltd, Nirala Nagar, Lucknow</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Uttar Pradesh</h3>
-                            <h4>Helpline Number : <a href="tel:18001805145 " target="_blank ">18001805145</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>King George Medical University, Lucknow</li>
-                            <li>Institute of Medical Sciences, Banaras Hindu University, Varanasi</li>
-                            <li>Jawaharlal Nehru Medical College, Aligarh</li>
-                            <li>Command Hospital, Lucknow</li>
-                            <li>Lala Lajpat Rai Memorial Medical College, Meerut</li>
-                            <li>Sanjay Gandhi Post Graduate Institute, Lucknow</li>
-                            <li>Uttar Pradesh RIMS, Saifai</li>
-                            <li>Regional Medical Research Centre, Gorakhpur</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">Uttarakhand</h3>
-                            <h4>Helpline Number : <a href="tel:18001805145 " target="_blank ">18001805145</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Govt Medical College, Haldwani</li>
-                            <li>All India Institute of Medical Sciences, Rishikesh</li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div class="col-lg-4 mb-2">
-                            <div class="card card-body scheme">
-                            <h3 class="card-title ">West Bengal</h3>
-                            <h4>Helpline Number : <a href="tel:1800313444222 " target="_blank ">1800313444222</a>, <a href="tel:03323412600 " target="_blank ">03323412600</a></h4>
-                            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
-                            <ul class="pl-3 ">
-                            <li>National Institute of Cholera & Enteric Diseases, Kolkata</li>
-                            <li>Institute of Post Graduate Medical Education & Research, Kolkata</li>
-                            <li>Midnapore Medical College, Midnapore</li>
-                            <li>North Bengal Medical College, Darjeeling</li>
-                            </ul>
-                            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
-                            <ul class="pl-3 ">
-                            <li>Apollo Gleneagles Hospitals, 58 Canal Circular Road, Kolkata</li>
-                            <li>Tata Medical Center, Rajarhat, Kolkata</li>
-                            </ul>
-                            </div>
-                            </div>                                                                                    
-                        </div>
-                    </div>
-                </section>
-                <footer class="bg-dark py-2">
-                  <div class="footer-content text-center text-white">Designed & Developed by <a href="https://www.linkedin.com/in/shubhkhanna/" class="text-primary">Shubh Khanna</a></div>
-                  <div class="footer-content text-center text-white ">Made For <span class="text-warning">India</div>
-              </footer>
-        <script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-        <script src="./JS/main.js"></script>
-    </body>
-</html>   
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Andhra Pradesh </h3>
+            <h4>Helpline Number :<a href="tel:0866-2410978 " target="_blank ">0866-2410978</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Sidhartha Medical College, Vijaywada</li>
+              <li>Govt. Medical College, Ananthpur</li>
+              <li>Rangaraya Medical College, Kakinada</li>
+              <li>Sri Venkateswara Institute of Medical Sciences, Tirupati </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Arunachal Pradesh</h3>
+            <h4>Helpline Number : <a href="tel:9436055743" target="_blank ">9436055743</a></h4>
+            <h5>Test Centers <span class="badge badge-warning ml-2">Collection sites only</span></h5>
+            <ul class="pl-3 ">
+              <li>Tomo Riba Institute of Health & Medical Sciences (TRIHMS), Naharlagun</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Assam</h3>
+            <h4>Helpline Number : <a href="tel:6913347770 " target="_blank ">6913347770</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Gauhati Medical College, Guwahati</li>
+              <li>Jorhat Medical College, Jorhat</li>
+              <li>Regional Medical Research Center, Dibrugarh</li>
+              <li>Silchar Medical College, Silchar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Bihar</h3>
+            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Indira Gandhi Institute Medical Sciences, Patna</li>
+              <li>Patna Medical College, Patna</li>
+              <li>Darbhanga Medical College, Darbhanga</li>
+              <li>Rajendra Memorial Research Institute of Medical Sciences, Patna</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Chandigarh</h3>
+            <h4>Helpline Number : <a href="tel:9779558282 " target="_blank ">9779558282</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Post Graduate Institute of Medical Education & Research, Chandigarh</li>
+              <li>Govt Medical College, Chandigarh</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Chhattisgarh </h3>
+            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>All India Institute of Medical Sciences, Raipur</li>
+              <li>Late Baliram Kashyap M Govt Medical College, Jagdalpur</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Delhi</h3>
+            <h4>Helpline Number : <a href="tel:011-22307145 " target="_blank ">011-22307145</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>All India Institute Medical Sciences</li>
+              <li>Lady Hardinge Medical College</li>
+              <li>National Centre for Disease Control</li>
+              <li>Ram Manohar Lohia Hospital</li>
+              <li>Institute of Liver & Biliary Sciences</li>
+              <li>Army Hospital Research & Referral</li>
+            </ul>
+            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
+            <ul class="pl-3 ">
+              <li>Lal Path Labs, Block -E, Sector 18, Rohini, Delhi</li>
+              <li>Dr Dangs Lab, C-2/1, Safadarjung Development Area, New-Delhi</li>
+              <li>Laboratory Services, Indraprastha Apollo Hospitals, Sarita, Vihar, New Delhi</li>
+              <li>Max Lab, Max Super Spciality Hospital, Saket, New-Delhi</li>
+              <li>Sir Ganga Ram Hospital Clinical Lab Services, Sir Ganga, Ram Hospital, Delhi</li>
+              <li>Oncquest Labs Ltd, 3-Factory Road, New-Delhi</li>
+              <li>Prognosis Laboratories, 515-16, Sector 19, Dwarka</li>
+              <li>City X-Ray & Scan Clinic Pvt Ltd, 4B/18, Tilak Nagar, New Delhi</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Goa</h3>
+            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Goa Medical College, Goa</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Gujarat</h3>
+            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>BJ Medical College, Ahmedabad</li>
+              <li>MP Shah Govt Medical College, Jamnagar</li>
+              <li>Govt Medical College, Surat</li>
+              <li>Govt Medical College, Bhavnagar</li>
+              <li>Govt Medical College, Vadodara</li>
+              <li>GMC, Rajkot, Gujarat</li>
+            </ul>
+            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
+            <ul class="pl-3 ">
+              <li>Unipath Specialty laboratory limited, Ahmedabad</li>
+              <li>Supratech Micropath Laboratory & Research Institute Pvt Ltd, Kedar, Ahmedabad</li>
+              <li>SN GeneLab Pvt Ltd, President Plaza –A, Near Mahavir Hospital, Nanpura, Surat</li>
+              <li>Pangenomics International Pvt Ltd, Ellis Bridge, Ahmedabad</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Haryana</h3>
+            <h4>Helpline Number : <a href="tel:8558893911 " target="_blank ">8558893911</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Pt B D Sharma Post Graduate Inst of Med Sciences, Rohtak, Haryana</li>
+              <li>BPS Govt Medical College, Sonipat</li>
+            </ul>
+            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
+            <ul class="pl-3 ">
+              <li>Strand Life Sciences, A-17, Sector 34, Gurugram</li>
+              <li>SRL Limited, GP26, Sector 18, Gurugram</li>
+              <li>Modern Diagnostic & Research Centre-Lab, 363-364/4, JAwahar Nagar. Gurgaon</li>
+              <li>MolQ Laboratory, Plot 28,29; Sector 18(P), Electronic city, Udyog Vihar, Phase IV, Gurgaon</li>
+              <li>Core Diagnostics Pvt Ltd, Udyog Vihar Phase-3, Gurgaon</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Himachal pradesh</h3>
+            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Indira Gandhi Medical College, Shimla</li>
+              <li>Dr Rajendra Prasad Govt Medical College, Tanda</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Jammu and Kashmir</h3>
+            <h4>Helpline Number : <a href="tel:01912520982 " target="_blank ">01912520982</a>, <a
+                href="tel:0194-2440283 " target="_blank ">0194-2440283</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Govt Medical College, Jammu</li>
+              <li>Command Hospital (NC) Udhampur</li>
+              <li>Sher-i-Kashmir Institute of Medical Sciences, Srinagar</li>
+              <li>Govt Medical College, Srinagar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Jharkhand</h3>
+            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>MGM Medical College & Hospital, Jamshedpur</li>
+              <li>Rajendra Institute of Medical Sciences, Ranchi</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Karnataka</h3>
+            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Hassan Inst of Med Sciences, Hassan</li>
+              <li>Mysore Medical College & Research Institute, Mysore</li>
+              <li>Shimoga Instt of Medical Sciences, Shivamoga Inst of Med Sciences, Shivamogga</li>
+              <li>Command Hospital (Air Force) Bengaluru</li>
+              <li>Bangalore Medical College & Research Institute, Bengaluru</li>
+              <li>National Institute of Virology, Bangalore Field Unit, Bengaluru</li>
+              <li>Gulbarga Institute of Medical Sciences, Gulbarga</li>
+            </ul>
+            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
+            <ul class="pl-3 ">
+              <li>Neuberg Anand Reference Laboratory, Bengaluru</li>
+              <li>Cancyte Technologies Pvt Ltd, Sri Shankara Research Centre, Bengaluru</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Kerala</h3>
+            <h4>Helpline Number : <a href="tel:0471-2552056 " target="_blank ">0471-2552056</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>National Institute of Virology Field Unit, Allapuzzha</li>
+              <li>Govt Medical College, Thiruvanathapuram</li>
+              <li>Govt Medical College, Kozhikode</li>
+              <li>Govt Medical College, Thrissur</li>
+              <li>Rajiv Gandhi Center for Biotechnology, Thiruvanathapuram</li>
+              <li>Sree Chitra Tirunal Institute of Medical Sciences, Thiruvanathapuram</li>
+              <li>State Public Health Laboratory, Trivandrum</li>
+              <li>Interuniversity, Kottayam</li>
+              <li>Malabar Cancer Center, Thalassery</li>
+              <li>Government Medical College Hospital, Kasaragod</li>
+            </ul>
+            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
+            <ul class="pl-3 ">
+              <li>DDRC SRL Diagnostics Pvt Ltd, Panampilly Nagar, Ernakulam</li>
+              <li>MIMS Lab Services, Govindapuram, Kozhikode</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Ladakh</h3>
+            <h4>Helpline Number : <a href="tel:1800313444222 " target="_blank ">1800313444222</a></h4>
+            <h5>Test Centers <span class="badge badge-warning ml-2">Collection sites only</span></h5>
+            <ul class="pl-3 ">
+              <li>Sonam Norboo Memorial Hospital (SNMH), Leh</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Madhya Pradesh</h3>
+            <h4>Helpline Number : <a href="tel:0755-2527177 " target="_blank ">0755-2527177</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>All India Institute of Medical Sciences, Bhopal</li>
+              <li>National Institute for Research on Tribal Health, Jabalpur</li>
+              <li>Mahatma Gandhi Memorial Medical College, Indore</li>
+              <li>Gandhi Medical College, Bhopal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Maharashtra</h3>
+            <h4>Helpline Number : <a href="tel:020-26127394 " target="_blank ">020-26127394</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>National Institute of Virology, Pune</li>
+              <li>Seth GS Medical College & KEM Hospital, Mumbai</li>
+              <li>Kasturba Hospital for Infectious Diseases, Mumbai</li>
+              <li>National Institute of Virology Field Unit, Mumbai</li>
+              <li>Armed Forces Medical College, Pune</li>
+              <li>BJ Medical College, Pune</li>
+              <li>Indira Gandhi Govt Medical College, Nagpur</li>
+              <li>Grant Medical College & Sir JJ Hospital, Mumbai</li>
+              <li>Govt Medical College, Aurangabad</li>
+              <li>V M Government Medical College, Solapur</li>
+              <li>Haffkine Institute, Mumbai</li>
+              <li>Shree Bhausaheb Hire Govt Medical College, Dhule</li>
+              <li>Government Medical College, Miraj</li>
+            </ul>
+            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
+            <ul class="pl-3 ">
+              <li>Sir H.N. Reliance Foundation Hospital and Research Centre, Mumbai</li>
+              <li>Thyrocare Technologies Limited, D37/1, TTC MIDC, Turbhe, Navi Mumbai</li>
+              <li>SRL Limited, Prime Square Building, Plot No 1, Gaiwadi Industrial Estate, SV Road, Goregaon, Mumbai
+              </li>
+              <li>Suburban Diagnostics (India) Pvt. Ltd., 306, 307/T, 3rd Floor, Sunshine Bld., Andheri (W), Mumbai</li>
+              <li>Metropolis Healthcare Ltd, Unit No. 409-416, 4th Floor, Commercial Building-1, Kohinoor Mall, Mumbai
+              </li>
+              <li>A.G. Diagnostics Pvt Ltd, Nayantara Building, Pune</li>
+              <li>Kokilaben Dhirubhai Ambani Hospital Laboratory, Four Bungalows, Mumbai</li>
+              <li>InfeXn Laboratories Private Limited, A/131, Therelek Compound, Road No 23, Wagle Industrial Estate,
+                Thane (W)</li>
+              <li>iGenetic Diagnostics Pvt Ltd, Krislon House, Andheri East, Mumbai</li>
+              <li>Tata Memorial Centre Diagnostic Services-Tata Memorial Hospital, Parel, Mumbai</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Manipur</h3>
+            <h4>Helpline Number : <a href="tel:3852411668 " target="_blank ">3852411668</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Jawaharlal Nehru Institute of Med Sciences, Imphal-East, Manipur</li>
+              <li>Regional Institute of Medical Sciences, Imphal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Meghalaya</h3>
+            <h4>Helpline Number : <a href="tel:108 " target="_blank ">108</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>North Eastern Indira Gandhi Regional Institute of Health & Medical Sciences, Shillong, Meghalaya</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Odisha</h3>
+            <h4>Helpline Number : <a href="tel:9439994859 " target="_blank ">9439994859</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Regional Medical Research Centre, Bhubaneshwar</li>
+              <li>All India Institute of Medical Sciences, Bhubaneshwar</li>
+            </ul>
+            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
+            <ul class="pl-3 ">
+              <li>Dept of Lab Services, Apollo Hospitals, Bhubaneswar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Puducherry</h3>
+            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Jawaharlal Institute of Postgraduate Medical Education & Research, Puducherry</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Punjab</h3>
+            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Govt Medical College, Amritsar</li>
+              <li>Govt Medical College, Patiala</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Rajasthan</h3>
+            <h4>Helpline Number : <a href="tel:0141-2225624 " target="_blank ">0141-2225624</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Sawai Man Singh Medical College, Jaipur</li>
+              <li>Dr Sampurnan and Medical College, Jodhpur</li>
+              <li>Jhalawar Medical College, Jhalawar</li>
+              <li>RNT Medical College, Udaipur</li>
+              <li>SP Medical College, Bikaner</li>
+              <li>All India Institute of Medical Sciences, Jodhpur</li>
+              <li>JLN Medical College, Ajmer</li>
+              <li>Govt Medical College, Kota</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Sikkim</h3>
+            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
+            <h5>Test Centers <span class="badge badge-warning ml-2">Collection sites only</span></h5>
+            <ul class="pl-3 ">
+              <li>Sir Thutob Namgyal Memorial (STNM), Gangtok</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Tamil Nadu</h3>
+            <h4>Helpline Number : <a href="tel:044-29510500 " target="_blank ">044-29510500</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>King Institute of Preventive Medicine & Research, Chennai</li>
+              <li>Madras Medical College, Chennai</li>
+              <li>Govt Theni Medical College, Theni</li>
+              <li>Tirunelveli Medical College, Tirunelveli</li>
+              <li>Govt Medical College, Thiruvarur</li>
+              <li>Kumar Mangalam Govt Medical College, Salem 96 Coimbatore Medical College, Coimbatore</li>
+              <li>Govt Medical College, Villupuram</li>
+              <li>Madurai Medical College, Madurai</li>
+              <li>Govt Medical College, Trichy</li>
+            </ul>
+            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
+            <ul class="pl-3 ">
+              <li>Dept of Lab Services, Apollo Hospitals, Bhubaneswar</li>
+              <li>Dept. of Clinical Virology, CMC, Vellore</li>
+              <li>Department of Laboratory Services, Apollo Hospitals Enterprise Ltd, Chennai</li>
+              <li>Sri Ramachandra Medical College & Research Institute, Porur, Chennai</li>
+              <li>Neuberg Ehrlich Lab Pvt Ltd, 46-48 Masilamani Road, Balaji Nagar, Chennai</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Telangana</h3>
+            <h4>Helpline Number : <a href="tel:104 " target="_blank ">104</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Gandhi Medical College, Secunderabad</li>
+              <li>Osmania Medical College, Hyderabad</li>
+              <li>Sir Ronald Ross of Tropical & Communicable Diseases, Hyderabad</li>
+              <li>Nizam’s Institute of Medical Sciences, Hyderabad</li>
+              <li>Institute of Preventive Medicine, Hyderabad</li>
+            </ul>
+            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
+            <ul class="pl-3 ">
+              <li>Laboratory Services, Apollo Hospitals, 6th Floor, Health Street Building, Jubilee Hills, Hyderabad
+              </li>
+              <li>Vijaya Diagnostic Centre Pvt Ltd, Street No 19, Himayath Nagar, Hyderabad</li>
+              <li>Vimta Labs Ltd, Plot No 142, Phase 2, IDA Cherlapally, Hyderabad</li>
+              <li>Apollo Health and Lifestyle Limited, Diagnostic Labortory, Bowenpally, Secunderabad</li>
+              <li>Dr. Remedies Labs Private Ltd, A3, Titus Plaza, Sharma Commercial Complex, Punjagutta, Hyderabad</li>
+              <li>American Institute of Pathology And Lab Sciences Pvt Ltd, Citizens Hospital, Serilingampally,
+                Hyderabad</li>
+              <li>Pathcare Labs Pvt Ltd, Medchal, Hyderabad</li>
+              <li>Medcis Pathlabs India Pvt Ltd, Plot No 16 & 17, Swathi Plaza, Anand Nagar, New Bowenpally,
+                Secunderabad</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Tripura</h3>
+            <h4>Helpline Number : <a href="tel:0381-2315879 " target="_blank ">0381-2315879</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Government Medical College, Agartala</li>
+            </ul>
+            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
+            <ul class="pl-3 ">
+              <li>RML Mehrotra Pathology Pvt Ltd, Nirala Nagar, Lucknow</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Uttar Pradesh</h3>
+            <h4>Helpline Number : <a href="tel:18001805145 " target="_blank ">18001805145</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>King George Medical University, Lucknow</li>
+              <li>Institute of Medical Sciences, Banaras Hindu University, Varanasi</li>
+              <li>Jawaharlal Nehru Medical College, Aligarh</li>
+              <li>Command Hospital, Lucknow</li>
+              <li>Lala Lajpat Rai Memorial Medical College, Meerut</li>
+              <li>Sanjay Gandhi Post Graduate Institute, Lucknow</li>
+              <li>Uttar Pradesh RIMS, Saifai</li>
+              <li>Regional Medical Research Centre, Gorakhpur</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">Uttarakhand</h3>
+            <h4>Helpline Number : <a href="tel:18001805145 " target="_blank ">18001805145</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>Govt Medical College, Haldwani</li>
+              <li>All India Institute of Medical Sciences, Rishikesh</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-2">
+          <div class="card card-body scheme">
+            <h3 class="card-title ">West Bengal</h3>
+            <h4>Helpline Number : <a href="tel:1800313444222 " target="_blank ">1800313444222</a>, <a
+                href="tel:03323412600 " target="_blank ">03323412600</a></h4>
+            <h5>Test Centers<span class="badge badge-danger ml-2">Government</span></h5>
+            <ul class="pl-3 ">
+              <li>National Institute of Cholera & Enteric Diseases, Kolkata</li>
+              <li>Institute of Post Graduate Medical Education & Research, Kolkata</li>
+              <li>Midnapore Medical College, Midnapore</li>
+              <li>North Bengal Medical College, Darjeeling</li>
+            </ul>
+            <h5>Test Centers<span class="badge badge-primary ml-2">Private</span></h5>
+            <ul class="pl-3 ">
+              <li>Apollo Gleneagles Hospitals, 58 Canal Circular Road, Kolkata</li>
+              <li>Tata Medical Center, Rajarhat, Kolkata</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark py-2">
+    <div class="footer-content text-center text-white">Designed & Developed by <a
+        href="https://www.linkedin.com/in/shubhkhanna/" class="text-primary">Shubh Khanna</a></div>
+    <div class="footer-content text-center text-white ">Made For <span class="text-warning">India</div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="./JS/main.js"></script>
+</body>
+
+</html>

@@ -1,392 +1,516 @@
 <!DOCTYPE html>
 <html lang="en" onload="updateData()">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="32x32">
-        <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="16x16">
-        <meta name="author" content="Shubh Khanna">
-        <meta name="description" content="Tracking COVID-19 cases across the Globe"> 
-        <meta name="keywords" content="coronavirus, coronavirus tracker, corona, COVID-19, Covid-19 India, Covid India Live, covid india live, covid india live update, global cases, coronavirus india cases">
-        
-        <meta property="og:site_name" content="COVID India Live">
-        <meta property="og:title" content="COVID India Live">
-        <meta property="og:description" content="Tracking COVID-19 cases across the Globe">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://covidindialive.netlify.com/">
-        <meta property="og:image" content="https://covidindialive.netlify.com/images/favicon.ico">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="https://covidindialive.netlify.com/">
-        <meta name="twitter:image" content="https://covidindialive.netlify.com/images/favicon.ico">
-        <base href="https://covidindialive.netlify.com/">
-        <link rel="canonical" href="https://covidindialive.netlify.com/">
-        
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/style.css">
 
-        <!-- Chrome, Firefox OS and Opera -->
-        <meta name="theme-color" content="#292b2c">
-        <!-- Windows Phone -->
-        <meta name="msapplication-navbutton-color" content="#292b2c">
-        <!-- iOS Safari -->
-        <meta name="apple-mobile-web-app-status-bar-style" content="#292b2c">
-        
-        <title>COVID India Live | State Cases</title>
+<head>
+    <title>COVID India Live | State Cases</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="QpGLgEQeUnwpcmpy6CVlQwdEOOHCAnaDrzsLE03HE60" />
+    <meta name="robots" content="index,follow" />
+    <meta name="Googlebot" content="index,follow" />
+    <meta name="AdsBot-Google" content="index,follow" />
+    <meta name="author" content="Shubh Khanna">
+    <meta name="description" content="Tracking COVID-19 cases across the Globe">
+    <meta name="keywords" content="covid india live,covid19,coronavirus,covid">
+    <meta property="og:site_name" content="COVID India Live">
+    <meta property="og:title" content="COVID India Live">
+    <meta property="og:description" content="Tracking COVID-19 cases across the Globe">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://covidindialive.netlify.app/">
+    <meta property="og:image" content="https://covidindialive.netlify.app/images/favicon.ico">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://covidindialive.netlify.app/">
+    <meta name="twitter:image" content="https://covidindialive.netlify.app/images/favicon.ico">
+    <base href="https://covidindialive.netlify.app/">
+    <link rel="canonical" href="https://covidindialive.netlify.app/">
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165420192-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-165420192-1');
-        </script>
+    <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="16x16">
 
-    </head>
-    <body data-spy="scroll" data-target="#main-nav" id="home">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
-          <div class="container">
-            <a href="index.html" class="navbar-brand ml-2"><span style="font-weight: bold;color: red;">COVID</span> India Live</a>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" >
-              <span class="text-warning">Menu</span>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#292b2c">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#292b2c">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#292b2c">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165420192-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-165420192-1');
+    </script>
+
+</head>
+
+<body data-spy="scroll" data-target="#main-nav" id="home">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
+        <div class="container">
+            <a href="index.html" class="navbar-brand ml-2"><span style="font-weight: bold;color: red;">COVID</span>
+                India Live</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="text-warning">Menu</span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item active">
-                  <a href="state.html" class="nav-link">State Cases</a>
-                </li>
-                <li class="nav-item">
-                  <a href="world.html" class="nav-link">Countries Cases</a>
-                </li>
-                <li class="nav-item">
-                  <a href="zones.html" class="nav-link">Zones</a>
-                </li>
-                <li class="nav-item">
-                    <a href="center.html" class="nav-link">Test Centers</a>
-                </li>
-                <li class="nav-item">
-                    <a href="precaution.html" class="nav-link">Precautions</a>
-                </li>
-                <li class="nav-item">
-                    <a href="health.html" class="nav-link">Health Tips</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-              </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="state.html" class="nav-link">State Cases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="world.html" class="nav-link">Countries Cases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="zones.html" class="nav-link">Zones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="center.html" class="nav-link">Test Centers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="precaution.html" class="nav-link">Precautions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="health.html" class="nav-link">Health Tips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                </ul>
             </div>
-          </div>
-        </nav>
-                <div class="container">
-                    <div class="row ">
-                        <div class="col mx-3">
-                            <h2 class="text-center scheme mt-5 pt-5 mx-auto" style="font-size: 50px;">Report By ICMR</h2>
-                            <p class="text-info pt-3" style="font-weight:bold; font-size: 20px;">Date: <span id="date" class="scheme"></span></p>
-                            <p class="text-info" style="font-weight:bold; font-size: 20px;">Total Sample Tested: <span id="test" style="letter-spacing: 0.5px;" class="scheme"></span></p>                                               
-                        </div>
-                    </div>
-                </div>
-                <h2 class="text-center scheme mt-2 pt-2 mx-auto" style="font-size: 60px;">State Wise Cases</h2>
-                    <div class="text-center">
-                        <input id="myState" type="text" placeholder=" Search Your State" class=" text-dark p-2 mt-4" style="box-shadow: 0px 0px 5px grey;border: 1px solid black;border-radius: 20px;">
-                    </div>
-                    <div class="container">
-                        <div class="table-responsive-sm mx-auto mt-4 border-dark" style="align-items: center; max-width: 50rem;">
-                        <table class="table table-bordered table-hover table-striped table-dark table-sm text-center"  id="myState1">
-                            <thead class="thead-dark" style="font-size: 22px;">
-                                <tr>
-                                    <th title="Field #1">State</th>
-                                    <th title="Field #2">Confirmed</th> 
-                                    <th title="Field #3"> Active</th>                                   
-                                    <th title="Field #4">Recovered</th>
-                                    <th title="Field #5">Deaths</th>
-                                </tr>
-                            </thead>
-                            <tbody id="stateTable" style="letter-spacing: 0.5px;">
-                                <tr>
-                                    <td><span id="s1_1"> </span></td>
-                                    <td><span id="s1_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s1_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s1_3"> </span></td>
-                                    <td><span id="s1_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s1_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s1_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s1_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s2_1"> </span></td>
-                                    <td><span id="s2_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s2_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s2_3"> </span></td>
-                                    <td><span id="s2_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s2_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s2_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s2_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s3_1"> </span></td>
-                                    <td><span id="s3_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s3_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s3_3"> </span></td>
-                                    <td><span id="s3_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s3_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s3_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s3_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s4_1"> </span></td>
-                                    <td><span id="s4_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s4_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s4_3"> </span></td>
-                                    <td><span id="s4_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s4_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s4_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s4_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s5_1"> </span></td>
-                                    <td><span id="s5_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s5_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s5_3"> </span></td>
-                                    <td><span id="s5_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s5_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s5_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s5_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s6_1"> </span></td>
-                                    <td><span id="s6_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s6_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s6_3"> </span></td>
-                                    <td><span id="s6_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s6_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s6_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s6_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s7_1"> </span></td>
-                                    <td><span id="s7_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s7_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s7_3"> </span></td>
-                                    <td><span id="s7_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s7_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s7_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s7_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s8_1"> </span></td>
-                                    <td><span id="s8_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s8_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s8_3"> </span></td>
-                                    <td><span id="s8_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s8_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s8_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s8_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s9_1"> </span></td>
-                                    <td><span id="s9_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s9_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s9_3"> </span></td>
-                                    <td><span id="s9_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s9_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s9_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s9_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s10_1"> </span></td>
-                                    <td><span id="s10_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s10_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s10_3"> </span></td>
-                                    <td><span id="s10_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s10_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s10_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s10_6" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s11_1"> </span></td>
-                                    <td><span id="s11_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s11_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s11_3"> </span></td>
-                                    <td><span id="s11_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s11_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s11_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s11_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s12_1"> </span></td>
-                                    <td><span id="s12_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s12_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s12_3"> </span></td>
-                                    <td><span id="s12_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s12_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s12_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s12_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s13_1"> </span></td>
-                                    <td><span id="s13_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s13_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s13_3"> </span></td>
-                                    <td><span id="s13_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s13_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s13_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s13_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s14_1"> </span></td>
-                                    <td><span id="s14_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s14_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s14_3"> </span></td>
-                                    <td><span id="s14_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s14_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s14_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s14_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s15_1"> </span></td>
-                                    <td><span id="s15_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s15_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s15_3"> </span></td>
-                                    <td><span id="s15_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s15_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s15_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s15_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s16_1"> </span></td>
-                                    <td><span id="s16_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s16_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s16_3"> </span></td>
-                                    <td><span id="s16_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s16_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s16_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s16_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s17_1"> </span></td>
-                                    <td><span id="s17_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s17_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s17_3"> </span></td>
-                                    <td><span id="s17_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s17_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s17_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s17_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s18_1"> </span></td>
-                                    <td><span id="s18_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s18_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s18_3"> </span></td>
-                                    <td><span id="s18_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s18_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s18_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s18_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s19_1"> </span></td>
-                                    <td><span id="s19_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s19_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s19_3"> </span></td>
-                                    <td><span id="s19_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s19_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s19_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s19_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s20_1"> </span></td>
-                                    <td><span id="s20_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s20_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s20_3"> </span></td>
-                                    <td><span id="s20_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s20_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s20_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s20_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s21_1"> </span></td>
-                                    <td><span id="s21_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s21_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s21_3"> </span></td>
-                                    <td><span id="s21_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s21_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s21_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s21_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s22_1"> </span></td>
-                                    <td><span id="s22_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s22_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s22_3"> </span></td>
-                                    <td><span id="s22_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s22_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s22_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s22_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s23_1"> </span></td>
-                                    <td><span id="s23_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s23_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s23_3"> </span></td>
-                                    <td><span id="s23_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s23_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s23_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s23_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s24_1"> </span></td>
-                                    <td><span id="s24_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s24_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s24_3"> </span></td>
-                                    <td><span id="s24_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s24_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s24_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s24_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s25_1"> </span></td>
-                                    <td><span id="s25_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s25_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s25_3"> </span></td>
-                                    <td><span id="s25_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s25_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s25_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s25_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s26_1"> </span></td>
-                                    <td><span id="s26_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s26_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s26_3"> </span></td>
-                                    <td><span id="s26_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s26_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s26_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s26_9" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s27_1"> </span></td>
-                                    <td><span id="s27_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s27_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s27_3"> </span></td>
-                                    <td><span id="s27_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s27_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s27_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s27_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s28_1"> </span></td>
-                                    <td><span id="s28_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s28_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s28_3"> </span></td>
-                                    <td><span id="s28_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s28_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s28_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s28_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s29_1"> </span></td>
-                                    <td><span id="s29_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s29_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s29_3"> </span></td>
-                                    <td><span id="s29_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s29_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s29_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s29_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row ">
+            <div class="col mx-3">
+                <h2 class="text-center scheme mt-5 pt-5 mx-auto" style="font-size: 50px;">Report By ICMR</h2>
+                <p class="text-info pt-3" style="font-weight:bold; font-size: 20px;">Date: <span id="date"
+                        class="scheme"></span></p>
+                <p class="text-info" style="font-weight:bold; font-size: 20px;">Total Sample Tested: <span id="test"
+                        style="letter-spacing: 0.5px;" class="scheme"></span></p>
+            </div>
+        </div>
+    </div>
+    <h2 class="text-center scheme mt-2 pt-2 mx-auto" style="font-size: 60px;">State Wise Cases</h2>
+    <div class="text-center">
+        <input id="myState" type="text" placeholder=" Search Your State" class=" text-dark p-2 mt-4"
+            style="box-shadow: 0px 0px 5px grey;border: 1px solid black;border-radius: 20px;">
+    </div>
+    <div class="container">
+        <div class="table-responsive-sm mx-auto mt-4 border-dark" style="align-items: center; max-width: 50rem;">
+            <table class="table table-bordered table-hover table-striped table-dark table-sm text-center" id="myState1">
+                <thead class="thead-dark" style="font-size: 22px;">
+                    <tr>
+                        <th title="Field #1">State</th>
+                        <th title="Field #2">Confirmed</th>
+                        <th title="Field #3"> Active</th>
+                        <th title="Field #4">Recovered</th>
+                        <th title="Field #5">Deaths</th>
+                    </tr>
+                </thead>
+                <tbody id="stateTable" style="letter-spacing: 0.5px;">
+                    <tr>
+                        <td><span id="s1_1"> </span></td>
+                        <td><span id="s1_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s1_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s1_3"> </span></td>
+                        <td><span id="s1_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s1_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s1_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s1_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s2_1"> </span></td>
+                        <td><span id="s2_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s2_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s2_3"> </span></td>
+                        <td><span id="s2_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s2_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s2_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s2_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s3_1"> </span></td>
+                        <td><span id="s3_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s3_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s3_3"> </span></td>
+                        <td><span id="s3_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s3_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s3_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s3_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s4_1"> </span></td>
+                        <td><span id="s4_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s4_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s4_3"> </span></td>
+                        <td><span id="s4_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s4_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s4_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s4_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s5_1"> </span></td>
+                        <td><span id="s5_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s5_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s5_3"> </span></td>
+                        <td><span id="s5_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s5_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s5_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s5_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s6_1"> </span></td>
+                        <td><span id="s6_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s6_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s6_3"> </span></td>
+                        <td><span id="s6_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s6_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s6_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s6_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s7_1"> </span></td>
+                        <td><span id="s7_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s7_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s7_3"> </span></td>
+                        <td><span id="s7_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s7_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s7_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s7_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s8_1"> </span></td>
+                        <td><span id="s8_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s8_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s8_3"> </span></td>
+                        <td><span id="s8_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s8_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s8_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s8_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s9_1"> </span></td>
+                        <td><span id="s9_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s9_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s9_3"> </span></td>
+                        <td><span id="s9_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s9_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s9_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s9_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s10_1"> </span></td>
+                        <td><span id="s10_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s10_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s10_3"> </span></td>
+                        <td><span id="s10_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s10_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s10_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s10_6" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s11_1"> </span></td>
+                        <td><span id="s11_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s11_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s11_3"> </span></td>
+                        <td><span id="s11_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s11_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s11_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s11_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s12_1"> </span></td>
+                        <td><span id="s12_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s12_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s12_3"> </span></td>
+                        <td><span id="s12_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s12_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s12_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s12_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s13_1"> </span></td>
+                        <td><span id="s13_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s13_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s13_3"> </span></td>
+                        <td><span id="s13_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s13_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s13_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s13_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s14_1"> </span></td>
+                        <td><span id="s14_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s14_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s14_3"> </span></td>
+                        <td><span id="s14_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s14_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s14_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s14_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s15_1"> </span></td>
+                        <td><span id="s15_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s15_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s15_3"> </span></td>
+                        <td><span id="s15_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s15_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s15_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s15_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s16_1"> </span></td>
+                        <td><span id="s16_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s16_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s16_3"> </span></td>
+                        <td><span id="s16_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s16_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s16_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s16_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s17_1"> </span></td>
+                        <td><span id="s17_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s17_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s17_3"> </span></td>
+                        <td><span id="s17_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s17_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s17_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s17_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s18_1"> </span></td>
+                        <td><span id="s18_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s18_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s18_3"> </span></td>
+                        <td><span id="s18_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s18_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s18_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s18_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s19_1"> </span></td>
+                        <td><span id="s19_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s19_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s19_3"> </span></td>
+                        <td><span id="s19_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s19_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s19_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s19_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s20_1"> </span></td>
+                        <td><span id="s20_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s20_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s20_3"> </span></td>
+                        <td><span id="s20_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s20_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s20_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s20_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s21_1"> </span></td>
+                        <td><span id="s21_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s21_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s21_3"> </span></td>
+                        <td><span id="s21_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s21_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s21_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s21_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s22_1"> </span></td>
+                        <td><span id="s22_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s22_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s22_3"> </span></td>
+                        <td><span id="s22_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s22_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s22_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s22_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s23_1"> </span></td>
+                        <td><span id="s23_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s23_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s23_3"> </span></td>
+                        <td><span id="s23_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s23_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s23_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s23_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s24_1"> </span></td>
+                        <td><span id="s24_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s24_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s24_3"> </span></td>
+                        <td><span id="s24_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s24_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s24_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s24_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s25_1"> </span></td>
+                        <td><span id="s25_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s25_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s25_3"> </span></td>
+                        <td><span id="s25_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s25_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s25_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s25_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s26_1"> </span></td>
+                        <td><span id="s26_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s26_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s26_3"> </span></td>
+                        <td><span id="s26_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s26_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s26_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s26_9" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s27_1"> </span></td>
+                        <td><span id="s27_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s27_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s27_3"> </span></td>
+                        <td><span id="s27_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s27_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s27_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s27_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s28_1"> </span></td>
+                        <td><span id="s28_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s28_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s28_3"> </span></td>
+                        <td><span id="s28_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s28_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s28_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s28_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s29_1"> </span></td>
+                        <td><span id="s29_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s29_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s29_3"> </span></td>
+                        <td><span id="s29_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s29_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s29_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s29_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
 
-                                <tr>
-                                    <td><span id="s30_1"> </span></td>
-                                    <td><span id="s30_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s30_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s30_3"> </span></td>
-                                    <td><span id="s30_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s30_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s30_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s30_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s31_1"> </span></td>
-                                    <td><span id="s31_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s31_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s31_3"> </span></td>
-                                    <td><span id="s31_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s31_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s31_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s31_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
+                    <tr>
+                        <td><span id="s30_1"> </span></td>
+                        <td><span id="s30_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s30_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s30_3"> </span></td>
+                        <td><span id="s30_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s30_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s30_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s30_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s31_1"> </span></td>
+                        <td><span id="s31_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s31_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s31_3"> </span></td>
+                        <td><span id="s31_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s31_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s31_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s31_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
 
-                                <tr>
-                                    <td><span id="s32_1"> </span></td>
-                                    <td><span id="s32_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s32_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s32_3"> </span></td>
-                                    <td><span id="s32_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s32_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s32_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s32_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s33_1"> </span></td>
-                                    <td><span id="s33_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s33_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s33_3"> </span></td>
-                                    <td><span id="s33_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s33_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s33_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s33_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s34_1"> </span></td>
-                                    <td><span id="s34_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s34_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s34_3"> </span></td>
-                                    <td><span id="s34_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s34_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s34_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s34_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s35_1"> </span></td>
-                                    <td><span id="s35_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s35_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s35_3"> </span></td>
-                                    <td><span id="s35_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s35_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s35_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s35_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s36_1"> </span></td>
-                                    <td><span id="s36_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s36_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s36_3"> </span></td>
-                                    <td><span id="s36_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s36_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s36_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s36_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="s37_1"> </span></td>
-                                    <td><span id="s37_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s37_6" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s37_3"> </span></td>
-                                    <td><span id="s37_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s37_7" style="font-size: small; font-weight: bold;"></span></td>
-                                    <td><span id="s37_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger" id="s37_8" style="font-size: small; font-weight: bold;"></span></td>
-                                </tr>                                
-                            </tbody>
-                        </table>
-                        </div>
-                    </div>                                                                                                                                                 
-                <footer class="bg-dark py-2">
-                    <div class="footer-content text-center text-white">Designed & Developed by <a href="https://www.linkedin.com/in/shubhkhanna/" class="text-primary">Shubh Khanna</a></div>
-                    <div class="footer-content text-center text-white ">Made For <span class="text-warning">India</div>
-                </footer>
-        <script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                    <tr>
+                        <td><span id="s32_1"> </span></td>
+                        <td><span id="s32_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s32_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s32_3"> </span></td>
+                        <td><span id="s32_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s32_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s32_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s32_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s33_1"> </span></td>
+                        <td><span id="s33_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s33_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s33_3"> </span></td>
+                        <td><span id="s33_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s33_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s33_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s33_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s34_1"> </span></td>
+                        <td><span id="s34_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s34_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s34_3"> </span></td>
+                        <td><span id="s34_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s34_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s34_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s34_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s35_1"> </span></td>
+                        <td><span id="s35_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s35_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s35_3"> </span></td>
+                        <td><span id="s35_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s35_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s35_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s35_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s36_1"> </span></td>
+                        <td><span id="s36_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s36_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s36_3"> </span></td>
+                        <td><span id="s36_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s36_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s36_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s36_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span id="s37_1"> </span></td>
+                        <td><span id="s37_2"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s37_6" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s37_3"> </span></td>
+                        <td><span id="s37_4"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s37_7" style="font-size: small; font-weight: bold;"></span></td>
+                        <td><span id="s37_5"> </span> <span class="text-danger">&#8593;</span><span class="text-danger"
+                                id="s37_8" style="font-size: small; font-weight: bold;"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer class="bg-dark py-2">
+        <div class="footer-content text-center text-white">Designed & Developed by <a
+                href="https://www.linkedin.com/in/shubhkhanna/" class="text-primary">Shubh Khanna</a></div>
+        <div class="footer-content text-center text-white ">Made For <span class="text-warning">India</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-        <script src="./JS/main.js"></script>
-    </body>
-</html>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="./JS/main.js"></script>
+</body>
+
+</html>

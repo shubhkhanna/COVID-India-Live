@@ -1,180 +1,202 @@
 <!DOCTYPE html>
 <html lang="en" onload="updateData()">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="32x32">
-        <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="16x16">
-        <meta name="author" content="Shubh Khanna">
-        <meta name="description" content="Tracking COVID-19 cases across the Globe"> 
-        <meta name="keywords" content="coronavirus, coronavirus tracker, corona, COVID-19, Covid-19 India, Covid India Live, covid india live, covid india live update, global cases, coronavirus india cases">
-        
-        <meta property="og:site_name" content="COVID India Live">
-        <meta property="og:title" content="COVID India Live">
-        <meta property="og:description" content="Tracking COVID-19 cases across the Globe">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://covidindialive.netlify.com/">
-        <meta property="og:image" content="https://covidindialive.netlify.com/images/favicon.ico">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="https://covidindialive.netlify.com/">
-        <meta name="twitter:image" content="https://covidindialive.netlify.com/images/favicon.ico">
-        <base href="https://covidindialive.netlify.com/">
-        <link rel="canonical" href="https://covidindialive.netlify.com/">
-        
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/style.css">
 
-        <!-- Chrome, Firefox OS and Opera -->
-        <meta name="theme-color" content="#292b2c">
-        <!-- Windows Phone -->
-        <meta name="msapplication-navbutton-color" content="#292b2c">
-        <!-- iOS Safari -->
-        <meta name="apple-mobile-web-app-status-bar-style" content="#292b2c">
-        
-        <title>COVID India Live | Precautions</title>
+<head>
+  <title>COVID India Live | Precautions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google-site-verification" content="QpGLgEQeUnwpcmpy6CVlQwdEOOHCAnaDrzsLE03HE60" />
+  <meta name="robots" content="index,follow" />
+  <meta name="Googlebot" content="index,follow" />
+  <meta name="AdsBot-Google" content="index,follow" />
+  <meta name="author" content="Shubh Khanna">
+  <meta name="description" content="Tracking COVID-19 cases across the Globe">
+  <meta name="keywords" content="covid india live,covid19,coronavirus,covid">
+  <meta property="og:site_name" content="COVID India Live">
+  <meta property="og:title" content="COVID India Live">
+  <meta property="og:description" content="Tracking COVID-19 cases across the Globe">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://covidindialive.netlify.app/">
+  <meta property="og:image" content="https://covidindialive.netlify.app/images/favicon.ico">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="https://covidindialive.netlify.app/">
+  <meta name="twitter:image" content="https://covidindialive.netlify.app/images/favicon.ico">
+  <base href="https://covidindialive.netlify.app/">
+  <link rel="canonical" href="https://covidindialive.netlify.app/">
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165420192-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-165420192-1');
-        </script>
+  <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="16x16">
 
-    </head>
-    <body data-spy="scroll" data-target="#main-nav" id="home">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
-        <div class="container">
-          <a href="index.html" class="navbar-brand ml-2"><span style="font-weight: bold;color: red;">COVID</span> India Live</a>
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" >
-            <span class="text-warning">Menu</span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a href="index.html" class="nav-link">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="state.html" class="nav-link">State Cases</a>
-              </li>
-              <li class="nav-item">
-                <a href="world.html" class="nav-link">Countries Cases</a>
-              </li>
-              <li class="nav-item">
-                <a href="zones.html" class="nav-link">Zones</a>
-              </li>
-              <li class="nav-item">
-                  <a href="center.html" class="nav-link">Test Centers</a>
-              </li>
-              <li class="nav-item active">
-                  <a href="precaution.html" class="nav-link">Precautions</a>
-              </li>
-              <li class="nav-item">
-                  <a href="health.html" class="nav-link">Health Tips</a>
-              </li>
-              <li class="nav-item">
-                  <a href="about.html" class="nav-link">About</a>
-              </li>
-            </ul>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#292b2c">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#292b2c">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#292b2c">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165420192-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-165420192-1');
+  </script>
+
+</head>
+
+<body data-spy="scroll" data-target="#main-nav" id="home">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
+    <div class="container">
+      <a href="index.html" class="navbar-brand ml-2"><span style="font-weight: bold;color: red;">COVID</span> India
+        Live</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="text-warning">Menu</span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="state.html" class="nav-link">State Cases</a>
+          </li>
+          <li class="nav-item">
+            <a href="world.html" class="nav-link">Countries Cases</a>
+          </li>
+          <li class="nav-item">
+            <a href="zones.html" class="nav-link">Zones</a>
+          </li>
+          <li class="nav-item">
+            <a href="center.html" class="nav-link">Test Centers</a>
+          </li>
+          <li class="nav-item active">
+            <a href="precaution.html" class="nav-link">Precautions</a>
+          </li>
+          <li class="nav-item">
+            <a href="health.html" class="nav-link">Health Tips</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <h2 class="scheme text-center mt-5 pt-5 mx-3" style="font-size: 50px;">Precautions As Per Mentioned By WHO</h2>
+  <div class="text-center">
+    <div class="badge badge-danger"><i class="fas fa-exclamation-triangle"> COVID-19</i></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mt-5">
+        <div class="card pre">
+          <div class="card-body" style="font-size: 1.2em;">
+            <h2 class="scheme m-3 text-center" style="font-size: 40px;">When to use a mask</h2>
+            <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>If you are healthy, you only need to
+              wear a mask if you are taking care of a person with COVID-19.</div>
+            <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>Wear a mask if you are coughing or
+              sneezing.</div>
+            <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>If you wear a mask, then you must know
+              how to use it and dispose of it properly.</div>
+            <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>Before putting on a mask, clean hands
+              with alcohol-based hand rub or soap and water.</div>
+            <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>Cover mouth and nose with mask and make
+              sure there are no gaps between your face and the mask.</div>
+            <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>Avoid touching the mask while using it;
+              if you do, clean your hands with alcohol-based hand rub or soap and water.</div>
+            <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>Replace the mask with a new one as soon
+              as it is damp and do not re-use single-use masks.</div>
+            <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>To remove the mask: remove it from
+              behind (do not touch the front of mask); discard immediately in a closed bin.</div>
+            <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>After removing mask, clean hands with
+              alcohol-based hand rub or soap and water.</div>
           </div>
         </div>
-      </nav>
-              <h2 class="scheme text-center mt-5 pt-5 mx-3" style="font-size: 50px;">Precautions As Per Mentioned By WHO</h2>
-              <div class="text-center"><div class="badge badge-danger"><i class="fas fa-exclamation-triangle"> COVID-19</i></div></div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-12 mt-5">
-                    <div class="card pre">
-                      <div class="card-body" style="font-size: 1.2em;">
-                        <h2 class="scheme m-3 text-center"  style="font-size: 40px;">When to use a mask</h2>
-                        <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>If you are healthy, you only need to wear a mask if you are taking care of a person with COVID-19.</div>
-                        <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>Wear a mask if you are coughing or sneezing.</div>                      
-                        <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>If you wear a mask, then you must know how to use it and dispose of it properly.</div>
-                        <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>Before putting on a mask, clean hands with alcohol-based hand rub or soap and water.</div>
-                        <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>Cover mouth and nose with mask and make sure there are no gaps between your face and the mask.</div>
-                        <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>Avoid touching the mask while using it; if you do, clean your hands with alcohol-based hand rub or soap and water.</div>
-                        <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>Replace the mask with a new one as soon as it is damp and do not re-use single-use masks.</div>
-                        <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>To remove the mask: remove it from behind (do not touch the front of mask); discard immediately in a closed bin.</div>
-                        <div class="p-2 scheme"><i class="fas fa-arrow-right m-2 scheme"></i>After removing mask, clean hands with alcohol-based hand rub or soap and water.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <h2 class="text-center scheme mt-2 pb-4 mx-3 px-3" style="font-size: 40px;">Protect Yourself And Others From Getting Sick</h2>
-                <div class="row">
-                  <div class="col-lg-4">
-                    <div class="card  mb-2">
-                      <img class="img-fluid rounded" src="./images/img4.jpeg">
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="card  mb-2">
-                      <img class="img-fluid rounded" src="./images/img5.jpeg">
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="card mb-2">
-                      <img class="img-fluid rounded" src="./images/img6.jpeg">
-                    </div>
-                  </div>
-                </div>
-                <br>
-                <h2 class="text-center scheme mt-2 pb-4 mx-3 px-3" style="font-size: 40px;">Be Ready For Coronavirus</h2>
-                <div class="row">
-                      <div class="col-lg-4">
-                        <div class="card mb-2">
-                          <img class="img-fluid rounded" src="./images/img7.jpeg">
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="card mb-2">
-                          <img class="img-fluid rounded" src="./images/img8.jpeg">
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="card border-dark mb-2">
-                          <img class="img-fluid rounded" src="./images/img9.jpeg">
-                        </div>
-                      </div>
-                </div>
-                <br>                
-                <h2 class="scheme text-center mt-2 pb-4 mx-3 px-3" style="font-size: 40px;">Myth Busters</h2>
-                <div class="row">
-                  <div class="col-lg-4">
-                    <div class="card mb-2">
-                      <img class="img-fluid rounded" src="./images/img1.jpg">
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="card mb-2">
-                      <img class="img-fluid rounded" src="./images/img2.jpg">                    
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="card mb-2">
-                      <img class="img-fluid rounded" src="./images/img3.jpg">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <footer class="bg-dark py-2">
-                <div class="footer-content text-center text-white">Designed & Developed by <a href="https://www.linkedin.com/in/shubhkhanna/" class="text-primary">Shubh Khanna</a></div>
-                <div class="footer-content text-center text-white ">Made For <span class="text-warning">India</div>
-            </footer>
-        <script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-        <script src="./JS/main.js"></script>
-    </body>
-</html>   
+      </div>
+    </div>
+    <br>
+    <h2 class="text-center scheme mt-2 pb-4 mx-3 px-3" style="font-size: 40px;">Protect Yourself And Others From Getting
+      Sick</h2>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card  mb-2">
+          <img class="img-fluid rounded" src="./images/img4.jpeg">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card  mb-2">
+          <img class="img-fluid rounded" src="./images/img5.jpeg">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card mb-2">
+          <img class="img-fluid rounded" src="./images/img6.jpeg">
+        </div>
+      </div>
+    </div>
+    <br>
+    <h2 class="text-center scheme mt-2 pb-4 mx-3 px-3" style="font-size: 40px;">Be Ready For Coronavirus</h2>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-2">
+          <img class="img-fluid rounded" src="./images/img7.jpeg">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card mb-2">
+          <img class="img-fluid rounded" src="./images/img8.jpeg">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card border-dark mb-2">
+          <img class="img-fluid rounded" src="./images/img9.jpeg">
+        </div>
+      </div>
+    </div>
+    <br>
+    <h2 class="scheme text-center mt-2 pb-4 mx-3 px-3" style="font-size: 40px;">Myth Busters</h2>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-2">
+          <img class="img-fluid rounded" src="./images/img1.jpg">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card mb-2">
+          <img class="img-fluid rounded" src="./images/img2.jpg">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card mb-2">
+          <img class="img-fluid rounded" src="./images/img3.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark py-2">
+    <div class="footer-content text-center text-white">Designed & Developed by <a
+        href="https://www.linkedin.com/in/shubhkhanna/" class="text-primary">Shubh Khanna</a></div>
+    <div class="footer-content text-center text-white ">Made For <span class="text-warning">India</div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="./JS/main.js"></script>
+</body>
+
+</html>
