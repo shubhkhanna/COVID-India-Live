@@ -108,28 +108,3 @@ i {
 .c1 {
   box-shadow: 1px 1px 8px lightgrey;
 }
-
-@media (prefers-color-scheme: dark) {
-  html,
-  body {
-    background-color: #292b2c;
-  }
-  .c1 {
-    box-shadow: 0px 0px 6px whitesmoke;
-  }
-  .scheme {
-    color: white;
-  }
-  .abt {
-    background-color: #292b2c;
-    border-color: white;
-    box-shadow: 0px 0px 5px whitesmoke;
-    border-radius: 10px;
-  }
-  .pre {
-    background-color: #292b2c;
-    border-color: white;
-    box-shadow: 0px 0px 5px whitesmoke;
-    border-radius: 10px;
-  }
-}

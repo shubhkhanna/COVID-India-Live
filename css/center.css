@@ -89,19 +89,3 @@ i {
 .badge {
   border-radius: 15px;
 }
-
-@media (prefers-color-scheme: dark) {
-  html,
-  body {
-    background-color: #292b2c;
-  }
-  .scheme {
-    color: white;
-  }
-  .card {
-    background-color: #292b2c;
-    border-color: white;
-    box-shadow: 0px 0px 3px whitesmoke;
-    border-radius: 10px;
-  }
-}
