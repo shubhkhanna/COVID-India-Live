@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" onload="updateData()">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="32x32">
-        <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="16x16">
-        <!-- <meta name="author" content="Shubh Khanna">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="16x16">
+    <!-- <meta name="author" content="Shubh Khanna">
         <meta name="description" content="Tracking COVID-19 cases across the Globe"> 
         <meta name="keywords" content="coronavirus, coronavirus tracker, corona, COVID-19, Covid-19 India, Covid India Live, covid india live, covid india live update, global cases, coronavirus india cases">
         
@@ -21,196 +22,210 @@
         <meta name="twitter:image" content="https://covidindialive.netlify.com/images/favicon.ico">
         <base href="https://covidindialive.netlify.com/">
         <link rel="canonical" href="https://covidindialive.netlify.com/"> -->
-               
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-        <link rel="stylesheet" href="./css/hover-min.css">
-        <link rel="stylesheet" href="./css/style.css">
-        <!-- Chrome, Firefox OS and Opera -->
-        <meta name="theme-color" content="#292b2c">
-        <!-- Windows Phone -->
-        <meta name="msapplication-navbutton-color" content="#292b2c">
-        <!-- iOS Safari -->
-        <meta name="apple-mobile-web-app-status-bar-style" content="#292b2c">        
-        <title>COVID India Live | Home</title>
-        
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165420192-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-165420192-1');
-        </script>
-    </head>
-    <body data-spy="scroll" data-target="#main-nav" id="home">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
-          <div class="container">
-            <a href="index.html" class="navbar-brand ml-2"><span style="font-weight: bold;color: red;">COVID</span> India Live</a>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" >
-              <span class="text-warning">Menu</span>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="./css/hover-min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#292b2c">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#292b2c">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#292b2c">
+    <title>COVID India Live | Home</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165420192-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-165420192-1');
+    </script>
+</head>
+
+<body data-spy="scroll" data-target="#main-nav" id="home">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="main-nav">
+        <div class="container">
+            <a href="index.html" class="navbar-brand ml-2"><span style="font-weight: bold;color: red;">COVID</span>
+                India Live</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="text-warning">Menu</span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="state.html" class="nav-link">State Cases</a>
-                </li>
-                <li class="nav-item">
-                  <a href="world.html" class="nav-link">Countries Cases</a>
-                </li>
-                <li class="nav-item">
-                  <a href="zones.html" class="nav-link">Zones</a>
-                </li>
-                <li class="nav-item">
-                    <a href="center.html" class="nav-link">Test Centers</a>
-                </li>
-                <li class="nav-item">
-                    <a href="precaution.html" class="nav-link">Precautions</a>
-                </li>
-                <li class="nav-item">
-                    <a href="health.html" class="nav-link">Health Tips</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-              </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="state.html" class="nav-link">State Cases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="world.html" class="nav-link">Countries Cases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="zones.html" class="nav-link">Zones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="center.html" class="nav-link">Test Centers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="precaution.html" class="nav-link">Precautions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="health.html" class="nav-link">Health Tips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                </ul>
             </div>
-          </div>
-        </nav>
-        <section class="mt-5 pt-3">
-            <div class="container-fluid bg-dark pt-4 pb-2 px-2" >
-            <p class="text-white text-center " style="font-size: 1.0em;letter-spacing: 1px;">
-                <span class="pr-2">Worldwide : </span>    
-                Confirmed: <span id="globalCases" class="pt-5 text-primary pr-2" style="font-weight: bold;">...</span><br>                    
-                Recovered: <span id="globalRecovered" class="pt-5 text-success pr-2" style="font-weight: bold;">...</span>
-                Deaths: <span id="globalDeaths" class="pt-5 text-danger pr-2" style="font-weight: bold;">...</span><br>
+        </div>
+    </nav>
+    <div class="container mt-5 pt-4">
+        <div class="row">
+            <div class="mx-auto col-md-12">
+                <h1 class="text-dark text-center pb-1 animate__animated animate__zoomIn">India Cases</h1>
+            </div>
+        </div>
+        <div class="row mx-auto pt-3">
+            <div class="col-md-3 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
+                <div class="card head card1">
+                    <div class="card-body py-4">
+                        <p class="text-center font-weight-bolder" style="font-size: 30px;">Confirmed</p>
+                        <p class="text-center text-primary animate__animated animate__fadeInUp animate__delay-2s"
+                            style="font-size: 30px;"><span id="confirmedCases">Loading...</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
+                <div class="card head card2">
+                    <div class="card-body py-4">
+                        <p class="text-center font-weight-bolder" style="font-size: 30px;">Active</p>
+                        <p class="text-center text-danger animate__animated animate__fadeInUp animate__delay-2s"
+                            style="font-size: 30px;"><span id="activeCases">Loading...</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
+                <div class="card head card3">
+                    <div class="card-body py-4">
+                        <p class="text-center font-weight-bolder" style="font-size: 30px;">Recovered</p>
+                        <p class="text-center text-success animate__animated animate__fadeInUp animate__delay-2s"
+                            style="font-size: 30px;"><span id="recoveredCases">Loading...</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
+                <div class="card head card4">
+                    <div class="card-body py-4">
+                        <p class="text-center font-weight-bolder" style="font-size: 30px;">Deaths</p>
+                        <p class="text-center text-dark animate__animated animate__fadeInUp animate__delay-2s"
+                            style="font-size: 30px;"><span id="deathCases">Loading...</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-auto">
+            <div class="col-lg-4 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
+                <div class="card head card1">
+                    <div class="card-body py-4">
+                        <p class="text-center font-weight-bolder" style="font-size: 30px;">New Confirmed</p>
+                        <p class="text-center text-primary animate__animated animate__fadeInUp animate__delay-2s"
+                            style="font-size: 30px;"><span id="dailyCases">Loading...</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
+                <div class="card head card3">
+                    <div class="card-body py-4">
+                        <p class="text-center font-weight-bolder" style="font-size: 30px;">New Recovered</p>
+                        <p class="text-center text-success animate__animated animate__fadeInUp animate__delay-2s"
+                            style="font-size: 30px;"><span id="dailyRecovered">Loading...</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4  mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
+                <div class="card head card4">
+                    <div class="card-body py-4">
+                        <p class="text-center font-weight-bolder" style="font-size: 30px;">New Deaths</p>
+                        <p class="text-center text-dark animate__animated animate__fadeInUp animate__delay-2s"
+                            style="font-size: 30px;"><span id="dailyDeaths">Loading...</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <marquee behavior="scroll" direction="left" scrollamount="4" style="color: black;font-size: 1.2em;"
+            onmouseover="javascript:stop()" onmouseout="javascript:start()">
+            <p class="pt-2 scheme" style="font-size: 1.2em;"><span class="text-danger ">Contact Details For INDIA
+                    :</span> Helpline Number : +91-11-23978046 / Toll Free : 1075 || Helpline Email ID : ncov2019@gov.in
             </p>
+        </marquee>
+    </div>
+    <div class="container mt-2">
+        <div class="row">
+            <div class="mx-auto col-md-12">
+                <h1 class="text-dark text-center pb-1 animate__animated animate__zoomIn">India Visuals</h1>
+                <p class="text-center text-muted px-3" style="font-size: 1.2em;">Please hover on the points on the graph
+                    to see the values.</p>
             </div>
-        </section>                            
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="mx-auto col-md-12">
-                  <h1 class="text-dark text-center pb-1 pt-2 animate__animated animate__zoomIn display-4">India Cases</h1>
-                </div>
-            </div>
-            <div class="row mx-auto">
-                <div class="col-md-3 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                    <div class="card head card1">
-                        <div class="card-body py-4">
-                            <p class="text-center font-weight-bolder" style="font-size: 30px;">Confirmed</p>
-                            <p class="text-center text-primary animate__animated animate__fadeInUp animate__delay-2s" style="font-size: 30px;"><span id="confirmedCases">Loading...</span></p>        
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                    <div class="card head card2">
-                        <div class="card-body py-4">
-                            <p class="text-center font-weight-bolder" style="font-size: 30px;">Active</p>
-                            <p class="text-center text-danger animate__animated animate__fadeInUp animate__delay-2s" style="font-size: 30px;"><span id="activeCases">Loading...</span></p>        
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                    <div class="card head card3">
-                        <div class="card-body py-4">
-                            <p class="text-center font-weight-bolder" style="font-size: 30px;">Recovered</p>
-                            <p class="text-center text-success animate__animated animate__fadeInUp animate__delay-2s" style="font-size: 30px;"><span id="recoveredCases">Loading...</span></p>        
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                    <div class="card head card4">
-                        <div class="card-body py-4">
-                            <p class="text-center font-weight-bolder" style="font-size: 30px;">Deaths</p>
-                            <p class="text-center text-dark animate__animated animate__fadeInUp animate__delay-2s" style="font-size: 30px;"><span id="deathCases">Loading...</span></p>        
-                        </div>
-                    </div>
-                </div>
-            </div>      
-            <div class="row mx-auto">
-                <div class="col-lg-4 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                    <div class="card head card1">
-                        <div class="card-body py-4">
-                            <p class="text-center font-weight-bolder" style="font-size: 30px;">New Confirmed</p>
-                            <p class="text-center text-primary animate__animated animate__fadeInUp animate__delay-2s" style="font-size: 30px;"><span id="dailyCases">Loading...</span></p>        
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                    <div class="card head card3">
-                        <div class="card-body py-4">
-                            <p class="text-center font-weight-bolder" style="font-size: 30px;">New Recovered</p>
-                            <p class="text-center text-success animate__animated animate__fadeInUp animate__delay-2s" style="font-size: 30px;"><span id="dailyRecovered">Loading...</span></p>        
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4  mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                    <div class="card head card4">
-                        <div class="card-body py-4">
-                            <p class="text-center font-weight-bolder" style="font-size: 30px;">New Deaths</p>
-                            <p class="text-center text-dark animate__animated animate__fadeInUp animate__delay-2s" style="font-size: 30px;"><span id="dailyDeaths">Loading...</span></p>        
-                        </div>
-                    </div>
-                </div>
-            </div>                                                    
         </div>
-        <p></p>
-        <div class="container-fluid">
-            <marquee behavior="scroll" direction="left" scrollamount="5" style="color: black;font-size: 1.5em;" onmouseover="javascript:stop()" onmouseout="javascript:start()">
-                <p class="pt-2 scheme" style="font-weight:bold;"><span class="text-danger ">Contact Details For INDIA :</span> Helpline Number : +91-11-23978046 / Toll Free : 1075  ||  Helpline Email ID : ncov2019@gov.in </p>
-            </marquee>
-        </div>
-        <section>                    
-            <h2 class="text-center pt-4 display-3 scheme">India Visuals</h2>
-            <div class="text-center text-danger px-3" style="font-size: 1.3em;font-weight: bold;">Please hover on the points on the graph to see the values.</div>
-            <br>
-            <!--graph-->
-            <div class="container-fluid pb-3">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card bg-dark mb-2" style="box-shadow: 0px 1px 2px;">
-                            <div class="card-body">                            
-                                <canvas id="confirm-graph" width="250" height="270" style=" padding: 0px 0px 0.3px 0px;"></canvas>
-                            </div>
-                        </div>                    
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card bg-dark mb-2" style="box-shadow: 0px 1px 2px;">
-                            <div class="card-body">                                
-                                <canvas id="recovered-graph" width="250" height="270" style="padding: 0px 0px 0.3px 0px;"></canvas>
-                            </div>
-                        </div>                    
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card bg-dark mb-2" style="box-shadow: 0px 1px 2px;">
-                            <div class="card-body">                                
-                                <canvas id="death-graph" width="250" height="270" style="padding: 0px 0px 0.3px 0px;"></canvas>
-                            </div>
-                        </div>                    
+    </div>
+    <!--graph-->
+    <div class="container pb-3">
+        <div class="row mx-auto justify-content-center">
+            <div class="col-md-8">
+                <div class="card head" style="background-color: #ecf0f3;">
+                    <div class="card-body">
+                        <canvas id="confirm-graph" style=" padding: 0px 0px 0.3px 0px;"></canvas>
                     </div>
                 </div>
             </div>
-        </section>                                                                                           
-        <footer class="bg-dark py-2">
-            <div class="footer-content text-center text-white">Designed & Developed by <a href="https://www.linkedin.com/in/shubhkhanna/" class="text-primary">Shubh Khanna</a></div>
-            <div class="footer-content text-center text-white ">Made For <span class="text-warning">India</div>
-        </footer>        
-        <script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        </div><br>
+        <div class="row mx-auto justify-content-center">
+            <div class="col-md-8">
+                <div class="card head" style="background-color: #ecf0f3;">
+                    <div class="card-body">
+                        <canvas id="recovered-graph" style=" padding: 0px 0px 0.3px 0px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <div class="row mx-auto justify-content-center">
+            <div class="col-md-8">
+                <div class="card head" style="background-color: #ecf0f3;">
+                    <div class="card-body">
+                        <canvas id="death-graph" style=" padding: 0px 0px 0.3px 0px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <footer class="bg-dark py-2">
+        <div class="footer-content text-center text-white">Designed & Developed by <a
+                href="https://www.linkedin.com/in/shubhkhanna/" class="text-primary">Shubh Khanna</a></div>
+        <div class="footer-content text-center text-white ">Made For <span class="text-warning">India</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-        <script src="./JS/main.js"></script>
-         
-    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="./JS/main.js"></script>
+
+</body>
+
 </html>

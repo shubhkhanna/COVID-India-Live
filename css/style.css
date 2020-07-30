@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: #ecf0f3;
 }
 .navbar {
@@ -15,7 +15,7 @@ body {
 .navbar .nav-item.active {
   border-left: red 3px solid;
 }
-.navbar-light .navbar-nav .active>.nav-link {
+.navbar-light .navbar-nav .active > .nav-link {
   color: black;
   font-weight: bolder;
 }
@@ -25,10 +25,6 @@ i {
 }
 .badge {
   font-size: medium;
-}
-canvas {
-  width: auto;
-  padding: auto;
 }
 .card1 {
   border-bottom: #0275d8 5px solid;
@@ -45,7 +41,7 @@ canvas {
 .head {
   border-radius: 10px;
   background: #ecf0f3;
-  box-shadow: inset 8px 8px 19px #dbdfe2, inset -8px -8px 19px #fdffff;
+  box-shadow: 8px 8px 19px #dbdfe2, -8px -8px 19px #fdffff;
 }
 .scheme {
   color: #292b2c;
@@ -67,7 +63,8 @@ canvas {
 }
 
 @media (prefers-color-scheme: dark) {
-  html, body {
+  html,
+  body {
     background-color: #292b2c;
   }
   .c1 {
@@ -83,7 +80,7 @@ canvas {
     border-radius: 10px;
   }
   .pre {
-    background-color:#292b2c;
+    background-color: #292b2c;
     border-color: white;
     box-shadow: 0px 0px 5px whitesmoke;
     border-radius: 10px;

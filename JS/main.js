@@ -1,4 +1,4 @@
-console.log(window.matchMedia("(prefers-color-scheme: dark)").matches)
+console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
 
 // Smooth Scrolling
 $("#main-nav a").on("click", function (event) {
@@ -778,14 +778,13 @@ function drawBlueChart(processedData, ctxID) {
           data: processedData,
           fill: true,
           backgroundColor: gradientFill,
-          borderColor: "blue",
+          borderColor: "#007bff",
           pointBorderColor: "blue",
           pointBackgroundColor: "lightblue",
           pointHoverBackgroundColor: "lightblue",
           pointHoverBorderColor: "royalblue",
-          pointRadius: 4,
-          pointHoverRadius: 7,
-          pointHoverBorderWidth: 3,
+          pointRadius: 3,
+          pointHoverRadius: 5,
         },
       ],
     },
@@ -793,8 +792,8 @@ function drawBlueChart(processedData, ctxID) {
       legend: {
         display: true,
         labels: {
-          fontColor: "lightblue",
-          fontSize: 15,
+          fontColor: "black",
+          fontSize: 20,
         },
       },
       elements: {
@@ -820,15 +819,15 @@ function drawBlueChart(processedData, ctxID) {
             scaleLabel: {
               display: true,
               labelString: "Date",
-              fontColor: "#ADDFFF",
-              fontSize: 12,
+              fontColor: "#000",
+              fontSize: 15,
             },
             ticks: {
-              fontColor: "#fff",
+              fontColor: "#000",
               fontSize: 10,
             },
             gridLines: {
-              color: "rgba(173,216,230 ,0.2 )",
+              color: "rgba(0,0,0,0.2)",
             },
           },
         ],
@@ -837,15 +836,15 @@ function drawBlueChart(processedData, ctxID) {
             scaleLabel: {
               display: true,
               labelString: "Cases",
-              fontColor: "#ADDFFF",
-              fontSize: 12,
+              fontColor: "#000",
+              fontSize: 15,
             },
             ticks: {
-              fontColor: "#fff",
-              fontSize: 14,
+              fontColor: "#000",
+              fontSize: 10,
             },
             gridLines: {
-              color: "rgba(173,216,230 ,0.2 )",
+              color: "rgba(0,0,0,0.2)",
             },
           },
         ],
@@ -874,14 +873,13 @@ function drawGreenChart(processedData, ctxID) {
           data: processedData,
           fill: true,
           backgroundColor: gradientFill,
-          borderColor: "green",
+          borderColor: "#28a745",
           pointBorderColor: "green",
-          pointBackgroundColor: "greenyellow",
-          pointHoverBackgroundColor: "greenyellow",
+          pointBackgroundColor: "lightgreen",
+          pointHoverBackgroundColor: "lightgreen",
           pointHoverBorderColor: "green",
-          pointRadius: 4,
-          pointHoverRadius: 7,
-          pointHoverBorderWidth: 3,
+          pointRadius: 3,
+          pointHoverRadius: 5,
         },
       ],
     },
@@ -889,8 +887,8 @@ function drawGreenChart(processedData, ctxID) {
       legend: {
         display: true,
         labels: {
-          fontColor: "greenyellow",
-          fontSize: 15,
+          fontColor: "black",
+          fontSize: 20,
         },
       },
       elements: {
@@ -916,15 +914,15 @@ function drawGreenChart(processedData, ctxID) {
             scaleLabel: {
               display: true,
               labelString: "Date",
-              fontColor: "#52D017",
-              fontSize: 12,
+              fontColor: "#000",
+              fontSize: 15,
             },
             ticks: {
-              fontColor: "#fff",
+              fontColor: "#000",
               fontSize: 10,
             },
             gridLines: {
-              color: "rgba(173,216,230 ,0.2 )",
+              color: "rgba(0,0,0,0.2)",
             },
           },
         ],
@@ -933,15 +931,15 @@ function drawGreenChart(processedData, ctxID) {
             scaleLabel: {
               display: true,
               labelString: "Cases",
-              fontColor: "#52D017",
-              fontSize: 12,
+              fontColor: "#000",
+              fontSize: 15,
             },
             ticks: {
-              fontColor: "#fff",
-              fontSize: 14,
+              fontColor: "#000",
+              fontSize: 10,
             },
             gridLines: {
-              color: "rgba(173,216,230 ,0.2 )",
+              color: "rgba(0,0,0,0.2)",
             },
           },
         ],
@@ -969,14 +967,13 @@ function drawRedChart(processedData, ctxID) {
           data: processedData,
           fill: true,
           backgroundColor: gradientFill,
-          borderColor: "darkred",
+          borderColor: "#ff073a",
           pointBorderColor: "red",
           pointBackgroundColor: "lightpink",
           pointHoverBackgroundColor: "lightpink",
           pointHoverBorderColor: "red",
-          pointRadius: 4,
-          pointHoverRadius: 7,
-          pointHoverBorderWidth: 3,
+          pointRadius: 3,
+          pointHoverRadius: 5,
         },
       ],
     },
@@ -984,8 +981,8 @@ function drawRedChart(processedData, ctxID) {
       legend: {
         display: true,
         labels: {
-          fontColor: "red",
-          fontSize: 15,
+          fontColor: "black",
+          fontSize: 20,
         },
       },
       elements: {
@@ -1011,15 +1008,15 @@ function drawRedChart(processedData, ctxID) {
             scaleLabel: {
               display: true,
               labelString: "Date",
-              fontColor: "#FF0000",
-              fontSize: 12,
+              fontColor: "#000",
+              fontSize: 15,
             },
             ticks: {
-              fontColor: "#fff",
+              fontColor: "#000",
               fontSize: 10,
             },
             gridLines: {
-              color: "rgba(173,216,230 ,0.2 )",
+              color: "rgba(0,0,0,0.2)",
             },
           },
         ],
@@ -1028,15 +1025,15 @@ function drawRedChart(processedData, ctxID) {
             scaleLabel: {
               display: true,
               labelString: "Cases",
-              fontColor: "#FF0000",
-              fontSize: 12,
+              fontColor: "#000",
+              fontSize: 15,
             },
             ticks: {
-              fontColor: "#fff",
-              fontSize: 14,
+              fontColor: "#000",
+              fontSize: 10,
             },
             gridLines: {
-              color: "rgba(173,216,230 ,0.2 )",
+              color: "rgba(0,0,0,0.2)",
             },
           },
         ],
@@ -1145,18 +1142,16 @@ function drawRow(rowData) {
   row.append($("<td>" + rowData.deaths + "</td>"));
 }
 
-
-$(function() {
-  $("#zoneTab td ").each(function() {
-    if ($(this).text() == 'Red') {
-      $(this).css('background-color', 'red');
+$(function () {
+  $("#zoneTab td ").each(function () {
+    if ($(this).text() == "Red") {
+      $(this).css("background-color", "red");
     }
-    if ($(this).text() == 'Orange') {
-      $(this).css('background-color', 'orange');
+    if ($(this).text() == "Orange") {
+      $(this).css("background-color", "orange");
     }
-    if ($(this).text() == 'Green') {
-     $(this).css('background-color', 'green');
+    if ($(this).text() == "Green") {
+      $(this).css("background-color", "green");
     }
   });
 });
-

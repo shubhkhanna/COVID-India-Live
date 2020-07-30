@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: #ecf0f3;
 }
 .navbar {
@@ -15,7 +15,7 @@ body {
 .navbar .nav-item.active {
   border-left: red 3px solid;
 }
-.navbar-light .navbar-nav .active>.nav-link {
+.navbar-light .navbar-nav .active > .nav-link {
   color: black;
   font-weight: bolder;
 }
@@ -45,7 +45,8 @@ i {
 }
 
 @media (prefers-color-scheme: dark) {
-  html, body {
+  html,
+  body {
     background-color: #292b2c;
   }
   .scheme {
