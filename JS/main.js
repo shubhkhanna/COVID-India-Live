@@ -1,4 +1,4 @@
-console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
+// console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
 
 // Smooth Scrolling
 $("#main-nav a").on("click", function (event) {
@@ -21,20 +21,21 @@ $("#main-nav a").on("click", function (event) {
 
 function updateData() {
   // fetch global data
-  fetch(" https://covid19.mathdro.id/api/")
-    .then((final) => {
-      return final.json();
-    })
-    .then((updated) => {
-      document.getElementById("globalCases").innerHTML =
-        updated.confirmed.value;
-      document.getElementById("globalRecovered").innerHTML =
-        updated.recovered.value;
-      document.getElementById("globalDeaths").innerHTML = updated.deaths.value;
-    })
-    .catch((err) => {
-      console.error("Error fetching data from API.\n", err);
-    });
+  // fetch(" https://covid19.mathdro.id/api/")
+  //   .then((final) => {
+  //     return final.json();
+  //   })
+  //   .then((updated) => {
+  //     document.getElementById("globalCases").innerHTML =
+  //       updated.confirmed.value;
+  //     document.getElementById("globalRecovered").innerHTML =
+  //       updated.recovered.value;
+  //     document.getElementById("globalDeaths").innerHTML = updated.deaths.value;
+  //   })
+  //   .catch((err) => {
+  //     console.error("Error fetching data from API.\n", err);
+  //   });
+
   // fetch india data
   fetch("https://api.covid19india.org/data.json")
     .then((res) => {
@@ -57,16 +58,20 @@ function updateData() {
         data.statewise[0].deltadeaths;
     });
 
-  fetch("https://api.rootnet.in/covid19-in/stats/testing/latest")
+  fetch("https://api.covid19india.org/data.json")
     .then((res) => {
       return res.json();
     })
-    .then((testing) => {
-      document.getElementById("date").innerHTML = testing.data.day;
+    .then((data) => {
+      let tested_cases = data.tested.length;
+      document.getElementById("date").innerHTML =
+        data.tested[tested_cases - 1].updatetimestamp;
       document.getElementById("test").innerHTML =
-        testing.data.totalSamplesTested;
+        data.tested[tested_cases - 1].totalsamplestested;
+      document.getElementById("today").innerHTML =
+        data.tested[tested_cases - 1].samplereportedtoday;
     });
-  console.log("Successful.\n");
+  console.log("Successful Sample tested.\n");
 
   fetch("https://api.covid19india.org/data.json")
     .then((one) => {
