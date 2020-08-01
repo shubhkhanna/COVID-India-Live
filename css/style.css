@@ -4,7 +4,7 @@ body {
   background-color: #ecf0f3;
 }
 .navbar {
-  box-shadow: 0px 2px 3px #292b2ca9;
+  box-shadow: 0px 2px 3px #292b2c50;
   background-color: #ecf0f3;
 }
 .icon-bar {
@@ -89,7 +89,4 @@ i {
   border-radius: 10px;
   background: #ecf0f3;
   box-shadow: 8px 8px 19px #dbdfe2, -8px -8px 19px #fdffff;
-}
-.pad {
-  padding-left: 5px;
 }
