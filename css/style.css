@@ -90,3 +90,6 @@ i {
   background: #ecf0f3;
   box-shadow: 8px 8px 19px #dbdfe2, -8px -8px 19px #fdffff;
 }
+.pad {
+  padding-left: 5px;
+}

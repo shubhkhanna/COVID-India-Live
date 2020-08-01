@@ -21,20 +21,19 @@ $("#main-nav a").on("click", function (event) {
 
 function updateData() {
   // fetch global data
-  // fetch(" https://covid19.mathdro.id/api/")
-  //   .then((final) => {
-  //     return final.json();
-  //   })
-  //   .then((updated) => {
-  //     document.getElementById("globalCases").innerHTML =
-  //       updated.confirmed.value;
-  //     document.getElementById("globalRecovered").innerHTML =
-  //       updated.recovered.value;
-  //     document.getElementById("globalDeaths").innerHTML = updated.deaths.value;
-  //   })
-  //   .catch((err) => {
-  //     console.error("Error fetching data from API.\n", err);
-  //   });
+  fetch(" https://covid19.mathdro.id/api/")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      document.getElementById("globalCases").innerHTML = data.confirmed.value;
+      document.getElementById("globalRecovered").innerHTML =
+        data.recovered.value;
+      document.getElementById("globalDeaths").innerHTML = data.deaths.value;
+    })
+    .catch((err) => {
+      console.error("Error fetching data from API.\n", err);
+    });
 
   // fetch india data
   fetch("https://api.covid19india.org/data.json")
@@ -1139,12 +1138,30 @@ function drawTable(data) {
 
 function drawRow(rowData) {
   var row = $("<tr />");
+  if (rowData.active === null) {
+    {
+      rowData.active = 0;
+    }
+  } else {
+    {
+      rowData.active;
+    }
+  }
+  if (rowData.recovered === null) {
+    {
+      rowData.recovered = 0;
+    }
+  } else {
+    {
+      rowData.recovered;
+    }
+  }
   $("#myCountry1").append(row);
-  row.append($("<td>" + rowData.country + "</td>"));
-  row.append($("<td>" + rowData.cases + "</td>"));
-  row.append($("<td>" + rowData.active + "</td>"));
-  row.append($("<td>" + rowData.recovered + "</td>"));
-  row.append($("<td>" + rowData.deaths + "</td>"));
+  row.append($("<td class='pl-2'>" + rowData.country + "</td>"));
+  row.append($("<td class='text-primary'>" + rowData.cases + "</td>"));
+  row.append($("<td class='text-danger'>" + rowData.active + "</td>"));
+  row.append($("<td class='text-success'>" + rowData.recovered + "</td>"));
+  row.append($("<td class='text-muted'>" + rowData.deaths + "</td>"));
 }
 
 $(function () {

@@ -93,27 +93,51 @@
       </div>
     </div>
   </nav>
-  <h2 class="text-center scheme mt-5 pt-5 mx-auto" style="font-size: 60px;">Country Wise Cases</h2>
-  <div class="text-center">
-    <input id="myCountry" type="text" placeholder="   Search Your Country " class=" text-dark p-2 mt-4"
-      style="box-shadow: 0px 0px 5px grey;border: 1px solid black;border-radius: 20px;">
-  </div>
-  <div class="container">
-    <div class="table-responsive-sm mx-auto mt-4 border-dark" style="align-items: center; max-width: 50rem;">
-      <table class="table table-bordered table-hover table-striped table-dark table-sm text-center" id="myCountry1">
-        <thead class="thead-dark" style="font-size: 22px;">
-          <tr>
-            <th title="Field #1">Country</th>
-            <th title="Field #2">Cases</th>
-            <th title="Field #3">Active</th>
-            <th title="Field #4">Recovered</th>
-            <th title="Field #5">Deaths</th>
-          </tr>
-        </thead>
-        <tbody id="countryTable" style="letter-spacing: 1.5px;">
+  <div class="container-fluid mt-5 pt-4 px-3">
+    <div class="row">
+      <div class="col-md-9 order-sm-1 order-2">
+        <div class="card head">
+          <div class="card-body">
+            <h3 class="text-center">CountryWise Cases</h3>
+            <div class="text-center">
+              <input id="myCountry" type="text" placeholder="&#x1F50D; Search Your Country"
+                class=" text-dark p-2 mt-3 text-center head" style="border-radius: 8px;border: none;outline: none;">
+            </div>
+            <div class="table-responsive-sm mx-auto mt-4" style="align-items: center; max-width: 50rem;">
+              <table class="table table-bordered table-hover table-striped table-sm" id="myCountry1">
+                <thead class="thead-light">
+                  <tr>
+                    <th title="Field #1">Country</th>
+                    <th title="Field #2">Cases</th>
+                    <th title="Field #3">Active</th>
+                    <th title="Field #4">Recovered</th>
+                    <th title="Field #5">Deaths</th>
+                  </tr>
+                </thead>
+                <tbody id="countryTable" style="letter-spacing: 0.5px;">
 
-        </tbody>
-      </table>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 order-sm-2 order-1 mb-4">
+        <div class="card head sticky-top">
+          <div class="card-body">
+            <h3 class="text-center pb-3">WorldWide Cases</h3>
+            <p class="font-weight-bold">Total Confirmed: <span id="globalCases"
+                class="text-danger float-right"><span>Fetching...</span></span>
+            </p>
+            <p class="font-weight-bold">Total Recovered: <span id="globalRecovered"
+                class="text-danger float-right"><span>Fetching...</span></span>
+            </p>
+            <p class="font-weight-bold">Total Deaths: <span id="globalDeaths"
+                class="text-danger float-right"><span>Fetching...</span></span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <footer class="py-3">
