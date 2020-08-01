@@ -89,3 +89,18 @@ i {
   background: #ecf0f3;
   box-shadow: 8px 8px 19px #dbdfe2, -8px -8px 19px #fdffff;
 }
+.info {
+  width: 100%;
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+}
+.info .cases {
+  display: inline-block;
+  padding: 10px 1.1rem;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding-bottom: -10px;
+}

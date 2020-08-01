@@ -55,6 +55,12 @@ function updateData() {
         data.statewise[0].deltarecovered;
       document.getElementById("dailyDeaths").innerHTML =
         data.statewise[0].deltadeaths;
+      document.getElementById("dailyActive").innerHTML =
+        data.statewise[0].deltaconfirmed -
+        data.statewise[0].deltarecovered -
+        data.statewise[0].deltadeaths;
+      document.getElementById("updated").innerHTML =
+        data.statewise[0].lastupdatedtime;
     });
 
   fetch("https://api.covid19india.org/data.json")

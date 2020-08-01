@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="google-site-verification" content="QpGLgEQeUnwpcmpy6CVlQwdEOOHCAnaDrzsLE03HE60" />
+    <!-- <meta name="google-site-verification" content="QpGLgEQeUnwpcmpy6CVlQwdEOOHCAnaDrzsLE03HE60" />
     <meta name="robots" content="index,follow" />
     <meta name="Googlebot" content="index,follow" />
     <meta name="AdsBot-Google" content="index,follow" />
@@ -23,7 +23,7 @@
     <meta name="twitter:site" content="https://covidindialive.netlify.app/">
     <meta name="twitter:image" content="https://covidindialive.netlify.app/images/favicon.ico">
     <base href="https://covidindialive.netlify.app/">
-    <link rel="canonical" href="https://covidindialive.netlify.app/">
+    <link rel="canonical" href="https://covidindialive.netlify.app/"> -->
 
     <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/ico" href="./images/favicon.ico" sizes="16x16">
@@ -94,89 +94,56 @@
         <div class="row">
             <div class="mx-auto col-md-12">
                 <h1 class="text-dark text-center pb-1 animate__animated animate__zoomIn">India Cases</h1>
-            </div>
-        </div>
-        <div class="row mx-auto pt-3">
-            <div class="col-md-3 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                <div class="card head card1">
-                    <div class="card-body py-4">
-                        <p class="text-center font-weight-bolder" style="font-size: 30px;">Confirmed</p>
-                        <p class="text-center text-primary animate__animated animate__fadeInUp animate__delay-2s"
-                            style="font-size: 30px;"><span id="confirmedCases">Loading...</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                <div class="card head card2">
-                    <div class="card-body py-4">
-                        <p class="text-center font-weight-bolder" style="font-size: 30px;">Active</p>
-                        <p class="text-center text-danger animate__animated animate__fadeInUp animate__delay-2s"
-                            style="font-size: 30px;"><span id="activeCases">Loading...</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                <div class="card head card3">
-                    <div class="card-body py-4">
-                        <p class="text-center font-weight-bolder" style="font-size: 30px;">Recovered</p>
-                        <p class="text-center text-success animate__animated animate__fadeInUp animate__delay-2s"
-                            style="font-size: 30px;"><span id="recoveredCases">Loading...</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                <div class="card head card4">
-                    <div class="card-body py-4">
-                        <p class="text-center font-weight-bolder" style="font-size: 30px;">Deaths</p>
-                        <p class="text-center text-dark animate__animated animate__fadeInUp animate__delay-2s"
-                            style="font-size: 30px;"><span id="deathCases">Loading...</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mx-auto">
-            <div class="col-lg-4 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                <div class="card head card1">
-                    <div class="card-body py-4">
-                        <p class="text-center font-weight-bolder" style="font-size: 30px;">New Confirmed</p>
-                        <p class="text-center text-primary animate__animated animate__fadeInUp animate__delay-2s"
-                            style="font-size: 30px;"><span id="dailyCases">Loading...</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                <div class="card head card3">
-                    <div class="card-body py-4">
-                        <p class="text-center font-weight-bolder" style="font-size: 30px;">New Recovered</p>
-                        <p class="text-center text-success animate__animated animate__fadeInUp animate__delay-2s"
-                            style="font-size: 30px;"><span id="dailyRecovered">Loading...</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4  mb-4 animate__animated animate__zoomIn animate__delay-1s hvr-float-shadow">
-                <div class="card head card4">
-                    <div class="card-body py-4">
-                        <p class="text-center font-weight-bolder" style="font-size: 30px;">New Deaths</p>
-                        <p class="text-center text-dark animate__animated animate__fadeInUp animate__delay-2s"
-                            style="font-size: 30px;"><span id="dailyDeaths">Loading...</span></p>
+                <div class="text-center mt-3">
+                    <div class="badge badge-primary py-2 px-3 animate__animated animate__zoomIn animate__delay-1s">Last
+                        Updated:
+                        <span id="updated"></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="info mt-3 animate__animated animate__zoomIn animate__delay-1s">
+        <div class="cases">
+            <div class="text-primary ">Confirmed</div>
+            <div class="text-primary " style="font-size: 13px;">[+<span id="dailyCases"></span>]</div>
+            <div class="text-primary " id="confirmedCases" style="font-size:20px;">
+            </div>
+        </div>
+        <div class="cases">
+            <div class="text-danger ">Active</div>
+            <div class="text-danger " style="font-size: 13px;">[+<span id="dailyActive"></span>]</div>
+            <div class="text-danger " id="activeCases" style="font-size:20px;">
+            </div>
+        </div>
+        <div class="cases">
+            <div class="text-success ">Recovered</div>
+            <div class="text-success" style="font-size: 13px;">[+<span id="dailyRecovered"></span>]
+            </div>
+            <div class="text-success " id="recoveredCases" style="font-size:20px;">
+            </div>
+        </div>
+        <div class="cases">
+            <div class="text-muted ">Deaths</div>
+            <div class="text-muted " style="font-size: 13px;">[+<span id="dailyDeaths"></span>]</div>
+            <div class="text-muted " id="deathCases" style="font-size:20px;"></div>
+        </div>
 
-    <div class="container-fluid">
+    </div>
+    <div class="container-fluid pt-2">
         <marquee behavior="scroll" direction="left" scrollamount="4" style="color: black;font-size: 1.2em;"
             onmouseover="javascript:stop()" onmouseout="javascript:start()">
             <p class="pt-2 scheme" style="font-size: 1.2em;"><span class="text-danger ">Contact Details For INDIA
-                    :</span> Helpline Number : +91-11-23978046 / Toll Free : 1075 || Helpline Email ID : ncov2019@gov.in
+                    :</span> Helpline Number : +91-11-23978046 / Toll Free : 1075 || Helpline Email ID :
+                ncov2019@gov.in
             </p>
         </marquee>
     </div>
     <div class="container mt-2">
         <div class="row">
             <div class="mx-auto col-md-12">
-                <h1 class="text-dark text-center pb-1 animate__animated animate__zoomIn animate__delay-1s">India Visuals
+                <h1 class="text-dark text-center pb-1 animate__animated animate__zoomIn animate__delay-1s">India
+                    Visuals
                 </h1>
                 <p class="text-center text-muted px-3 animate__animated animate__zoomIn animate__delay-1s"
                     style="font-size: 1.2em;">Please hover on the points on the graph
