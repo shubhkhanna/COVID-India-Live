@@ -1164,16 +1164,16 @@ function drawRow(rowData) {
   row.append($("<td class='text-muted'>" + rowData.deaths + "</td>"));
 }
 
-$(function () {
-  $("#zoneTab td ").each(function () {
-    if ($(this).text() == "Red") {
-      $(this).css("background-color", "red");
-    }
-    if ($(this).text() == "Orange") {
-      $(this).css("background-color", "orange");
-    }
-    if ($(this).text() == "Green") {
-      $(this).css("background-color", "green");
-    }
-  });
-});
+// $(function () {
+//   $("#zoneTab td ").each(function () {
+//     if ($(this).text() == "Red") {
+//       $(this).css("background-color", "red");
+//     }
+//     if ($(this).text() == "Orange") {
+//       $(this).css("background-color", "orange");
+//     }
+//     if ($(this).text() == "Green") {
+//       $(this).css("background-color", "green");
+//     }
+//   });
+// });
