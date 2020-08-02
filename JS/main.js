@@ -470,11 +470,41 @@ function drawRow(rowData) {
     }
   }
   $("#myCountry1").append(row);
-  row.append($("<td class='pl-2'>" + rowData.country + "</td>"));
-  row.append($("<td class='text-primary'>" + rowData.cases + "</td>"));
-  row.append($("<td class='text-danger'>" + rowData.active + "</td>"));
-  row.append($("<td class='text-success'>" + rowData.recovered + "</td>"));
-  row.append($("<td class='text-muted'>" + rowData.deaths + "</td>"));
+  row.append(
+    $(
+      "<td style='font-weight: 600;background-color: rgba(108,117,125,.3);color: #191919;' class='text-center'>" +
+        rowData.country +
+        "</td>"
+    )
+  );
+  row.append(
+    $(
+      "<td  style='background-color: rgba(0,123,255,.1); color: #007bff;' class='text-center font-weight-bold'>" +
+        rowData.cases +
+        "</td>"
+    )
+  );
+  row.append(
+    $(
+      "<td style='background-color: rgba(255,7,58,0.1); color: #ff073a;' class='text-center font-weight-bold'>" +
+        rowData.active +
+        "</td>"
+    )
+  );
+  row.append(
+    $(
+      "<td class='text-center font-weight-bold' style='background-color: rgba(40,167,69,.1); color: #28a745;'>" +
+        rowData.recovered +
+        "</td>"
+    )
+  );
+  row.append(
+    $(
+      "<td class='text-center font-weight-bold' style='background-color: rgba(108,117,125,.3);color: #6c757d;'>" +
+        rowData.deaths +
+        "</td>"
+    )
+  );
 }
 
 // $(function () {
