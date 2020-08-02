@@ -76,11 +76,10 @@ i {
   display: flex;
   flex-wrap: wrap;
 }
-.card {
-  background-color: white;
-  border-color: #292b2c;
+.head {
   border-radius: 10px;
-  box-shadow: 0px 0px 3px #292b2c;
+  background: #ecf0f3;
+  box-shadow: 8px 8px 19px #dbdfe2, -8px -8px 19px #fdffff;
 }
 .badge {
   border-radius: 15px;
