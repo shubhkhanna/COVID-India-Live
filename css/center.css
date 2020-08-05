@@ -79,8 +79,9 @@ i {
 .head {
   border-radius: 10px;
   background: #ecf0f3;
-  box-shadow: 8px 8px 19px #dbdfe2, -8px -8px 19px #fdffff;
+  box-shadow: inset 8px 8px 19px #dbdfe2, inset -8px -8px 19px #fdffff;
 }
 .badge {
-  border-radius: 15px;
+  border-radius: 10px;
+  padding: 5px 10px;
 }
