@@ -20,33 +20,44 @@ $("#main-nav a").on("click", function (event) {
 function updateData() {
   // fetch global data
   fetch(" https://covid19.mathdro.id/api/")
-    .then((res) => {
+    .then(res => {
       return res.json();
     })
-    .then((data) => {
-      document.getElementById("globalCases").innerHTML = data.confirmed.value;
+    .then(data => {
+      document.getElementById("globalCases").innerHTML = data.confirmed.value
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       document.getElementById("globalRecovered").innerHTML =
-        data.recovered.value;
-      document.getElementById("globalDeaths").innerHTML = data.deaths.value;
+        data.recovered.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      document.getElementById("globalDeaths").innerHTML = data.deaths.value
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     })
-    .catch((err) => {
+    .catch(err => {
       console.error("Error fetching data from API.\n", err);
     });
 
   // fetch india data
   fetch("https://api.covid19india.org/data.json")
-    .then((res) => {
+    .then(res => {
       return res.json();
     })
-    .then((data) => {
+    .then(data => {
       document.getElementById("confirmedCases").innerHTML =
-        data.statewise[0].confirmed;
+        data.statewise[0].confirmed
+          .toString()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       document.getElementById("activeCases").innerHTML =
-        data.statewise[0].active;
+        data.statewise[0].active
+          .toString()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       document.getElementById("recoveredCases").innerHTML =
-        data.statewise[0].recovered;
-      document.getElementById("deathCases").innerHTML =
-        data.statewise[0].deaths;
+        data.statewise[0].recovered
+          .toString()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      document.getElementById("deathCases").innerHTML = data.statewise[0].deaths
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       document.getElementById("dailyCases").innerHTML =
         data.statewise[0].deltaconfirmed;
       document.getElementById("dailyRecovered").innerHTML =
@@ -62,17 +73,38 @@ function updateData() {
     });
 
   fetch("https://api.covid19india.org/data.json")
-    .then((res) => {
+    .then(res => {
       return res.json();
     })
-    .then((data) => {
+    .then(data => {
       let tested_cases = data.tested.length;
       document.getElementById("date").innerHTML =
         data.tested[tested_cases - 1].updatetimestamp;
-      document.getElementById("test").innerHTML =
-        data.tested[tested_cases - 1].totalsamplestested;
-      document.getElementById("today").innerHTML =
-        data.tested[tested_cases - 1].samplereportedtoday;
+      document.getElementById("test").innerHTML = data.tested[
+        tested_cases - 1
+      ].totalsamplestested
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      document.getElementById("today").innerHTML = data.tested[
+        tested_cases - 1
+      ].samplereportedtoday
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      document.getElementById("totalvaccinated").innerHTML = data.tested[
+        tested_cases - 1
+      ].totalindividualsvaccinated
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      document.getElementById("totalrtpcr").innerHTML = data.tested[
+        tested_cases - 1
+      ].dailyrtpcrsamplescollectedicmrapplication
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      document.getElementById("rgtd45").innerHTML = data.tested[
+        tested_cases - 1
+      ].registrationabove45years
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     });
   console.log("Successful Sample tested.\n");
 }
@@ -367,9 +399,9 @@ window.onload = function () {
   var previousDay = {};
   var newcases = [];
   fetch("https://pomber.github.io/covid19/timeseries.json")
-    .then((response) => response.json())
-    .then((data) => {
-      data["India"].forEach((day) => {
+    .then(response => response.json())
+    .then(data => {
+      data["India"].forEach(day => {
         if (previousDay["recovered"] >= day["recovered"]) {
           recovered = previousDay["recovered"];
         } else {
@@ -399,7 +431,7 @@ window.onload = function () {
       drawGreenChart(proRecoveredData, "recovered-graph");
       drawRedChart(newcases, "death-graph");
     })
-    .catch((e) => {
+    .catch(e => {
       console.log(e);
     });
 };
@@ -480,28 +512,28 @@ function drawRow(rowData) {
   row.append(
     $(
       "<td  style='background-color: rgba(0,123,255,.1); color: #007bff;' class='text-center font-weight-bold'>" +
-        rowData.cases +
+        rowData.cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
         "</td>"
     )
   );
   row.append(
     $(
       "<td style='background-color: rgba(255,7,58,0.1); color: #ff073a;' class='text-center font-weight-bold'>" +
-        rowData.active +
+        rowData.active.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
         "</td>"
     )
   );
   row.append(
     $(
       "<td class='text-center font-weight-bold' style='background-color: rgba(40,167,69,.1); color: #28a745;'>" +
-        rowData.recovered +
+        rowData.recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
         "</td>"
     )
   );
   row.append(
     $(
       "<td class='text-center font-weight-bold' style='background-color: rgba(108,117,125,.3);color: #6c757d;'>" +
-        rowData.deaths +
+        rowData.deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
         "</td>"
     )
   );
@@ -537,12 +569,12 @@ $(document).ready(function () {
               '<td style="background-color: rgba(0,123,255,.1); color: #007bff;"><div style="font-size:10px; display:inline-block; align-text:center; margin-right: .15rem; vertical-align:center; color: #ff073a;">+' +
               value.deltaconfirmed +
               "&nbsp;</div>" +
-              value.confirmed +
+              value.confirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
               "</td>";
           } else {
             stateData +=
               '<td style="background-color: rgba(0,123,255,.1); color: #007bff;">' +
-              value.confirmed +
+              value.confirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
               "</td>";
           }
           stateData +=
@@ -554,12 +586,12 @@ $(document).ready(function () {
               '<td style="background-color: rgba(40,167,69,.1); color: #28a745;"><div style="font-size:10px; display:inline-block; align-text:center; margin-right: .15rem; vertical-align:center; color: #ff073a;">+' +
               value.deltarecovered +
               "&nbsp;</div>" +
-              value.recovered +
+              value.recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
               "</td>";
           } else {
             stateData +=
               '<td style="background-color: rgba(40,167,69,.1); color: #28a745;">' +
-              value.recovered +
+              value.recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
               "</td>";
           }
           if (value.deltadeaths > 0) {
@@ -567,12 +599,12 @@ $(document).ready(function () {
               '<td style="background-color: rgba(108,117,125,.3);color: #6c757d;"><div style="font-size:10px; display:inline-block; align-text:center; margin-right: .15rem; vertical-align:center; color: #ff073a;">+' +
               value.deltadeaths +
               "&nbsp;</div>" +
-              value.deaths +
+              value.deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
               "</td>";
           } else {
             stateData +=
               '<td style="background-color: rgba(108,117,125,.3);color: #6c757d;">' +
-              value.deaths +
+              value.deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
               "</td>";
           }
           stateData += "</tr>";
@@ -595,19 +627,19 @@ $(document).ready(function () {
           "</td>";
         stateData +=
           '<td style="background-color: rgba(0,123,255,.1); color: #007bff;">' +
-          value.confirmed +
+          value.confirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
           "</td>";
         stateData +=
           '<td style="background-color: rgba(255,7,58,0.1); color: #ff073a;">' +
-          value.active +
+          value.active.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
           "</td>";
         stateData +=
           '<td style="background-color: rgba(40,167,69,.1); color: #28a745;">' +
-          value.recovered +
+          value.recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
           "</td>";
         stateData +=
           '<td style="background-color: rgba(108,117,125,.3);color: #6c757d;">' +
-          value.deaths +
+          value.deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
           "</td>";
       }
       stateData += "</tr>";
