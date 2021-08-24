@@ -20,10 +20,10 @@ $("#main-nav a").on("click", function (event) {
 function updateData() {
   // fetch global data
   fetch(" https://covid19.mathdro.id/api/")
-    .then(res => {
+    .then((res) => {
       return res.json();
     })
-    .then(data => {
+    .then((data) => {
       document.getElementById("globalCases").innerHTML = data.confirmed.value
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -33,16 +33,16 @@ function updateData() {
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     })
-    .catch(err => {
+    .catch((err) => {
       console.error("Error fetching data from API.\n", err);
     });
 
   // fetch india data
-  fetch("https://api.covid19india.org/data.json")
-    .then(res => {
+  fetch("https://data.covid19india.org/data.json")
+    .then((res) => {
       return res.json();
     })
-    .then(data => {
+    .then((data) => {
       document.getElementById("confirmedCases").innerHTML =
         data.statewise[0].confirmed
           .toString()
@@ -72,11 +72,11 @@ function updateData() {
         data.statewise[0].lastupdatedtime;
     });
 
-  fetch("https://api.covid19india.org/data.json")
-    .then(res => {
+  fetch("https://data.covid19india.org/data.json")
+    .then((res) => {
       return res.json();
     })
-    .then(data => {
+    .then((data) => {
       let tested_cases = data.tested.length;
       document.getElementById("date").innerHTML =
         data.tested[tested_cases - 1].updatetimestamp;
@@ -399,9 +399,9 @@ window.onload = function () {
   var previousDay = {};
   var newcases = [];
   fetch("https://pomber.github.io/covid19/timeseries.json")
-    .then(response => response.json())
-    .then(data => {
-      data["India"].forEach(day => {
+    .then((response) => response.json())
+    .then((data) => {
+      data["India"].forEach((day) => {
         if (previousDay["recovered"] >= day["recovered"]) {
           recovered = previousDay["recovered"];
         } else {
@@ -431,7 +431,7 @@ window.onload = function () {
       drawGreenChart(proRecoveredData, "recovered-graph");
       drawRedChart(newcases, "death-graph");
     })
-    .catch(e => {
+    .catch((e) => {
       console.log(e);
     });
 };
@@ -554,7 +554,7 @@ function drawRow(rowData) {
 // });
 
 $(document).ready(function () {
-  $.getJSON("https://api.covid19india.org/data.json", function (data) {
+  $.getJSON("https://data.covid19india.org/data.json", function (data) {
     var stateData = "";
     $.each(data.statewise, function (key, value) {
       if (value.confirmed > 0) {
@@ -616,7 +616,7 @@ $(document).ready(function () {
 });
 //table footer data
 $(document).ready(function () {
-  $.getJSON("https://api.covid19india.org/data.json", function (data) {
+  $.getJSON("https://data.covid19india.org/data.json", function (data) {
     var stateData = "";
     $.each(data.statewise, function (key, value) {
       stateData += "<tr>";
